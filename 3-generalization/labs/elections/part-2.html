@@ -243,13 +243,11 @@ Below are two visualizations using data from the last two presidential elections
 
 
 
-
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
 ![](part-2_files/figure-html/unnamed-chunk-1-1.png){fig-align='center' width=672}
 :::
 :::
-
 
 
 
@@ -266,14 +264,12 @@ You will be analyzing results from *Mississippi* in **Questions 6-9**. Make sure
 
 
 
-
 ::: {.cell}
 
 ```{.r .cell-code}
 miss <- read_csv("https://raw.githubusercontent.com/openelections/openelections-data-ms/master/2020/20201103__ms__general__precinct.csv")
 ```
 :::
-
 
 
 
@@ -321,14 +317,12 @@ We've started creating the distribution table for $X$ as a data frame by creatin
 
 
 
-
 ::: {.cell}
 
 ```{.r .cell-code}
 fd_unif <- data.frame(first_digit = seq(1, 9))
 ```
 :::
-
 
 
 
@@ -355,14 +349,12 @@ Will this distribution have a expected value that is higher, lower, or the same 
 
 
 
-
 ::: {.cell}
 
 ```{.r .cell-code}
 fd_benford <- data.frame(first_digit = seq(1, 9))
 ```
 :::
-
 
 
 
@@ -381,7 +373,6 @@ Create a plot of the resulting empirical distribution of first digits.
 
 
 
-
 ::: {.cell}
 
 ```{.r .cell-code}
@@ -395,13 +386,11 @@ fd_benford %>%
 
 
 
-
 #### Question 9
 
 What do the first digit empirical distributions look like for the four candidates in the Iranian presidential election?
 
 Inside the `stat20data` package there is a function called `get_first()` that pulls off the first digit of every element in a vector. Piece all four plots together into one single plot using the `patchwork` library (search for "patchwork" in the search bar at the top right of the course website for an example of its use).
-
 
 
 
@@ -413,7 +402,6 @@ penguins %>%
   select(bill_length_mm, first_digit)
 ```
 :::
-
 
 
 

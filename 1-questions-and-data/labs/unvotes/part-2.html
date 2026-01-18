@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>UN Votes – Stat 20</title>
+<title>Getting Started – Stat 20</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,13 +77,13 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="UN Votes – Stat 20">
+<meta property="og:title" content="Getting Started – Stat 20">
 <meta property="og:description" content="Introduction to Probability and Statistics at UC Berkeley">
 <meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/1-questions-and-data/labs/unvotes/images/un-logo.png">
 <meta property="og:site_name" content="Stat 20">
 <meta property="og:image:height" content="336">
 <meta property="og:image:width" content="474">
-<meta name="twitter:title" content="UN Votes – Stat 20">
+<meta name="twitter:title" content="Getting Started – Stat 20">
 <meta name="twitter:description" content="Introduction to Probability and Statistics at UC Berkeley">
 <meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/1-questions-and-data/labs/unvotes/images/un-logo.png">
 <meta name="twitter:image-height" content="336">
@@ -153,7 +153,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">UN Votes</h1>
+<h1 class="title">Getting Started</h1>
 </div>
 
 
@@ -174,23 +174,44 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 <ul>
 <li>Link: <a href="https://stat20.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fberkeley-stat20%2Fstat20-labs&amp;urlpath=rstudio%2F&amp;branch=master">Load lab template in RStudio</a></li>
 </ul>
-<section id="the-context-of-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="the-context-of-the-data">The Context of the Data</h2>
-<p>Since its founding in 1946, the United Nation has regularly put forth resolutions that aim to express the will of its members. Impactful historical resolutions have involved the Declaration of Human Rights in 1948, a prohibition on the use of nuclear and thermonuclear weapons in 1968, and the establishment of a no-fly zone in Libya in 2011. After each resolution is proposed, it is voted on in a roll-call vote of the member nations.</p>
-<p>The data set at hand contains the voting records of every nation in the UN from 1946 - 2019 on three different issues: Colonialism, Human Rights, and Nuclear Weapons.</p>
-</section>
-<section id="computing-on-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="computing-on-the-data">Computing on the Data</h2>
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p>Create a data visualization the shows the proportion of “yes” votes over time on three different issues: Colonialism, Human Rights, and Nuclear Weapons. Construct the plot to compare the voting patterns of the United States, the United Kingdom, and one other country of your choosing (not Turkey).</p>
+<p>Create a vector with the even integers between 1 and 10, as well as the number 99 (six elements in total). Save it into an object named <code>vec</code>.</p>
 </section>
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
-<p>Formulate two claims about voting behavior that is supported by this graphic. Categorize each claim as begin a summary, generalization, causal claim, or prediction.</p>
+<p>Answer this question using <code>vec</code> from the last question. If you don’t know the name of a function to use, Google it!</p>
+<section id="part-a" class="level4">
+<h4 class="anchored" data-anchor-id="part-a">part a</h4>
+<p>Find the sum of the <code>vec</code>.</p>
+</section>
+<section id="part-b" class="level4">
+<h4 class="anchored" data-anchor-id="part-b">part b</h4>
+<p>Find the max of <code>vec</code>.</p>
+</section>
+<section id="part-c" class="level4">
+<h4 class="anchored" data-anchor-id="part-c">part c</h4>
+<p>Find the mean of <code>vec</code> and round it to the nearest integer.</p>
+</section>
 </section>
 <section id="question-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>Using R code, find “three times one point two raised to the quantity thirteen divided by six.”</p>
+</section>
+<section id="question-4---un-votes" class="level3">
+<h3 class="anchored" data-anchor-id="question-4---un-votes">Question 4 - UN Votes</h3>
+<p>Since its founding in 1946, the United Nation has regularly put forth resolutions that aim to express the will of its members. Impactful historical resolutions have involved the Declaration of Human Rights in 1948, a prohibition on the use of nuclear and thermonuclear weapons in 1968, and the establishment of a no-fly zone in Libya in 2011. After each resolution is proposed, it is voted on in a roll-call vote of the member nations.</p>
+<p>The data set at hand, <code>unvotes</code>, contains the voting records of every nation in the UN from 1946 - 2019 on three different issues: Colonialism, Human Rights, and Nuclear Weapons.</p>
+<section id="part-a-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-1">part a</h4>
+<p>Create a data visualization the shows the proportion of “yes” votes over time on three different issues: Colonialism, Human Rights, and Nuclear Weapons. Construct the plot to compare the voting patterns of the United States, the United Kingdom, and one other country of your choosing (not Turkey).</p>
+</section>
+<section id="part-b-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-1">part b</h4>
+<p>Formulate two claims about voting behavior that is supported by this graphic. Categorize each claim as begin a summary, generalization, causal claim, or prediction.</p>
+</section>
+<section id="part-c-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-c-1">part c</h4>
 <p>What else would you like to learn about this data set or the context of voting at the United Nations that would allow you to make more informed, accurate, thoughtful, and effective claims? List three specific items.</p>
 
 
