@@ -99,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-ws-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-ps-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-ws-listing'] = new List('listing-ws-listing', options);
+    window['quarto-listings']['listing-ps-listing'] = new List('listing-ps-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -275,10 +275,10 @@ No matching items
 <section id="problem-sets" class="level2">
 <h2 class="anchored" data-anchor-id="problem-sets">Problem Sets</h2>
 <p>Problem sets are pen-and-paper practice problems that we work on weekly in class. Each weeks problem set consists of two parts, to be submitted together. The goal of the problem sets is simply practice: they help you drill the techniques needed to complete the labs.</p>
-<div id="listing-ws-listing" class="quarto-listing quarto-listing-container-custom">
+<div id="listing-ps-listing" class="quarto-listing quarto-listing-container-custom">
 <ul>
 <li>
-<a href="./1-questions-and-data/02-taxonomy-of-data/ws.pdf">WS: Taxonomy of Data</a>
+<a href="./1-questions-and-data/02-taxonomy-of-data/ws.pdf">PS: Taxonomy of Data</a>
 </li>
 </ul>
 <div class="listing-no-matching d-none">
