@@ -1,7 +1,12 @@
 [
   {
     "listing": "/assignments.html",
-    "items": []
+    "items": [
+      "/2-summarizing-data/01-summarizing-categorical-data/ws.pdf",
+      "/2-summarizing-data/02-summarizing-numerical-data/ws.pdf",
+      "/1-questions-and-data/02-taxonomy-of-data/ws.pdf",
+      "/1-questions-and-data/01-understanding-the-world/ws.pdf"
+    ]
   },
   {
     "listing": "/index.html",
