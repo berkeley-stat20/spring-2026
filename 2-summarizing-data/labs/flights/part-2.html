@@ -81,13 +81,15 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 
 <meta property="og:title" content="Lab 3: Flights I – Stat 20">
 <meta property="og:description" content="Introduction to Probability and Statistics at UC Berkeley">
-<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/labs/flights/assets/stat20-hex.png">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/labs/flights/images/airline.png">
 <meta property="og:site_name" content="Stat 20">
+<meta property="og:image:height" content="486">
+<meta property="og:image:width" content="730">
 <meta name="twitter:title" content="Lab 3: Flights I – Stat 20">
 <meta name="twitter:description" content="Introduction to Probability and Statistics at UC Berkeley">
-<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/labs/flights/part-2_files/figure-html/unnamed-chunk-2-1.png">
-<meta name="twitter:image-height" content="960">
-<meta name="twitter:image-width" content="1344">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/labs/flights/images/airline.png">
+<meta name="twitter:image-height" content="486">
+<meta name="twitter:image-width" content="730">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -206,7 +208,11 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </section>
 <section id="part-c" class="level3">
 <h3 class="anchored" data-anchor-id="part-c">part c</h3>
-<p>Do any of the variables have ambiguous data types to you (they could be interpreted either as categorical or numerical) ? Write them here.</p>
+<p>Are there any variables which are recorded using numbers but should be treated categorically? Write them here.</p>
+</section>
+<section id="part-d" class="level3">
+<h3 class="anchored" data-anchor-id="part-d">part d</h3>
+<p>Are there any variables which could reasonably be interpreted as either categorical or numerical? Write them here.</p>
 </section>
 </section>
 <section id="question-3" class="level2">
@@ -217,7 +223,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
 <section id="part-a-2" class="level3">
 <h3 class="anchored" data-anchor-id="part-a-2">part a</h3>
-<p>Create a bar chart that shows the distribution by month of all the flights leaving the Bay Area (from SFO and OAK airports together).</p>
+<p>Write <code>ggplot2</code> code to create a bar chart that shows the distribution by month of all the flights leaving the Bay Area (from SFO and OAK airports together).</p>
 </section>
 <section id="part-b-2" class="level3">
 <h3 class="anchored" data-anchor-id="part-b-2">part b</h3>
@@ -228,7 +234,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
 <section id="part-a-3" class="level3">
 <h3 class="anchored" data-anchor-id="part-a-3">part a</h3>
-<p>Create a histogram showing the distribution of departure delays for all flights.</p>
+<p>Write <code>ggplot2</code> code to create a histogram showing the distribution of departure delays for all flights.</p>
 </section>
 <section id="part-b-3" class="level3">
 <h3 class="anchored" data-anchor-id="part-b-3">part b</h3>
@@ -238,8 +244,8 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="part-c-1">part c</h3>
 <p>Add a text annotation to your plot that explains the meaning of a negative departure delay.</p>
 </section>
-<section id="part-d" class="level3">
-<h3 class="anchored" data-anchor-id="part-d">part d</h3>
+<section id="part-d-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-1">part d</h3>
 <p>Describe the shape and modality of the distribution in 1 to 2 sentences.</p>
 </section>
 </section>
@@ -248,21 +254,21 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 <blockquote class="blockquote">
 <p>What is the destination and delay time (in hrs) for the flight that was <em>most</em> delayed?</p>
 </blockquote>
-<p>Write code that answers this question.</p>
+<p>Write a <code>dplyr</code> pipeline to answer this question. Then, explain the result of your pipeline in one sentence.</p>
 </section>
 <section id="question-7" class="level2">
 <h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
-<p>If you flew out of OAK or SFO during the year 2020, what is the tail number of the plane that you were on? If you did not fly in this period, find the tail number of the plane that flew JetBlue flight 40 to New York’s JFK Airport from SFO on May 1st.</p>
+<p>If you flew out of OAK or SFO during the year 2020, what is the tail number of the plane that you were on? Write a <code>dplyr</code> pipeline to answer this question. If you did not fly in this period, find the tail number of the plane that flew JetBlue flight 40 to New York’s JFK Airport from SFO on May 1st.</p>
 </section>
 <section id="question-8" class="level2">
 <h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
 <section id="part-a-4" class="level3">
 <h3 class="anchored" data-anchor-id="part-a-4">part a</h3>
-<p>What proportion of all flights left on schedule?</p>
+<p>What proportion of all flights left on schedule? Write a <code>dplyr</code> pipeline to answer this question.</p>
 </section>
 <section id="part-b-4" class="level3">
 <h3 class="anchored" data-anchor-id="part-b-4">part b</h3>
-<p>What proportion flights left on schedule for each airport (OAK and SFO)?</p>
+<p>What proportion flights left on schedule for each airport (OAK and SFO)? Write a <code>dplyr</code> pipeline to answer this question.</p>
 </section>
 </section>
 <section id="question-9" class="level2">
