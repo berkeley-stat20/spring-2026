@@ -288,31 +288,21 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </div>
 <p>What we can glean from this figure is that the distribution of body masses across <em>all species of penguin</em> is skewed right. This means that, for instance, a more typical observation lies closer to 4000 grams than 5000 grams.</p>
 <p>If we take an average, it is likely to be pulled to the right by the larger, but less typical, observations. The median observation, however, would be more resistant to this pull. Therefore, the median might be a nice choice for a measure of center. Similarly, since the IQR is initially constructed from the median, it will serve well here as a measure of spread.</p>
-<p>Now, let’s calculate these values. We should first isolate our variable of interest. We can do this in code by using the <code>dplyr</code> function <strong><code>select()</code></strong>.</p>
+<p>Now, let’s calculate these values using <code>summarize</code> (you can also spell it <code>summarise</code> and it’ll work just the same). As is custom with <code>dplyr</code> functions, the first argument is the data frame you are working with. The subsequent argument(s) tell the computer what to do, referring to column names as needed. For <code>summarize</code>, each such argument is a calculation to perform.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>body_mass <span class="ot">&lt;-</span> <span class="fu">select</span>(penguins, body_mass_g)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>body_mass</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(penguins, </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>          <span class="fu">median</span>(body_mass_g),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>          <span class="fu">IQR</span>(body_mass_g))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 333 × 1
-   body_mass_g
-         &lt;int&gt;
- 1        3750
- 2        3800
- 3        3250
- 4        3450
- 5        3650
- 6        3625
- 7        4675
- 8        3200
- 9        3800
-10        4400
-# ℹ 323 more rows</code></pre>
+<pre><code># A tibble: 1 × 2
+  `median(body_mass_g)` `IQR(body_mass_g)`
+                  &lt;int&gt;              &lt;dbl&gt;
+1                  4050               1225</code></pre>
 </div>
 </div>
-<p>As is custom with <code>dplyr</code> functions, the first argument goes to the data frame you are working with. The following arguments are more function specific. In <code>select()</code>’s case, we tell the computer which column/variable we are interested in.</p>
-<p>Now, we can calculate our summaries. When working with a vector, we could use functions like <code>mean()</code> and <code>median()</code> directly, e.g.&nbsp;<code>median(body_mass_g)</code>. However, <code>body_mass_g</code> is not a standalone vector but is now a column in a data frame called <code>body_mass</code>! Therefore, we need to access it through a <code>dplyr</code> function called <strong><code>summarise()</code></strong>.</p>
+<p>The result of <code>summarize</code> is a <em>new data frame</em> (in this case, one row by two columns). Notice that the column names are kind of ugly - they are just the code used to make the calculation. You can rename these columns to whatever you like. Perhaps something like this:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(body_mass, </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(penguins, </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">body_mass_median =</span> <span class="fu">median</span>(body_mass_g),</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">body_mass_IQR =</span> <span class="fu">IQR</span>(body_mass_g))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -322,8 +312,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 1             4050          1225</code></pre>
 </div>
 </div>
-<p>Note that while the first argument goes to the name of the data frame, the following arguments are given to the names of the new columns that <code>summarise()</code> puts in another <em>new data frame</em> (one row by two columns). You can name the columns whatever you would like.</p>
-<p>Based on what we’ve found, the median here supports the claim we made above: that a typical penguin has a body mass closer to 4000 grams than to 5000 grams. The middle 50 percent of the penguins have body masses within 1225/2 grams, or roughly 600 grams, of 4050.</p>
+<p>Based on what we’ve found, the median here supports the claim we made above: that a typical penguin has a body mass closer to 4000 grams than to 5000 grams. The middle half of the penguins have body masses within a range of 1225 grams.</p>
 </section>
 <section id="groupwise-operations" class="level3">
 <h3 class="anchored" data-anchor-id="groupwise-operations">Groupwise Operations</h3>
@@ -361,9 +350,9 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>grouped_penguins <span class="ot">&lt;-</span> <span class="fu">group_by</span>(penguins, species)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Like most <code>tidyverse</code> functions, the first argument to <code>group_by()</code> is a data frame. The second argument is the name of the variable that you want to use to delineate groups. In this case, we want to group by species to calculate three separate mean/standard deviation pairs.</p>
-<p>Now, assuming we roll with our new <code>grouped_penguins</code> data frame, we can use <code>summarise()</code> like we did before!</p>
+<p>Now, assuming we roll with our new <code>grouped_penguins</code> data frame, we can use <code>summarize()</code> like we did before!</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarise</span>(grouped_penguins, </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(grouped_penguins, </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">bill_length_mean =</span> <span class="fu">mean</span>(bill_length_mm),</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">bill_length_sd =</span> <span class="fu">sd</span>(bill_length_mm))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -379,7 +368,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </section>
 <section id="plotting-with-categorical-variables" class="level3">
 <h3 class="anchored" data-anchor-id="plotting-with-categorical-variables">Plotting with Categorical Variables</h3>
-<p>Finally, let’s return to the violin plot of bill lengths grouped by species of penguin.</p>
+<p>Finally, let’s return to the violin plot of bill lengths grouped by species of penguin (from the Notes page).</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span> bill_length_mm,</span>
@@ -394,16 +383,19 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </div>
 </div>
 <p>What if I wanted the Adelie violin to show up on the top of the graph? By default, the violin plot puts the level first in the alphabetical order on the bottom of the plot. Therefore, I need to <em>reorder</em> the levels of species to put Adelie at the top. This is where <code>factor()</code> will do the job!</p>
-<p>As before, <code>bill_length_mm</code> is not a standalone vector but a column in a data frame! We cannot access it directly, e.g.&nbsp;by <code>factor(species, levels = c("Gentoo", "Chinstrap", "Adelie"))</code>.</p>
-<p>Therefore, we use the <code>dplyr</code> function <strong><code>mutate()</code></strong>. A <strong>mutation</strong> involves changing the properties of an existing column, or adding a new one altogether (which we will explore next week).</p>
+<p>We use the <code>dplyr</code> function <strong><code>mutate()</code></strong> to change a column, or to add a new column (which we will explore next week). Below, we overwrite the <code>species</code> column with a factor-ized version of itself, setting the order in which the species should always be displayed.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>penguins_2 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(penguins, </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">species =</span> <span class="fu">factor</span>(species, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Gentoo"</span>, <span class="st">"Chinstrap"</span>, <span class="st">"Adelie"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> <span class="fu">mutate</span>(penguins, </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">species =</span> <span class="fu">factor</span>(species, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Gentoo"</span>, <span class="st">"Chinstrap"</span>, <span class="st">"Adelie"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>The first argument of <code>mutate()</code> is dedicated to our data frame, <code>penguins</code>. The second argument can be the name of an existing column or the name of a new column (next week). We want to change <code>species</code> to be an altered version of itself, hence we name the second argument <code>species</code>. Make sure you understand where each set of parentheses closes and ends.</p>
-<p>Now, assuming we roll with our new <code>penguins_2</code> data frame, we can use <code>ggplot()</code> like we did before!</p>
+<p>A few things are happening here:</p>
+<ol type="1">
+<li>The <code>mutate</code> function is called, passing it our data frame (<code>penguins</code>) and one thing to do: change the <code>species</code> column to a factor, where the categories go in this particular order.</li>
+<li>The result is a new dataframe, which we use to overwrite our original dataframe. (<code>penguins &lt;- ...</code>). This is common practice when you are cleaning up your data to be the way you want – you overwrite a dataframe with a new version of itself.</li>
+</ol>
+<p>Now, if we rerun the exact same code, the new category order is respected:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins_2, </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span> bill_length_mm,</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> species)) <span class="sc">+</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
