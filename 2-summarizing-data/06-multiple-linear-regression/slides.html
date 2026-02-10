@@ -7,7 +7,9 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/countdown-0.5.0/countdown.js"></script>
+<link href="../../site_libs/quarto-contrib/countdown-0.5.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="STAT 20: Introduction to Probability and Statistics">
@@ -222,19 +224,10 @@ STAT 20: Introduction to Probability and Statistics
 </div>
 
 </section>
-<section id="multiple-linear-regression-refresher" class="title-slide slide level1 center">
-<h1>Multiple Linear Regression Refresher</h1>
-<ul>
-<li>Head to <code>pollev.com</code> for a set of rapid-fire questions on last night’s notes.</li>
-</ul>
-</section>
-
 <section>
-<section id="quiz-review" class="title-slide slide level1 center">
-<h1>Quiz Review</h1>
-<ul>
-<li>Head to <code>pollev.com</code> for a set of quiz-level questions pertaining to <em>Summarizing Numerical Associations</em> and <em>Multiple Linear Regression</em>.</li>
-</ul>
+<section id="concept-questions" class="title-slide slide level1 center">
+<h1>Concept Questions</h1>
+
 </section>
 <section id="question-1" class="slide level2">
 <h2>Question 1</h2>
@@ -274,7 +267,7 @@ STAT 20: Introduction to Probability and Statistics
 <h2>Question 2</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_26f2d489" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_8acb5889" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -319,7 +312,7 @@ Coefficients:
 <h2>Question 3</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_16e0cca8" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_a551dc15" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -364,7 +357,7 @@ Coefficients:
 <h2>Question 4</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_76af4413" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_4a89d35f" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -403,72 +396,53 @@ Coefficients:
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="question-5" class="slide level2">
-<h2>Question 5</h2>
-<p>Consider the following linear regression output where the variable <code>school</code> is categorical and the variable <code>hours_studied</code> is numerical.</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Coefficients</th>
-<th>Estimate</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>(Intercept)</code></td>
-<td>2.5</td>
-</tr>
-<tr class="even">
-<td><code>hours_studied</code></td>
-<td>.2</td>
-</tr>
-<tr class="odd">
-<td><code>schoolCal</code></td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td><code>schoolStanford</code></td>
-<td>-1</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="question-5-cont." class="slide level2">
-<h2>Question 5 (cont.)</h2>
-<ul>
-<li>Say I wanted to create a data frame from the original <code>edu</code> dataframe which contains the minimum, median, and IQR for <code>hours_studied</code> among each school. In order to do this, I make use of <code>group_by()</code> followed by <code>summarize()</code>. I save this data frame into an object called <code>GPA_summary</code>.</li>
-</ul>
-<div class="fragment">
-<div class="poll">
-<p>What are the dimensions of <code>GPA_summary</code>?</p>
-</div>
-</div>
-<div class="fragment">
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_f5778b9f" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<!--
+
+## Question 5
+
+Consider the following linear regression output where the variable `school` is categorical and the variable `hours_studied` is numerical.
+
+| Coefficients     | Estimate |
+| ----------- | ----------- |
+| `(Intercept)`      | 2.5       |
+| `hours_studied`        | .2        |
+| `schoolCal`      | 1       |
+| `schoolStanford`        | -1      |
+
+## Question 5 (cont.)
+
+-   Say I wanted to create a data frame from the original `edu` dataframe which contains the minimum, median, and IQR for `hours_studied` among each school. In order to do this, I make use of `group_by()` followed by `summarize()`. I save this data frame into an object called `GPA_summary`.
+
+. . .
+
+:::poll
+What are the dimensions of `GPA_summary`?
+:::
+
+. . . 
+
+
+::: {.cell}
+::: {.cell-output-display}
+
+```{=html}
+<div class="countdown" id="timer_e7afe7c3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<aside class="notes">
-<p>The correct answer in the poll should be 3x4. The three rows are for the three levels in the school category (there <em>is</em> an additional level beyond <code>"Cal"</code> and <code>"Stanford"</code>, regardless if it is not stated). One column is for the school name, the other three are for each of the statistics calculated; the three rows are for the three levels in the school category.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<!---
+```
+
+:::
+:::
+
+
+. . . 
+
+:::notes
+The correct answer in the poll should be 3x4. The three rows are for the three levels in the school category (there *is* an additional level beyond `"Cal"` and `"Stanford"`, regardless if it is not stated).  One column is for the school name, the other three are for each of the statistics calculated; the three rows are for the three levels in the school category.
+:::
+
+
 
 # Concept Questions
 
@@ -479,7 +453,7 @@ Coefficients:
 ::: {.cell-output-display}
 
 ```{=html}
-<div class="countdown" id="timer_27192b0b" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_07a0a7f5" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -564,7 +538,7 @@ Coefficients:
 ::: {.cell-output-display}
 
 ```{=html}
-<div class="countdown" id="timer_e3884c0d" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_00e334c9" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -649,7 +623,7 @@ A variable that is 1 if an observation takes a particular level of a categorical
 ::: {.cell-output-display}
 
 ```{=html}
-<div class="countdown" id="timer_d463a39a" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_d9733a05" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -693,63 +667,8 @@ Which is the correct interpretation of the coefficient in front of Gentoo?
 This one assess their ability to use a conditional interpretation of a regression coefficient (controlling for the other variables in the model...)
 :::
 
-## Concept Question 4
-
-Consider the following linear regression output where the variable `school` is categorical and the variable `hours_studied` is numerical.
 
 
-::: {.cell layout-align="center"}
-
-```{.r .cell-code}
-lm(GPA ~ hours_studied + school, data = edu)
-```
-:::
-
-
-\   
-\   
-
-| Coefficients     | Estimate |
-| ----------- | ----------- |
-| `(Intercept)`      | 2.5       |
-| `hours_studied`        | .2        |
-| `schoolCal`      | 1       |
-| `schoolStanford`        | -1      |
-
-. . . 
-
-## Concept Question 4 (cont.)
-
--   Say I wanted to create a data frame from the original `edu` dataframe which contains the minimum, median, and IQR for `hours_studied` among each school. In order to do this, I make use of `group_by()` followed by `summarize()`. I save this data frame into an object called `GPA_summary`.
-
-
-:::poll
-What are the dimensions of `GPA_summary`?
-:::
-
-
-:::notes
-The correct answer in the poll should be 3x3. The three columns are for each of the statistics calculated; the three rows are for the three levels in the school category (there *is* an additional level beyond `"Cal"` and `"Stanford"`, regardless if it is not stated). 
-
-This was a former final question.
-:::
-
-
-::: {.cell}
-::: {.cell-output-display}
-
-```{=html}
-<div class="countdown" id="timer_7ec24c63" data-update-every="1" tabindex="0" style="top:0;right:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-```
-
-:::
-:::
-
-
--->
 <!-- ## MLR Geometry -->
 <!-- . . . -->
 <!-- ```{r} -->
@@ -839,10 +758,41 @@ This was a former final question.
 <!--               z = ~z_west, -->
 <!--               showscale = FALSE) -->
 <!-- ``` -->
-
-
-</div>
 </section></section>
+<section id="problem-set-multiple-linear-regression" class="title-slide slide level1 center">
+<h1>Problem Set: Multiple Linear Regression</h1>
+<div id="timer_b18f6926a22d5002d8ac83274432bba804d9d8ac" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+</section>
+
+<section id="break" class="title-slide slide level1 center">
+<h1>Break</h1>
+<div id="timer_b18f6926a22d5002d8ac83274432bba804d9d8ac" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+</section>
+
+<section id="lab-flights-ii" class="title-slide slide level1 center">
+<h1>Lab: Flights II</h1>
+<div id="timer_b18f6926a22d5002d8ac83274432bba804d9d8ac" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">25</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../../site_libs/quarto-contrib/quarto-project/stat20/stat20slides/stat20-hex-vsmall.png" class="slide-logo"></p>

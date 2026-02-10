@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignments – Stat 20</title>
+<title>Lab 3: Flights I – Stat 20</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/stat20-hex.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f5009c217daa21bd4db0718502b8e117.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-f5009c217daa21bd4db0718502b8e117.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,63 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-lab-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-course-name','listing-semester','listing-site-url','listing-website','listing-format','listing-execute','listing-language','listing-drafts','listing-title','listing-image','listing-sidebar','listing-path','listing-outputHref','listing-date','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-type','listing-sub-type','listing-href','listing-unit','listing-topic','listing-display-date','listing-draft',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-course-name","listing-semester","listing-site-url","listing-website","listing-format","listing-execute","listing-language","listing-drafts","listing-title","listing-image","listing-sidebar","listing-path","listing-outputHref","listing-date","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-type","listing-sub-type","listing-href","listing-unit","listing-topic","listing-display-date","listing-draft"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-lab-listing'] = new List('listing-lab-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-ps-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-course-name','listing-semester','listing-site-url','listing-website','listing-format','listing-execute','listing-language','listing-drafts','listing-title','listing-title-prefix','listing-path','listing-outputHref','listing-date','listing-author','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count','listing-type','listing-href','listing-unit','listing-topic','listing-display-date','listing-draft',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-course-name","listing-semester","listing-site-url","listing-website","listing-format","listing-execute","listing-language","listing-drafts","listing-title","listing-title-prefix","listing-path","listing-outputHref","listing-date","listing-author","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-type","listing-href","listing-unit","listing-topic","listing-display-date","listing-draft"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-ps-listing'] = new List('listing-ps-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WP7F4QKDC8"></script>
 
 <script type="text/javascript">
@@ -137,47 +78,18 @@ gtag('js', new Date());
 gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Assignments – Stat 20">
+<meta property="og:title" content="Lab 3: Flights I – Stat 20">
 <meta property="og:description" content="Introduction to Probability and Statistics at UC Berkeley">
-<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/assets/stat20-hex.png">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/labs/flights/images/airline.png">
 <meta property="og:site_name" content="Stat 20">
-<meta property="og:image:height" content="1000">
-<meta property="og:image:width" content="866">
-<meta name="twitter:title" content="Assignments – Stat 20">
+<meta property="og:image:height" content="486">
+<meta property="og:image:width" content="730">
+<meta name="twitter:title" content="Lab 3: Flights I – Stat 20">
 <meta name="twitter:description" content="Introduction to Probability and Statistics at UC Berkeley">
-<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/1-questions-and-data/labs/unvotes/images/un-logo.png">
-<meta name="twitter:image-height" content="336">
-<meta name="twitter:image-width" content="474">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/labs/flights/images/airline.png">
+<meta name="twitter:image-height" content="486">
+<meta name="twitter:image-width" content="730">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -188,9 +100,9 @@ window.Quarto = {
     <nav class="navbar navbar-expand-sm " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
-    <img src="./assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
+    <img src="../../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -200,23 +112,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> 
+    <a class="nav-link" href="../../../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./office-hours.html"> 
+    <a class="nav-link" href="../../../office-hours.html"> 
 <span class="menu-text">Office Hours</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notes.html"> 
+    <a class="nav-link" href="../../../notes.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./assignments.html" aria-current="page"> 
+    <a class="nav-link" href="../../../assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./tutorials.html"> 
+    <a class="nav-link" href="../../../tutorials.html"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
 </ul>
@@ -244,7 +156,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignments</h1>
+<h1 class="title">Lab 3: Flights I</h1>
 </div>
 
 
@@ -261,104 +173,138 @@ window.Quarto = {
 </header>
 
 
-<section id="labs" class="level2">
-<h2 class="anchored" data-anchor-id="labs">Labs</h2>
-<p>Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/base-r.pdf">base R</a>, <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf">data visualization (ggplot2)</a>, and <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf">data wrangling (dplyr)</a>.</p>
-<div id="listing-lab-listing" class="quarto-listing quarto-listing-container-custom">
-
-<div class="grid text-center list">
-
-<div class="g-col-12 g-col-sm-6 g-col-md-4">
-<div class="card hovercard">
-<img src="./1-questions-and-data/labs/unvotes/images/un-logo.png" class="card-img-top" loading="lazy" style="border-radius: 40%;" fig-alt="Getting Started logo">
-<div class="card-body">
-<span class="card-title listing-title" style="font-weight: bold;">Lab 1: Getting Started</span><br>
-
-  
-    <a href="./1-questions-and-data/labs/unvotes/part-2.html" class="badge Instructions-badge">Instructions</a>
-  
-
-</div>
-</div>
-</div>
-
-<div class="g-col-12 g-col-sm-6 g-col-md-4">
-<div class="card hovercard">
-<img src="./2-summarizing-data/labs/class-survey/images/survey_icon.png" class="card-img-top" loading="lazy" style="border-radius: 40%;" fig-alt="Class Survey logo">
-<div class="card-body">
-<span class="card-title listing-title" style="font-weight: bold;">Lab 2: Class Survey</span><br>
-
-  
-    <a href="./2-summarizing-data/labs/class-survey/part-2.html" class="badge Instructions-badge">Instructions</a>
-  
-
-</div>
-</div>
-</div>
-
-<div class="g-col-12 g-col-sm-6 g-col-md-4">
-<div class="card hovercard">
-<img src="./2-summarizing-data/labs/flights/images/airline.png" class="card-img-top" loading="lazy" style="border-radius: 40%;" fig-alt="Flights I logo">
-<div class="card-body">
-<span class="card-title listing-title" style="font-weight: bold;">Lab 3: Flights I</span><br>
-
-  
-    <a href="./2-summarizing-data/labs/flights/part-1.html" class="badge Instructions-badge">Instructions</a>
-  
-
-</div>
-</div>
-</div>
-
-<div class="g-col-12 g-col-sm-6 g-col-md-4">
-<div class="card hovercard">
-<img src="./2-summarizing-data/labs/flights/images/airline.png" class="card-img-top" loading="lazy" style="border-radius: 40%;" fig-alt="Flights II logo">
-<div class="card-body">
-<span class="card-title listing-title" style="font-weight: bold;">Lab 4: Flights II</span><br>
-
-  
-    <a href="./2-summarizing-data/labs/flights/part-2.html" class="badge Instructions-badge">Instructions</a>
-  
-
-</div>
-</div>
-</div>
-
-</div>
-
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="problem-sets" class="level2">
-<h2 class="anchored" data-anchor-id="problem-sets">Problem Sets</h2>
-<p>On most class days, we will hand out a sheet of paper called a “problem set.” These are pen-and-paper practice problems that we work on in class. The goal of the problem sets is simply practice: they help you drill the techniques needed to complete the labs. You will scan and submit both problem sets for a given week as a single assignment each Tuesday on Gradescope. Use the “scan to pdf” feature on your phone to get all sides of both sheets into a single PDF, and submit that. The names of the assignments on gradescope tell you the names of the problem sets that are expected.</p>
-<div id="listing-ps-listing" class="quarto-listing quarto-listing-container-custom">
 <ul>
-<li>
-<a href="./1-questions-and-data/01-understanding-the-world/ws.pdf">PS: Understanding the World With Data</a>
-</li>
-<li>
-<a href="./1-questions-and-data/02-taxonomy-of-data/ws.pdf">PS: Taxonomy of Data</a>
-</li>
-<li>
-<a href="./2-summarizing-data/01-summarizing-categorical-data/ws.pdf">PS: Summarizing Categorical Data</a>
-</li>
-<li>
-<a href="./2-summarizing-data/02-summarizing-numerical-data/ws.pdf">PS: Summarizing Numerical Data</a>
-</li>
-<li>
-<a href="./2-summarizing-data/03-a-grammar-of-graphics/ws.pdf">PS: A Grammar of Graphics</a>
-</li>
-<li>
-<a href="./2-summarizing-data/04-conditioning/ws.pdf">PS: Conditioning</a>
-</li>
-<li>
-<a href="./2-summarizing-data/05-summarizing-associations/ws.pdf">PS: Summarizing Numerical Associations</a>
-</li>
+<li>Link: <a href="https://stat20.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fberkeley-stat20%2Fstat20-labs&amp;urlpath=rstudio%2F&amp;branch=sp26">Load lab template in RStudio</a></li>
 </ul>
-<div class="listing-no-matching d-none">No matching items</div>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
+<p>Believe it or not, detailed information about flights is public record! The Bureau of Transportation Statistics, a federal agency, collects and hosts this data for public download. The data we are working with this week (and next) consists of all flights that left OAK and SFO during the 2020 calendar year. Here are some interesting points.:</p>
+<ul>
+<li><p>If you flew in 2020 out of either of these airports, you can find out the exact plane you were on and exactly when it departed and landed.</p></li>
+<li><p>2020 saw the larger, global onset of the COVID-19, so many flights were grounded at the start of the pandemic. Might we see evidence of this in the data?</p></li>
+</ul>
+<p>We will be answering questions like these (and more) in this lab. The <code>flights</code> data frame is located in the <code>stat20data</code> package. Once you’ve loaded in this package, you can move it to your environment by running the following line of R code:</p>
+</section>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<section id="part-a" class="level3">
+<h3 class="anchored" data-anchor-id="part-a">part a</h3>
+<p>What is the unit of observation in the <code>flights</code> data frame?</p>
+</section>
+<section id="part-b" class="level3">
+<h3 class="anchored" data-anchor-id="part-b">part b</h3>
+<p>What are the dimensions of the <code>flights</code> data frame, in rows and columns?</p>
+</section>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<section id="part-a-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-1">part a</h3>
+<p>List three variables in the <code>flights</code> data frame that are categorical.</p>
+</section>
+<section id="part-b-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-1">part b</h3>
+<p>List three variables in the <code>flights</code> data frame that are numerical.</p>
+</section>
+<section id="part-c" class="level3">
+<h3 class="anchored" data-anchor-id="part-c">part c</h3>
+<p>Are there any variables which are recorded using numbers but should be treated categorically? Write them here.</p>
+</section>
+<section id="part-d" class="level3">
+<h3 class="anchored" data-anchor-id="part-d">part d</h3>
+<p>Are there any variables which could reasonably be interpreted as either categorical or numerical? Write them here.</p>
+</section>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p>What is your guess for the units/format used to record the departure time? Said another way, what would a value of 1517 represent?</p>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<section id="part-a-2" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-2">part a</h3>
+<p>Write <code>ggplot2</code> code to create a bar chart that shows the distribution by month of all the flights leaving the Bay Area (from SFO and OAK airports together).</p>
+</section>
+<section id="part-b-2" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-2">part b</h3>
+<p>Do you see any sign of an effect of the pandemic?</p>
+</section>
+</section>
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
+<section id="part-a-3" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-3">part a</h3>
+<p>Write <code>ggplot2</code> code to create a histogram showing the distribution of departure delays for all flights.</p>
+</section>
+<section id="part-b-3" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-3">part b</h3>
+<p>Using the <code>lims()</code> <code>ggplot</code> layer, set the limits of the x-axis to focus on where most of the data lie.</p>
+</section>
+<section id="part-c-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-1">part c</h3>
+<p>Add a text annotation to your plot that explains the meaning of a negative departure delay.</p>
+</section>
+<section id="part-d-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-1">part d</h3>
+<p>Describe the shape and modality of the distribution in 1 to 2 sentences.</p>
+</section>
+</section>
+<section id="question-6" class="level2">
+<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
+<blockquote class="blockquote">
+<p>What is the destination and delay time (in hrs) for the flight that was <em>most</em> delayed?</p>
+</blockquote>
+<p>Write a <code>dplyr</code> pipeline to answer this question. Then, explain the result of your pipeline in one sentence.</p>
+</section>
+<section id="question-7" class="level2">
+<h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
+<p>If you flew out of OAK or SFO during the year 2020, what is the tail number of the plane that you were on? Write a <code>dplyr</code> pipeline to answer this question. If you did not fly in this period, find the tail number of the plane that flew JetBlue flight 40 to New York’s JFK Airport from SFO on May 1st.</p>
+</section>
+<section id="question-8" class="level2">
+<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
+<section id="part-a-4" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-4">part a</h3>
+<p>What proportion of all flights left on schedule? Write a <code>dplyr</code> pipeline to answer this question.</p>
+</section>
+<section id="part-b-4" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-4">part b</h3>
+<p>What proportion flights left on schedule for each airport (OAK and SFO)? Write a <code>dplyr</code> pipeline to answer this question.</p>
+</section>
+</section>
+<section id="question-9" class="level2">
+<h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
+<p>The plot below shows a relationship between the number of flights <em>going out of SFO</em> and the average departure delay. It illustrates the hypothesis that more flights on a given day would lead to a more congested airport which would lead to greater delays on average. Each point represents a single day in 2020; there are 366 of them on the plot.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="part-1_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
-
+</div>
+</div>
+<section id="part-a-5" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-5">part a</h3>
+<p>Describe the variables featured in the plot and their aesthetic mappings according to the Grammar of Graphics.</p>
+</section>
+<section id="part-b-5" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-5">part b</h3>
+<p>Describe also any settings that you see, if any, according to the Grammar of Graphics.</p>
+</section>
+<section id="part-c-2" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-2">part c</h3>
+<p>Form a single <code>dplyr</code> pipeline that will reproduce the plot, starting with the original <code>flights</code> data frame. <a href="https://www.sthda.com/english/wiki/ggplot2-point-shapes">This</a> link might be helpful!</p>
+</section>
+</section>
+<section id="last-question" class="level2">
+<h2 class="anchored" data-anchor-id="last-question">Last Question</h2>
+<p>Will you ensure that your submission to Gradescope…</p>
+<ol type="1">
+<li>is of a pdf generated from a qmd file,</li>
+<li>has all of your code visible to readers,</li>
+<li>and assigns each of the questions to all pages that show your work for that question?</li>
+</ol>
+<p>(This one is easy! Just answer “yes” or “no”)</p>
 
 
 </section>
@@ -776,7 +722,7 @@ window.Quarto = {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./license.html">
+    <a class="nav-link" href="../../../license.html">
 <p>License</p>
 </a>
   </li>  

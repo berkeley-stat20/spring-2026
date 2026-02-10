@@ -173,127 +173,103 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </header>
 
 
-<ul>
-<li>Link: <a href="https://stat20.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fberkeley-stat20%2Fstat20-labs&amp;urlpath=rstudio%2F&amp;branch=sp26">Load lab template in RStudio</a></li>
-</ul>
 <section id="the-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-data">The Data</h2>
-<p>Believe it or not, detailed information about flights is public record! The Bureau of Transportation Statistics, a federal agency, collects and hosts this data for public download. The data we are working with this week (and next) consists of all flights that left OAK and SFO during the 2020 calendar year. Here are some interesting points.:</p>
-<ul>
-<li><p>If you flew in 2020 out of either of these airports, you can find out the exact plane you were on and exactly when it departed and landed.</p></li>
-<li><p>2020 saw the larger, global onset of the COVID-19, so many flights were grounded at the start of the pandemic. Might we see evidence of this in the data?</p></li>
-</ul>
-<p>We will be answering questions like these (and more) in this lab. The <code>flights</code> data frame is located in the <code>stat20data</code> package. Once you’ve loaded in this package, you can move it to your environment by running the following line of R code:</p>
+<p>We will be answering more questions using the <code>flights</code> data frame located in the <code>stat20data</code> package!</p>
 </section>
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<section id="part-a" class="level3">
-<h3 class="anchored" data-anchor-id="part-a">part a</h3>
-<p>What is the unit of observation in the <code>flights</code> data frame?</p>
-</section>
-<section id="part-b" class="level3">
-<h3 class="anchored" data-anchor-id="part-b">part b</h3>
-<p>What are the dimensions of the <code>flights</code> data frame, in rows and columns?</p>
-</section>
+<p>Mutate a new column onto the original <code>flights</code> data frame which, for each flight, contains the average speed of the plane, <em>measured in miles per hour</em>. Call the new column <code>avg_speed</code>, and save the resulting data frame back into the object <code>flights</code>.</p>
+<p><em>Hint: Look through the column names or the help file to find variables that can be used to calculate this.</em></p>
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<section id="part-a-1" class="level3">
-<h3 class="anchored" data-anchor-id="part-a-1">part a</h3>
-<p>List three variables in the <code>flights</code> data frame that are categorical.</p>
+<p>In this question, we’ll be focusing on the relationship between <em>distance and average speed.</em></p>
+<section id="part-a" class="level3">
+<h3 class="anchored" data-anchor-id="part-a">part a</h3>
+<p>Create a scatter plot to visualize the above relationship. Place distance on the x axis and average speed on the y axis. Label your axes.</p>
 </section>
-<section id="part-b-1" class="level3">
-<h3 class="anchored" data-anchor-id="part-b-1">part b</h3>
-<p>List three variables in the <code>flights</code> data frame that are numerical.</p>
+<section id="part-b" class="level3">
+<h3 class="anchored" data-anchor-id="part-b">part b</h3>
+<p>Describe the relationship between the two variables that you see. Specifically, comment on the <em>direction</em>, <em>shape</em>, and <em>strength</em> of the association.</p>
 </section>
 <section id="part-c" class="level3">
 <h3 class="anchored" data-anchor-id="part-c">part c</h3>
-<p>Are there any variables which are recorded using numbers but should be treated categorically? Write them here.</p>
+<p>Add code to title your plot with a brief summary of what you wrote in <strong>part b</strong>.</p>
 </section>
 <section id="part-d" class="level3">
 <h3 class="anchored" data-anchor-id="part-d">part d</h3>
-<p>Are there any variables which could reasonably be interpreted as either categorical or numerical? Write them here.</p>
+<p>Write <code>dplyr</code> code to calculate the correlation coefficient between average speed and distance.</p>
+</section>
+<section id="part-e" class="level3">
+<h3 class="anchored" data-anchor-id="part-e">part e</h3>
+<p>Based on your answers to <strong>part c</strong> and <strong>part d</strong>, do you believe it is appropriate to fit a linear model explaining average speed with distance? Explain in one to two sentences.</p>
 </section>
 </section>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>What is your guess for the units/format used to record the departure time? Said another way, what would a value of 1517 represent?</p>
+<p>In this question, we’ll be focusing on the relationship between <em>departure delay and arrival delay</em>.</p>
+<section id="part-a-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-a-1">part a</h3>
+<p>Create a scatter plot to visualize this relationship. Place departure delay on the x axis and arrival delay on the y axis.</p>
+</section>
+<section id="part-b-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-b-1">part b</h3>
+<p>Describe the relationship between the two variables that you see. Specifically, comment on the <em>direction</em>, <em>shape</em>, and <em>strength</em> of the association.</p>
+</section>
+<section id="part-c-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-c-1">part c</h3>
+<p>Give the plot a title based on what you wrote in <strong>part b</strong>.</p>
+</section>
+<section id="part-d-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-d-1">part d</h3>
+<p>Write <code>dplyr</code> code to calculate the correlation coefficient between arrival delay and departure delay.</p>
+</section>
+<section id="part-e-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-e-1">part e</h3>
+<p>Based on your answers to <strong>parts a-e</strong>, do you believe it is appropriate to fit a linear model explaining average speed with distance? Explain in one to two sentences.</p>
+</section>
 </section>
 <section id="question-4" class="level2">
 <h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
 <section id="part-a-2" class="level3">
 <h3 class="anchored" data-anchor-id="part-a-2">part a</h3>
-<p>Write <code>ggplot2</code> code to create a bar chart that shows the distribution by month of all the flights leaving the Bay Area (from SFO and OAK airports together).</p>
+<p>Fit a linear model using <code>lm()</code> to estimate <em>arrival delay using departure delay</em>.</p>
 </section>
 <section id="part-b-2" class="level3">
 <h3 class="anchored" data-anchor-id="part-b-2">part b</h3>
-<p>Do you see any sign of an effect of the pandemic?</p>
+<p>Write out the mathematical form of the linear model based on the output in <strong>part a</strong>.</p>
 </section>
 </section>
 <section id="question-5" class="level2">
 <h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
 <section id="part-a-3" class="level3">
 <h3 class="anchored" data-anchor-id="part-a-3">part a</h3>
-<p>Write <code>ggplot2</code> code to create a histogram showing the distribution of departure delays for all flights.</p>
+<p>Fit a linear model using <code>lm()</code> to estimate <em>arrival delay using both departure delay and distance</em>.</p>
 </section>
 <section id="part-b-3" class="level3">
 <h3 class="anchored" data-anchor-id="part-b-3">part b</h3>
-<p>Set the limits of the x-axis to focus on where most of the data lie.</p>
-</section>
-<section id="part-c-1" class="level3">
-<h3 class="anchored" data-anchor-id="part-c-1">part c</h3>
-<p>Add a text annotation to your plot that explains the meaning of a negative departure delay.</p>
-</section>
-<section id="part-d-1" class="level3">
-<h3 class="anchored" data-anchor-id="part-d-1">part d</h3>
-<p>Describe the shape and modality of the distribution in 1 to 2 sentences.</p>
+<p>Write out the mathematical form of the linear model based on the output in <strong>part a</strong>.</p>
 </section>
 </section>
 <section id="question-6" class="level2">
 <h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
-<blockquote class="blockquote">
-<p>What is the destination and delay time (in hrs) for the flight that was <em>most</em> delayed?</p>
-</blockquote>
-<p>Write a <code>dplyr</code> pipeline to answer this question. Then, explain the result of your pipeline in one sentence.</p>
-</section>
-<section id="question-7" class="level2">
-<h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
-<p>If you flew out of OAK or SFO during the year 2020, what is the tail number of the plane that you were on? Write a <code>dplyr</code> pipeline to answer this question. If you did not fly in this period, find the tail number of the plane that flew JetBlue flight 40 to New York’s JFK Airport from SFO on May 1st.</p>
-</section>
-<section id="question-8" class="level2">
-<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
 <section id="part-a-4" class="level3">
 <h3 class="anchored" data-anchor-id="part-a-4">part a</h3>
-<p>What proportion of all flights left on schedule? Write a <code>dplyr</code> pipeline to answer this question.</p>
+<p>Create a new data frame from flights with the following columns:</p>
+<ul>
+<li><p>arrival delay</p></li>
+<li><p>departure delay</p></li>
+<li><p>distance</p></li>
+<li><p><em>the residuals</em> of the linear model you fit in <strong>Question 5</strong>.</p></li>
+</ul>
 </section>
 <section id="part-b-4" class="level3">
 <h3 class="anchored" data-anchor-id="part-b-4">part b</h3>
-<p>What proportion flights left on schedule for each airport (OAK and SFO)? Write a <code>dplyr</code> pipeline to answer this question.</p>
-</section>
-</section>
-<section id="question-9" class="level2">
-<h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
-<p>The plot below shows a relationship between the number of flights <em>going out of SFO</em> and the average departure delay. It illustrates the hypothesis that more flights on a given day would lead to a more congested airport which would lead to greater delays on average. Each point represents a single day in 2020; there are 366 of them on the plot.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="part-2_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<section id="part-a-5" class="level3">
-<h3 class="anchored" data-anchor-id="part-a-5">part a</h3>
-<p>Describe the variables featured in the plot and their aesthetic mappings according to the Grammar of Graphics.</p>
-</section>
-<section id="part-b-5" class="level3">
-<h3 class="anchored" data-anchor-id="part-b-5">part b</h3>
-<p>Describe also any settings that you see, if any, according to the Grammar of Graphics.</p>
-</section>
-<section id="part-c-2" class="level3">
-<h3 class="anchored" data-anchor-id="part-c-2">part c</h3>
-<p>Form a single <code>dplyr</code> pipeline that will reproduce the plot, starting with the original <code>flights</code> data frame. <a href="https://www.sthda.com/english/wiki/ggplot2-point-shapes">This</a> link might be helpful!</p>
+<blockquote class="blockquote">
+<p>Which flight carrier had the smallest residuals, on average?</p>
+</blockquote>
+<p>Write <code>dplyr</code> code and then use it to answer this question in one sentence.</p>
 </section>
 </section>
 <section id="last-question" class="level2">

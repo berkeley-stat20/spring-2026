@@ -248,7 +248,7 @@ STAT 20: Introduction to Probability and Statistics
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<div id="timer_1695ed87bf72ca57716e694e9c9f30eebbcd6eb3" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_8136f0d660e4dac01aa8b4ddf2e8de6e785d5846" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -262,7 +262,7 @@ STAT 20: Introduction to Probability and Statistics
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-2-1.png" class="quarto-figure quarto-figure-center r-stretch" width="768"><div class="poll">
 <p>Which <em>four</em> plots exhibit the strongest association?</p>
 </div>
-<div id="timer_1695ed87bf72ca57716e694e9c9f30eebbcd6eb3" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_8136f0d660e4dac01aa8b4ddf2e8de6e785d5846" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -546,37 +546,11 @@ STAT 20: Introduction to Probability and Statistics
 <!-- Come up with at least one example from real life where you might expect to see this kind of U-shaped association. Come up with another example of an inverted U-shape. -->
 <!-- ::: -->
 </section>
-<section id="describing-associations" class="slide level2">
-<h2>Describing Associations</h2>
-<p>When considering the structure in a scatter plot, pay attention to:</p>
-<ol type="1">
-<li>The strength of the association
-<ul>
-<li><em>How much does the conditional distribution of y change when you move along the x?</em></li>
-</ul></li>
-</ol>
-<div class="fragment">
-<ol start="2" type="1">
-<li>The shape of the association
-<ul>
-<li><em>Linear? Quadratic? Cubic or beyond?</em></li>
-</ul></li>
-</ol>
-</div>
-<div class="fragment">
-<ol start="3" type="1">
-<li>The direction of the (linear) association
-<ul>
-<li><em>Positive or negative?</em></li>
-</ul></li>
-</ol>
-</div>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="take-a-guess" class="slide level2">
+<h2>Take a guess:</h2>
 
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><div class="poll">
-<p>Guess: Which state has the highest poverty rate? The lowest?</p>
+<p>Which state has the highest poverty rate? The lowest?</p>
 </div>
 <aside class="notes">
 <p>This can be asked without poll-everywhere, without group discussion, just asking students to shout out which states they think will have highest and lowest.</p>
@@ -593,8 +567,8 @@ STAT 20: Introduction to Probability and Statistics
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="marginal-distributions-of-poverty-and-graduation-rate" class="slide level2">
+<h2>Marginal distributions of poverty and graduation rate</h2>
 
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><aside class="notes">
 <p>This is an equally-useful set of plots to answer the previous question.</p>
@@ -611,14 +585,15 @@ STAT 20: Introduction to Probability and Statistics
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
+<section id="the-scatter-plot-and-linear-model-answer-conditional-questions-such-as" class="slide level2">
+<h2>The scatter plot and linear model answer “conditional” questions, such as:</h2>
 
 <img data-src="slides_files/figure-revealjs/unnamed-chunk-16-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><div class="fragment">
-<div class="poll">
-<p>Which state has the highest graduation rate given its poverty rate?</p>
-</div>
-<div id="timer_1695ed87bf72ca57716e694e9c9f30eebbcd6eb3" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<ul>
+<li>Which state is most <span style="color: #D33">outperforming</span> the model’s expectations?</li>
+<li>That is, which state has the <span style="color: #D33">highest graduation rate <em>given its poverty rate</em></span>?</li>
+</ul>
+<div id="timer_8136f0d660e4dac01aa8b4ddf2e8de6e785d5846" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="top: 0;right: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -639,10 +614,34 @@ STAT 20: Introduction to Probability and Statistics
           display:block!important;
       }</style></aside>
 </div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-17-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><ul>
+<li>Which state is most <span style="color: #D33">outperforming</span> the model’s expectations?</li>
+<li>That is, which state has the <span style="color: #D33">highest graduation rate <em>given its poverty rate</em></span>?</li>
+</ul>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-18-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><ul>
+<li>Which state is most <span style="color: #F3F">underperforming</span> the model’s expectations?</li>
+<li>That is, which state has the <span style="color: #F3F"><em>lowest</em> graduation rate given its poverty rate</span> ?</li>
+</ul>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+
+<img data-src="slides_files/figure-revealjs/unnamed-chunk-19-1.png" class="quarto-figure quarto-figure-center r-stretch" width="480"><ul>
+<li>Which state is most <span style="color: #F3F">underperforming</span> the model’s expectations?</li>
+<li>That is, which state has the <span style="color: #F3F"><em>lowest</em> graduation rate given its poverty rate</span> ?</li>
+</ul>
 </section></section>
 <section id="problem-set-summarizing-numerical-associations" class="title-slide slide level1 center">
 <h1>Problem Set: Summarizing Numerical Associations</h1>
-<div id="timer_1695ed87bf72ca57716e694e9c9f30eebbcd6eb3" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_8136f0d660e4dac01aa8b4ddf2e8de6e785d5846" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -653,7 +652,7 @@ STAT 20: Introduction to Probability and Statistics
 
 <section id="break" class="title-slide slide level1 center">
 <h1>Break</h1>
-<div id="timer_1695ed87bf72ca57716e694e9c9f30eebbcd6eb3" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_8136f0d660e4dac01aa8b4ddf2e8de6e785d5846" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -662,9 +661,9 @@ STAT 20: Introduction to Probability and Statistics
  </div>
 </section>
 
-<section id="lab-part-2-flights" class="title-slide slide level1 center">
-<h1>Lab Part 2: Flights</h1>
-<div id="timer_1695ed87bf72ca57716e694e9c9f30eebbcd6eb3" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<section id="lab-flights-ii" class="title-slide slide level1 center">
+<h1>Lab: Flights II</h1>
+<div id="timer_8136f0d660e4dac01aa8b4ddf2e8de6e785d5846" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
