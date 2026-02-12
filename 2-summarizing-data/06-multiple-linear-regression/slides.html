@@ -224,27 +224,61 @@ STAT 20: Introduction to Probability and Statistics
 </div>
 
 </section>
-<section>
-<section id="concept-questions" class="title-slide slide level1 center">
-<h1>Concept Questions</h1>
-
+<section id="concept-questions" class="slide level2">
+<h2>Concept Questions</h2>
+<p>Today’s questions are centered around a few different linear models made using the data in the <code>penguins</code> data frame.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(flipper_length_mm <span class="sc">~</span> bill_length_mm, <span class="at">data =</span> penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>m2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(flipper_length_mm <span class="sc">~</span> bill_length_mm <span class="sc">+</span> species, </span>
+<span id="cb2-2"><a></a>         <span class="at">data =</span> penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>m3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(flipper_length_mm <span class="sc">~</span> bill_length_mm <span class="sc">+</span> bill_depth_mm, </span>
+<span id="cb3-2"><a></a>         <span class="at">data =</span> penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>m4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(flipper_length_mm <span class="sc">~</span> bill_length_mm <span class="sc">+</span> </span>
+<span id="cb4-2"><a></a>  bill_depth_mm <span class="sc">+</span> species, </span>
+<span id="cb4-3"><a></a>         <span class="at">data =</span> penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
 </section>
 <section id="question-1" class="slide level2">
 <h2>Question 1</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(bill_depth_mm <span class="sc">~</span> bill_length_mm, <span class="at">data =</span> penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="countdown" id="timer_a2dd8d98" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
-<div class="fragment">
+</div>
+</div>
+<p><br>
+</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>m2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(bill_depth_mm <span class="sc">~</span> bill_length_mm <span class="sc">+</span> body_mass_g <span class="sc">+</span> species, </span>
-<span id="cb2-2"><a></a>         <span class="at">data =</span> penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>m1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = flipper_length_mm ~ bill_length_mm, data = penguins)
+
+Coefficients:
+   (Intercept)  bill_length_mm  
+       127.330           1.674  </code></pre>
+</div>
 </div>
 <div class="poll">
-<p>How many more coefficients does the second model have than the first?</p>
+<p>Which is the correct interpretation of the coefficient in front of <strong>bill length</strong>?</p>
 </div>
 <aside class="notes">
-<p>Remind students that they need to remember whether <code>species</code> and <code>body_mass_g</code> are numerical or categorical. Students should know how many species there are (three).</p>
-<p>One addl. coefficient for body mass; two addl. for species (one less than the number of species, which is three). This gives a total of three more coefficients.</p>
+<p>This assesses students’ ability to interpret a slope coefficient in simple linear regression based on how their values impact the estimated y variable.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -256,18 +290,12 @@ STAT 20: Introduction to Probability and Statistics
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</div>
-</section></section>
-<section>
-<section id="questions-2-4" class="title-slide slide level1 center">
-<h1>Questions 2-4</h1>
-<p>Consider the following multiple linear regression model, which will be the subject of the next three review questions.</p>
 </section>
 <section id="question-2" class="slide level2">
 <h2>Question 2</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_4d64c629" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_07abb1fb" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -276,26 +304,22 @@ STAT 20: Introduction to Probability and Statistics
 <p><br>
 </p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>m2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>m2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = bill_depth_mm ~ bill_length_mm + body_mass_g + species, 
-    data = penguins)
+lm(formula = flipper_length_mm ~ bill_length_mm + species, data = penguins)
 
 Coefficients:
-     (Intercept)    bill_length_mm       body_mass_g  speciesChinstrap  
-        10.33083           0.09484           0.00117          -0.90748  
-   speciesGentoo  
-        -5.80117  </code></pre>
+     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo  
+         147.563             1.096            -5.247            17.552  </code></pre>
 </div>
 </div>
 <div class="poll">
-<p>Which is the correct interpretation of the coefficient in front of <strong>bill length</strong>? <em>Select all that apply</em>.</p>
+<p>Which is the correct interpretation of the coefficient in front of <strong>bill length</strong>?</p>
 </div>
 <aside class="notes">
-<p>This one assesses their ability to use a conditional interpretation of a regression coefficient (controlling for the other variables in the model…).</p>
-<p>The correct interpretation controls for both other variables (body mass and species), and has the x variable and the y variable in the correct places.</p>
+<p>This one assesses their ability to use a conditional interpretation of a regression coefficient (controlling for the other variables in the model…), in the case where the other variable is categorical.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -312,7 +336,7 @@ Coefficients:
 <h2>Question 3</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_74e495f2" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_16e6902f" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -321,26 +345,23 @@ Coefficients:
 <p><br>
 </p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>m2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>m2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = bill_depth_mm ~ bill_length_mm + body_mass_g + species, 
-    data = penguins)
+lm(formula = flipper_length_mm ~ bill_length_mm + species, data = penguins)
 
 Coefficients:
-     (Intercept)    bill_length_mm       body_mass_g  speciesChinstrap  
-        10.33083           0.09484           0.00117          -0.90748  
-   speciesGentoo  
-        -5.80117  </code></pre>
+     (Intercept)    bill_length_mm  speciesChinstrap     speciesGentoo  
+         147.563             1.096            -5.247            17.552  </code></pre>
 </div>
 </div>
 <div class="poll">
-<p>Which is the correct interpretation of the coefficient in front of <strong>Gentoo</strong>?</p>
+<p>Which is the correct interpretation of the coefficient in front of <strong>Gentoo</strong>? <em>Select all that apply.</em></p>
 </div>
 <aside class="notes">
-<p>This one assesses their ability to use a conditional interpretation of a regression coefficient (controlling for the other variables in the model…)</p>
-<p>The correct interpretation needs to involve a comparison to the reference level, Adelie and should not involve anything about bill length or body mass, (other than to say they should be fixed).</p>
+<p>This one assesses their ability to interpret an indicator varaible coefficient.</p>
+<p>The most common interpretation should involve a comparison to the reference level (Adelie) and will mention that we need to fix the value of the other, numerical variable in the model.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -357,7 +378,7 @@ Coefficients:
 <h2>Question 4</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_d4d015a6" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_be7505c9" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -366,25 +387,61 @@ Coefficients:
 <p><br>
 </p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>m2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>m3</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = bill_depth_mm ~ bill_length_mm + body_mass_g + species, 
+lm(formula = flipper_length_mm ~ bill_length_mm + bill_depth_mm, 
     data = penguins)
 
 Coefficients:
-     (Intercept)    bill_length_mm       body_mass_g  speciesChinstrap  
-        10.33083           0.09484           0.00117          -0.90748  
-   speciesGentoo  
-        -5.80117  </code></pre>
+   (Intercept)  bill_length_mm   bill_depth_mm  
+       194.218           1.409          -3.218  </code></pre>
 </div>
 </div>
 <div class="poll">
-<p>How would this linear model best be visualized?</p>
+<p>Which is the correct interpretation of the coefficient in front of <strong>bill length</strong>?</p>
 </div>
 <aside class="notes">
-<p>Three numerical variables means we will have planes in a 3D space. The coefficients for the dummy variables will shift the planes up and down. There are three species, so three parallel planes is what we are looking for.</p>
+<p>This one assesses their ability to use a conditional interpretation of a regression coefficient (controlling for the other variables in the model…), when the other variable is numerical.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="question-5" class="slide level2">
+<h2>Question 5</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_93ebc962" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<p><br>
+</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>m1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(flipper_length_mm <span class="sc">~</span> bill_length_mm , </span>
+<span id="cb13-2"><a></a>         <span class="at">data =</span> penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>m4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(flipper_length_mm <span class="sc">~</span> bill_length_mm <span class="sc">+</span> </span>
+<span id="cb14-2"><a></a>  bill_depth_mm <span class="sc">+</span> species, </span>
+<span id="cb14-3"><a></a>         <span class="at">data =</span> penguins)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="poll">
+<p>How many more coefficients does the model <code>m4</code> have than <code>m1</code>?</p>
+</div>
+<aside class="notes">
+<p><code>m4</code> has one more numerical variable than <code>m1</code>, and one more categorical variable as well. This adds 1 more coefficient and 2 more coefficients (there are three penguin species, so 3-1), respectively. The correct answer should be three more coefficients.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -397,6 +454,39 @@ Coefficients:
           display:block!important;
       }</style></aside>
 <!--
+## Question 1
+
+
+::: {.cell}
+
+```{.r .cell-code}
+m1 <- lm(flipper_length_mm ~ bill_length_mm, data = penguins)
+```
+:::
+
+
+. . . 
+
+
+::: {.cell}
+
+```{.r .cell-code}
+m2 <- lm(flipper_length_mm ~ bill_length_mm + body_mass_g + species, 
+         data = penguins)
+```
+:::
+
+
+
+
+:::notes
+Remind students that they need to remember whether `species` and `body_mass_g` are numerical or categorical. Students should know how many species there are (three). 
+
+One addl. coefficient for body mass; two addl. for species (one less than the number of species, which is three). This gives a total of three more coefficients.
+
+Three numerical variables means we will have planes in a 3D space. The coefficients for the dummy variables will shift the planes up and down. There are three species, so three parallel planes is what we are looking for.
+:::
+
 
 ## Question 5
 
@@ -426,7 +516,7 @@ What are the dimensions of `GPA_summary`?
 ::: {.cell-output-display}
 
 ```{=html}
-<div class="countdown" id="timer_3d1f77b2" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_348c5629" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -453,7 +543,7 @@ The correct answer in the poll should be 3x4. The three rows are for the three l
 ::: {.cell-output-display}
 
 ```{=html}
-<div class="countdown" id="timer_aa206e75" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_74c0cc19" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -525,7 +615,7 @@ Coefficients:
 
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
-![](slides_files/figure-revealjs/unnamed-chunk-15-1.png){fig-align='center' width=960}
+![](slides_files/figure-revealjs/unnamed-chunk-24-1.png){fig-align='center' width=960}
 :::
 :::
 
@@ -538,7 +628,7 @@ Coefficients:
 ::: {.cell-output-display}
 
 ```{=html}
-<div class="countdown" id="timer_9dd7b35e" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_c81be9af" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -578,7 +668,7 @@ You may want to follow this question up by drawing on a board a data frame with 
 
 ::: {.cell layout-align="center"}
 ::: {.cell-output-display}
-![](slides_files/figure-revealjs/unnamed-chunk-18-1.png){fig-align='center' width=960}
+![](slides_files/figure-revealjs/unnamed-chunk-27-1.png){fig-align='center' width=960}
 :::
 :::
 
@@ -623,7 +713,7 @@ A variable that is 1 if an observation takes a particular level of a categorical
 ::: {.cell-output-display}
 
 ```{=html}
-<div class="countdown" id="timer_3cc8df2f" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_2418c0fd" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -758,10 +848,10 @@ This one assess their ability to use a conditional interpretation of a regressio
 <!--               z = ~z_west, -->
 <!--               showscale = FALSE) -->
 <!-- ``` -->
-</section></section>
+</section>
 <section id="problem-set-multiple-linear-regression" class="title-slide slide level1 center">
 <h1>Problem Set: Multiple Linear Regression</h1>
-<div id="timer_d27d3ef3c65d8cffd0f1f286c9356e26be5680fa" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_a0fc667efd5e610721b0029e7c763bdd4a7084f0" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -772,7 +862,7 @@ This one assess their ability to use a conditional interpretation of a regressio
 
 <section id="break" class="title-slide slide level1 center">
 <h1>Break</h1>
-<div id="timer_d27d3ef3c65d8cffd0f1f286c9356e26be5680fa" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_a0fc667efd5e610721b0029e7c763bdd4a7084f0" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -783,7 +873,7 @@ This one assess their ability to use a conditional interpretation of a regressio
 
 <section id="lab-flights-ii" class="title-slide slide level1 center">
 <h1>Lab: Flights II</h1>
-<div id="timer_d27d3ef3c65d8cffd0f1f286c9356e26be5680fa" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_a0fc667efd5e610721b0029e7c763bdd4a7084f0" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
