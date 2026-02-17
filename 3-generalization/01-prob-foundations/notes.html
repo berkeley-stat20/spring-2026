@@ -45,6 +45,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-3d5d2dc666b99e3ac51654de1ffd1bbd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -467,7 +469,7 @@ P(A) = \frac{k}{n}
 </figure>
 </div>
 <p>Suppose we toss a fair coin, and I ask you what is the chance of the coin landing heads. Like most people, you reply 50%. Why? Well… (you reply) there are two possible things that can happen, and if the coin is fair, then they are both equally likely, so the probability of heads is 1/2 or 50%.</p>
-<p>Here, we have thought about an event (the coin landing heads), seen that there is one outcome in that event, and two outcomes in the outcome space, so we say the probability of the event, <span class="math inline">\(P(\text{Heads})\)</span>, is 1/2.</p>
+<p>Here, we have thought about an event (the coin landing heads), seen that there is one outcome in that event, and two (equally likely) outcomes in the outcome space, so we say the probability of the event, <span class="math inline">\(P(\text{Heads})\)</span>, is 1/2.</p>
 </section>
 <section id="example-tossing-a-fair-six-sided-diedice" class="level3">
 <h3 class="anchored" data-anchor-id="example-tossing-a-fair-six-sided-diedice">Example: Tossing a fair six-sided die<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h3>
@@ -515,7 +517,7 @@ P(A) = \frac{k}{n}
 <dl>
 <dt>Axiom 1</dt>
 <dd>
-The chance of any event is at least <span class="math inline">\(0\)</span>: <span class="math inline">\(P(A) \ge 0\)</span> for any event <span class="math inline">\(A\)</span>.
+The chance of any event is at least <span class="math inline">\(0\)</span>: <span class="math inline">\(P(A) \ge 0\)</span> for any event <span class="math inline">\(A\)</span>. In other words, there are no negative probabilities.
 </dd>
 <dt>Axiom 2</dt>
 <dd>
@@ -530,6 +532,7 @@ The chance of an outcome being in <span class="math inline">\(\Omega\)</span> is
 An event with no outcomes in it. Denoted by either empty braces <span class="math inline">\(\{\}\)</span> or the symbol for the empty set <span class="math inline">\(\emptyset\)</span>. The probability of the impossible event is <span class="math inline">\(0\)</span>.
 </dd>
 </dl>
+<p>For example, if you roll a standard 6-sided die, the event of “rolling an 8” is impossible. There is no 8 anywhere on a standard die, so 8 is not in the outcome space.</p>
 </div>
 <div class="def">
 <dl>
@@ -538,6 +541,13 @@ An event with no outcomes in it. Denoted by either empty braces <span class="mat
 Given events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, we can define a new event called <span class="math inline">\(A\)</span> <em>or</em> <span class="math inline">\(B\)</span>, which consists of all the outcomes that are <em>either</em> in <span class="math inline">\(A\)</span> <em>or</em> in <span class="math inline">\(B\)</span> or in both. This is also written as <span class="math inline">\(A \cup B\)</span>, read as ``<span class="math inline">\(A\)</span> union <span class="math inline">\(B\)</span>’’.
 </dd>
 </dl>
+<p>Example: let’s say you roll a standard 6-sided die, and define these two events:</p>
+<ul>
+<li><span class="math inline">\(A = \{1,2,3\}\)</span> (the roll is 3 or less)</li>
+<li><span class="math inline">\(B = \{1,3,5\}\)</span> (the roll is odd)</li>
+</ul>
+<p>Then the event <span class="math inline">\(A \cup B = \{1,2,3,5\}\)</span>.</p>
+<p>Put differently, in order for a die roll to be 3-or-less, odd, or both, we need to roll a 1, 2, 3, or 5.</p>
 </div>
 <div class="def">
 <dl>
@@ -546,27 +556,29 @@ Given events <span class="math inline">\(A\)</span>, <span class="math inline">\
 Given events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, we can define a new event called <span class="math inline">\(A\)</span> <em>and</em> <span class="math inline">\(B\)</span>, which consists of all the outcomes that are <em>both</em> in <span class="math inline">\(A\)</span> <em>and</em> in <span class="math inline">\(B\)</span>. This is also written as <span class="math inline">\(A \cap B\)</span>, read as ``<span class="math inline">\(A\)</span> intersect <span class="math inline">\(B\)</span>’’.
 </dd>
 </dl>
+<p>Same example: let’s say you roll a standard 6-sided die, and define these two events:</p>
+<ul>
+<li><span class="math inline">\(A = \{1,2,3\}\)</span> (the roll is 3 or less)</li>
+<li><span class="math inline">\(B = \{1,3,5\}\)</span> (the roll is odd)</li>
+</ul>
+<p>Then the event <span class="math inline">\(A \cap B = \{1,3\}\)</span>. These are the only outcomes in both events.</p>
+<p>Put differently, in order for a die roll to be both odd <em>and</em> 3-or-less, we need to roll a 1 or a 3.</p>
 </div>
 <p>Now we consider events that <em>don’t</em> intersect or overlap at all, that is, they are <em>disjoint</em> from each other, or mutually exclusive:</p>
 <div class="def">
 <dl>
 <dt><strong>Mutually exclusive events</strong></dt>
 <dd>
-If two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> do not overlap, that is, they have <em>no outcomes in common</em>, we say that the events are <strong>mutually exclusive</strong>.
+If two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> do not overlap–that is, they have <em>no outcomes in common</em>–we say that the events are <strong>mutually exclusive</strong>.
 </dd>
 </dl>
-<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, then we know that if one of them happens, the other one <em>cannot</em>. We denote this by writing <span class="math inline">\(A \cap B = \emptyset\)</span> and read this as <span class="math inline">\(A\)</span> <em>intersect</em> <span class="math inline">\(B\)</span> is empty. Therefore, we have that</p>
-<p><span class="math display">\[P(A \cap B) = P(\emptyset) = 0\]</span>.</p>
+<p>A die roll cannot be both even and odd at the same time. A single coin flip cannot be both heads and tails. Such events are mutually exclusive.</p>
+<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive, then we know that if one of them happens, the other one <em>cannot</em>. If a die roll is even, then it is definitely <em>not</em> odd. We denote this by writing <span class="math inline">\(A \cap B = \emptyset\)</span> and read this as <span class="math inline">\(A\)</span> <em>intersect</em> <span class="math inline">\(B\)</span> is empty. Therefore, we have that</p>
+<p><span class="math display">\[P(A \cap B) = P(\emptyset) = 0\]</span></p>
 </div>
-<p>For example, if we are playing De Méré’s second game, the event <span class="math inline">\(A\)</span> that we roll a pair of sixes and the event <span class="math inline">\(B\)</span> that we roll a pair of twos cannot happen on the same roll. These events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive.</p>
-<!--
-Another example: the events that President Biden is re-elected and the event that Donald Trump is re-elected as President cannot both happen, therefore they are mutually exclusive events. 
--->
-<p>However, if we roll a die, the event <span class="math inline">\(C\)</span> that we roll an <em>even</em> number and the event <span class="math inline">\(D\)</span> that we roll a <em>prime</em> number are <em>not</em> mutually exclusive, since the number 2 is both even and prime.</p>
-<!--
-the event $C$ that we roll an *even* number and the event $D$ that we roll an *odd* number are mutually exclusive, 
--->
-<p>Here’s another example that might interest soccer fans: The event that Manchester City wins the English Premier League (EPL) in 2024, and the event that Liverpool wins the EPL in 2024 are mutually exclusive, but the events that Manchester City are EPL champions in 2024 and Manchester City are EPL champions in 2023 are <em>not</em> mutually exclusive.</p>
+<p>The event that a die roll is <em>even</em> <span class="math inline">\(\{2,4,6\}\)</span> and the event that a die roll is odd <span class="math inline">\(\{1,3,5\}\)</span> are mutually exclusive. They have no outcomes in common, and therefore cannot both happen.</p>
+<p>However, the event that a die roll is <em>even</em> <span class="math inline">\(\{2,4,6\}\)</span> and the event that a die roll is a <em>prime</em> number <span class="math inline">\(\{2,3,5\}\)</span> are <em>not</em> mutually exclusive. The number 2 is both even and prime, so both events could happen.</p>
+<p>Here’s another example that might interest soccer fans: The event that Manchester City wins the English Premier League (EPL) in 2026, and the event that <em>Liverpool</em> wins the EPL in 2026 are mutually exclusive, but the events that Manchester City are EPL champions in 2026 and Liverpool are EPL champions in 202<strong>7</strong> are <em>not</em> mutually exclusive.</p>
 <p>Now for the third axiom:</p>
 <dl>
 <dt>Axiom 3</dt>
@@ -574,15 +586,33 @@ the event $C$ that we roll an *even* number and the event $D$ that we roll an *o
 If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive (<span class="math inline">\(A \cap B = \emptyset\)</span>), then
 </dd>
 </dl>
-<p><span class="math display">\[P(A \cup B) = P(A) + P(B)\]</span> That is, for two mutually exclusive events, the probability that <em>either</em> of the two events might occur is the <em>sum</em> of their probabilities. This is called the <strong>addition rule</strong>.</p>
+<p><span class="math display">\[P(A \cup B) = P(A) + P(B)\]</span></p>
+<p>That is, for two mutually exclusive events, the probability that <em>either</em> of the two events might occur is the <em>sum</em> of their probabilities. This is called the <strong>addition rule</strong>.</p>
 <p>For example, consider rolling a fair six-sided die, and the two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, where <span class="math inline">\(A\)</span> is the event of rolling a multiple of <span class="math inline">\(5\)</span>, and <span class="math inline">\(B\)</span> is the event that we roll a multiple of <span class="math inline">\(2\)</span>.</p>
-<p>The only outcome in <span class="math inline">\(A\)</span> is <span class="math inline">\(\{5\}\)</span>, while <span class="math inline">\(B\)</span> consists of <span class="math inline">\(\{2, 4, 6\}\)</span>. <span class="math inline">\(P(A) = 1/6\)</span>, and <span class="math inline">\(P(B) = 3/6\)</span>. Since <span class="math inline">\(A \cap B =\emptyset\)</span>, that is, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have no outcomes in common, we have that</p>
+<p>The only outcome in <span class="math inline">\(A\)</span> is <span class="math inline">\(\{5\}\)</span>, while <span class="math inline">\(B\)</span> has <span class="math inline">\(\{2, 4, 6\}\)</span>. <span class="math inline">\(P(A) = 1/6\)</span>, and <span class="math inline">\(P(B) = 3/6\)</span>. Since <span class="math inline">\(A \cap B =\emptyset\)</span>, that is, <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have no outcomes in common, we have that</p>
 <p><span class="math display">\[P(A \cup B) = P(A) + P(B) = \frac{1}{6} + \frac{3}{6} = \frac{4}{6}\]</span></p>
+<p><strong>You can only add probabilities like this IF the events are mutually exclusive.</strong> Why? Consider:</p>
+<ul>
+<li>Event A: a die roll is 2 or higher.
+<ul>
+<li>That is, <span class="math inline">\(A = \{2,3,4,5,6\}\)</span></li>
+<li>So <span class="math inline">\(P(A) = 5/6\)</span></li>
+</ul></li>
+<li>Event B: a die roll is 4 or <em>lower</em>.
+<ul>
+<li>That is, <span class="math inline">\(B = \{1,2,3,4\}\)</span></li>
+<li>So <span class="math inline">\(P(B) = 4/6\)</span></li>
+</ul></li>
+</ul>
+<p>These events are NOT mutually exclusive. They can both happen if we roll a 2, 3, or 4.</p>
+<p>If you try to compute <span class="math inline">\(P(A \cup B)\)</span> (“A or B”) by adding <span class="math inline">\(P(A) + P(B)\)</span>, you get <span class="math inline">\(5/6 + 4/6 = 9/6\)</span> which is 150%. You can’t have a &gt; 100% chance of anything happening! (See Axiom 2).</p>
+<p>Why didn’t this work? Well, you’ve double-counted the numbers that satisfy both events (2, 3, and 4). You can only add probabilities directly if you have nothing to double-count, which only happens when the events are mutually exclusive.</p>
 <div class="def">
 <p><strong>The complement rule</strong></p>
 <p>Here is an important consequence of axiom 3. Let <span class="math inline">\(A\)</span> be an event in <span class="math inline">\(\Omega\)</span>. The <em>complement</em> of <span class="math inline">\(A\)</span>, written as <span class="math inline">\(A^C\)</span>, consists of all those outcomes in <span class="math inline">\(\Omega\)</span> that are <em>not</em> in <span class="math inline">\(A\)</span>. Then we have the following rule:</p>
 <p><span class="math display">\[P(A) + P(A^C) =  1\]</span></p>
-<p>This is because <span class="math inline">\(A  \cup A^C = \Omega\)</span>, and <span class="math inline">\(A  \cap A^C \emptyset\)</span>).</p>
+<p>Any event will either happen (<span class="math inline">\(A\)</span>) or it won’t (<span class="math inline">\(A^C\)</span>). One of those has to be true. A coin flip has to be either Heads or “not Heads.” This is because <span class="math inline">\(A  \cup A^C = \Omega\)</span>, and <span class="math inline">\(A  \cap A^C \emptyset\)</span>).</p>
+<p>It may feel silly, but this is a surprisingly useful rule. Sometimes a probability is really hard to calculate, but its complement is easy to calculate. So you calculate the complement instead, and subtract from 1.</p>
 </div>
 <section id="an-example-with-the-axioms-penguins" class="level3">
 <h3 class="anchored" data-anchor-id="an-example-with-the-axioms-penguins">An example with the axioms: penguins</h3>
@@ -620,7 +650,7 @@ Check your answer
 </section>
 <section id="venn-diagrams" class="level2">
 <h2 class="anchored" data-anchor-id="venn-diagrams">Venn Diagrams</h2>
-<p>We often represent events using <em>Venn diagrams</em>. The outcome space <span class="math inline">\(\Omega\)</span> is usually represented as a rectangle, and events are represented as circles inside <span class="math inline">\(\Omega\)</span>. Here is a Venn diagram showing two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, their intersection, and their union:</p>
+<p>We often represent events using <em>Venn diagrams</em>. The outcome space <span class="math inline">\(\Omega\)</span> is usually represented as a rectangle, and events are represented as circles inside <span class="math inline">\(\Omega\)</span>. Remember, <span class="math inline">\(\Omega\)</span> is <em>literally everything that could possibly happen</em>. Here is a Venn diagram showing two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, their intersection, and their union:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/venn-diagram-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
@@ -1107,6 +1137,7 @@ Note that the number of simulations is defined above.
 <li>We wrote down the axioms (fundamental rules) of probability, after defining unions, intersections, and mutually exclusive events and Venn diagrams.</li>
 <li>In the “Ideas in Code” section, explored how to simulate probabilities using <code>sample()</code> and <code>replicate()</code>, and learned another useful function <code>seq()</code></li>
 </ul>
+<p><a href="../../3-generalization/01-prob-foundations/tutorial.html" style="fontsize: 1.5em">Continue on to the tutorial portion of the notes <i class="fa-solid fa-arrow-right-long fa-xl" aria-label="arrow-right-long"></i></a></p>
 
 
 </section>
