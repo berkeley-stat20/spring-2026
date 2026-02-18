@@ -570,19 +570,19 @@ This is defined to be the probability of the intersection of <span class="math i
 <p><span class="math display">\[  P(B | A) = \frac{ P(A \cap B)}{P(A)} \]</span></p>
 </div>
 <p>The idea here is that we <em>know</em> that <span class="math inline">\(A\)</span> happened, therefore the only outcomes we are concerned about are the ones in <span class="math inline">\(A\)</span> - this is our new outcome space. We compute the relative size of the part of <span class="math inline">\(B\)</span> that happen (<span class="math inline">\(A\cap B\)</span>) to the size of the new outcome space.</p>
-<div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Note that <span class="math inline">\(P(A | B)\)</span> and <span class="math inline">\(P(B | A)\)</span> can be very different. Consider the scenario shown in the Venn diagram here: <img src="images/cond-prob-warning.png" class="img-fluid"></p>
-</div>
-</div>
+<p><strong>Important: <span class="math inline">\(P(A | B)\)</span> and <span class="math inline">\(P(B | A)\)</span> can be very different!</strong></p>
+<p>Consider this scenario:</p>
+<p><img src="images/pab_pba.png" class="img-fluid" width="300"></p>
+<p>Note that B is <em>almost</em> entirely inside A.</p>
+<p>Now <strong>what is <span class="math inline">\(P(A|B)\)</span></strong>? That is, given that B happened (we’re somewhere in the small circle), what’s the chance that A happened (we’re also in the big circle)?</p>
+<p>Our formula says: <span class="math inline">\(P(A|B) = \frac{P(A \cap B)}{P(B)}\)</span></p>
+<p>But look at the Venn diagram. Almost all of event B event is also part of event A. If B happens, then A <em>almost surely</em> also happens. In other words, <span class="math inline">\(P(A \cap B) \approx P(B)\)</span>. Which means…</p>
+<p><span class="math inline">\(P(A|B) = \frac{P(A \cap B)}{P(B)} \approx \frac{P(B)}{P(B)} = 1\)</span></p>
+<p>The opposite is <em>not</em> true, though.</p>
+<p><span class="math inline">\(P(B|A) = ?\)</span></p>
+<p>Given that A happened (we’re somewhere in the big circle), what’s the chance that B happened (we’re also in the small circle)? Well, being in the big circle still doesn’t make B super likely, so <span class="math inline">\(P(B|A)\)</span> is clearly much less than 100%.</p>
+<p><span class="math inline">\(P(B|A) = \frac{P(B \cap A)}{P(A)} \approx \frac{P(B)}{P(A)}\)</span></p>
+<p>Which is much smaller than 1, because B is a lot smaller than A.</p>
 </section>
 <section id="independence" class="level2">
 <h2 class="anchored" data-anchor-id="independence">Independence</h2>
@@ -594,15 +594,38 @@ We say that two events are <em>independent</em> if the probabilities for the sec
 </dd>
 </dl>
 </div>
-<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent, <span class="math inline">\(P(B\vert A) = P(B)\)</span>.</p>
+<p><strong>Example of independent events</strong></p>
+<p>Getting heads on one coin flip doesn’t change the chance of getting heads on a second coin flip. The flips are <em>independent</em>. Let’s name the events:</p>
+<ul>
+<li>Event <span class="math inline">\(A\)</span> is “First coin flip is Heads.” <span class="math inline">\(P(A) = 0.5\)</span></li>
+<li>Event <span class="math inline">\(B\)</span> is “Second coin flip is Heads.” <span class="math inline">\(P(B) = 0.5\)</span></li>
+</ul>
+<p>If <span class="math inline">\(A\)</span> happens (first flip is Heads), it doesn’t change <span class="math inline">\(P(B)\)</span> (chance the second flip will be Heads). In other words:</p>
+<p><span class="math inline">\(P(B | A) = P(B) = 0.5\)</span></p>
+<p>And if <span class="math inline">\(A\)</span> <em>doesn’t</em> happen (<span class="math inline">\(A^C\)</span>, the first flip is Tails), this still doesn’t change <span class="math inline">\(P(B)\)</span> (chance the second flip will be Heads).</p>
+<p><span class="math inline">\(P(B | A^C) = P(B) = 0.5\)</span></p>
+<p>In other words, whatever happens with <span class="math inline">\(A\)</span>, the chance of <span class="math inline">\(B\)</span> will not change. And vice versa.</p>
+<p><strong>Example of <em>dependent</em> events</strong></p>
+<p>Consider “sleeping through your alarm” to be an event, <span class="math inline">\(A\)</span>. Maybe you rarely do this, so <span class="math inline">\(P(A) = 0.02\)</span>. Now consider “being late to class” to be an event, <span class="math inline">\(B\)</span>. Maybe this is also uncommon for you, so <span class="math inline">\(P(B) = 0.10\)</span>. However, IF you missed your alarm, THEN you’re much more likely to be late for class! That is, <em>given</em> that you missed your alarm, you’re suddenly (say) 60% likely to be late. In other words,</p>
+<ul>
+<li>Event <span class="math inline">\(A\)</span> is “Sleeping through your alarm.” <span class="math inline">\(P(A) = 0.02\)</span></li>
+<li>Event <span class="math inline">\(B\)</span> is “Being late to class.” <span class="math inline">\(P(B) = 0.10\)</span></li>
+<li><span class="math inline">\(P(B | A) = 0.60\)</span> which is <span class="math inline">\(&gt; P(B)\)</span></li>
+</ul>
+<p>The events are <em>dependent</em>.</p>
+<p><strong>How to check for independence:</strong></p>
+<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent, <span class="math inline">\(P(B|A) = P(B)\)</span>. (And <span class="math inline">\(P(A|B) = P(A)\)</span>)</p>
 <p>Consequently, the multiplication rule reduces to:</p>
 <p><span class="math display">\[ P(A \cap B) = P(A) \times P(B | A) = P(A) \times P(B) \]</span></p>
-<p>Usually the fastest and most convenient way to check if two events are independent is to see if the product of their probabilities is the same as the probability of their intersection.</p>
+<p>Usually the fastest and most convenient way to check if two events are independent is to see if the product of their probabilities is the same as the probability of their intersection:</p>
 <div class="def">
-<p><strong>Computational check for independence</strong> Check if <span class="math inline">\(P(A \cap B) = P(A)\times P(B)\)</span></p>
+<p><strong>Computational check for independence</strong></p>
+<p>Check if: <span class="math inline">\(P(A \cap B) = P(A)\times P(B)\)</span></p>
 </div>
-<p>For example, consider our box of red and blue tickets. When we draw <em>with</em> replacement, the probability of a red ticket on the second draw given a blue ticket on the first draw remains at 1/2. If we had a red ticket on the first draw, the probability of the second ticket being red is <em>still</em> 1/2. The probability doesn’t change because it does not depend on the outcome of the first draw, since we put the ticket back.</p>
-<p>If we draw the tickets <em>without</em> replacement, we have seen that the probabilities of draws change. The probability of a blue ticket on the second draw given a red ticket on the first draw is 2/3, but the probability of a red ticket on the second draw given a red ticket on the first is 1/3.</p>
+<p>As another example, consider our box of 2 red and 2 blue tickets. <img src="images/box-red-blue.jpeg" class="img-fluid" width="100"></p>
+<p>We’re going to draw twice from the box.</p>
+<p>When we draw <em>with</em> replacement, the box resets to the same place between draws. If we get red ticket on the first draw, <em>then put it back</em>, the box is back to its original form: 2 red, 2 blue. This means the second draw faces the same probabilities as the first: the chance of the second ticket being red is <em>still</em> 1/2. Hence, the draws are <em>independent</em>.</p>
+<p>However, if we draw the tickets <em>without</em> replacement, <em>the box changes</em> between draws, and so will the probabilities. If a red ticket comes out first, the box has only 1 red and 2 blue tickets left, so the probability of a red ticket on the second draw is now only 1/3. The draws are <em>dependent</em>.</p>
 <p>The lesson here is that when we draw tickets <em>with</em> replacement, the draws are <strong>independent</strong> - the outcome of the first draw does not affect the second. If we draw tickets <em>without</em> replacement, the draws are <strong>dependent</strong>. The outcome of the first draw changes the probabilities of the tickets for the second draw.</p>
 <section id="example-selecting-2-people-out-of-a-group-of-5" class="level3">
 <h3 class="anchored" data-anchor-id="example-selecting-2-people-out-of-a-group-of-5">Example: Selecting 2 people out of a group of 5</h3>
