@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Summarizing Numerical Data – Stat 20</title>
+<title>Probability Distributions – Stat 20</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../2-summarizing-data/03-a-grammar-of-graphics/tutorial.html" rel="next">
-<link href="../../2-summarizing-data/01-summarizing-categorical-data/tutorial.html" rel="prev">
 <link href="../../assets/stat20-hex.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -119,20 +117,47 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 <script type="module" src="../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Summarizing Numerical Data – Stat 20">
-<meta property="og:description" content="Seeing the forest for the trees.">
-<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/assets/stat20-hex.png">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Probability Distributions – Stat 20">
+<meta property="og:description" content="Some special distributions and visualizing probabilities">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/images/die-emp-prob-dsn.jpg">
 <meta property="og:site_name" content="Stat 20">
-<meta name="twitter:title" content="Summarizing Numerical Data – Stat 20">
-<meta name="twitter:description" content="Seeing the forest for the trees.">
-<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/2-summarizing-data/02-summarizing-numerical-data/tutorial_files/figure-html/unnamed-chunk-2-1.png">
-<meta name="twitter:image-height" content="960">
-<meta name="twitter:image-width" content="1344">
+<meta name="twitter:title" content="Probability Distributions – Stat 20">
+<meta name="twitter:description" content="Some special distributions and visualizing probabilities">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/03-probability-dsns/images/die-emp-prob-dsn.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -167,7 +192,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../tutorials.html" aria-current="page"> 
+    <a class="nav-link" href="../../tutorials.html"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
 </ul>
@@ -184,89 +209,42 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials.html">R Tutorials</a></li><li class="breadcrumb-item"><a href="../../2-summarizing-data/02-summarizing-numerical-data/tutorial.html">Summarizing Numerical Data</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../tutorials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Tutorials</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../1-questions-and-data/02-taxonomy-of-data/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Taxonomy of Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../2-summarizing-data/01-summarizing-categorical-data/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summarizing Categorical Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../2-summarizing-data/02-summarizing-numerical-data/tutorial.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Summarizing Numerical Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../2-summarizing-data/03-a-grammar-of-graphics/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">A Grammar of Graphics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../2-summarizing-data/04-conditioning/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Conditioning</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../2-summarizing-data/05-summarizing-associations/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summarizing Numerical Associations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../3-generalization/01-prob-foundations/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probability Foundations</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#three-useful-functions" id="toc-three-useful-functions" class="nav-link active" data-scroll-target="#three-useful-functions">Three useful functions</a>
+  <ul>
+  <li><a href="#rep-replicates-values-in-a-vector" id="toc-rep-replicates-values-in-a-vector" class="nav-link" data-scroll-target="#rep-replicates-values-in-a-vector">1. <code>rep()</code>: replicates values in a vector</a></li>
+  <li><a href="#replicate-repeat-a-specific-set-of-tasks-a-large-number-of-times." id="toc-replicate-repeat-a-specific-set-of-tasks-a-large-number-of-times." class="nav-link" data-scroll-target="#replicate-repeat-a-specific-set-of-tasks-a-large-number-of-times.">2. <code>replicate()</code>: repeat a specific set of tasks a large number of times.</a></li>
+  <li><a href="#geom_col-plotting-with-probability" id="toc-geom_col-plotting-with-probability" class="nav-link" data-scroll-target="#geom_col-plotting-with-probability">3. <code>geom_col()</code>: plotting with probability</a></li>
+  </ul></li>
+  <li><a href="#example-rolling-a-die-twice-and-summing-the-spots" id="toc-example-rolling-a-die-twice-and-summing-the-spots" class="nav-link" data-scroll-target="#example-rolling-a-die-twice-and-summing-the-spots">Example: Rolling a die twice and summing the spots</a>
+  <ul>
+  <li><a href="#obtaining-a-sum" id="toc-obtaining-a-sum" class="nav-link" data-scroll-target="#obtaining-a-sum">Obtaining a sum</a></li>
+  </ul></li>
+  <li><a href="#visualizing-our-results" id="toc-visualizing-our-results" class="nav-link" data-scroll-target="#visualizing-our-results">Visualizing our results</a>
+  <ul>
+  <li><a href="#making-a-probability-histogram-with-geom_col" id="toc-making-a-probability-histogram-with-geom_col" class="nav-link" data-scroll-target="#making-a-probability-histogram-with-geom_col">Making a probability histogram with <code>geom_col()</code></a></li>
+  <li><a href="#performing-a-simulation-and-making-an-empirical-histogram" id="toc-performing-a-simulation-and-making-an-empirical-histogram" class="nav-link" data-scroll-target="#performing-a-simulation-and-making-an-empirical-histogram">Performing a simulation and making an empirical histogram</a></li>
+  <li><a href="#comparing-our-results-to-the-truth" id="toc-comparing-our-results-to-the-truth" class="nav-link" data-scroll-target="#comparing-our-results-to-the-truth">Comparing our results to the truth</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials.html">R Tutorials</a></li><li class="breadcrumb-item"><a href="../../2-summarizing-data/02-summarizing-numerical-data/tutorial.html">Summarizing Numerical Data</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Summarizing Numerical Data</h1>
-<p class="subtitle lead">Seeing the forest for the trees.</p>
+<h1 class="title">Probability Distributions</h1>
+<p class="subtitle lead">Some special distributions and visualizing probabilities</p>
 </div>
 
 
@@ -283,152 +261,189 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </header>
 
 
-<p>Once you have your data in front of you, you’ve seen how we can form visual summaries with <code>ggplot2</code>. But how can we calculate numerical summaries? Furthermore, what if we are concerned about summarizing a portion of our data, like just one species of penguin at a time? We will answer these questions below, and introduce some new functions from the <code>dplyr</code> package (within the <code>tidyverse</code> library) along the way. We’ll also look at how <code>factor()</code> can come in handy while plotting.</p>
-<p>If you are playing along in RStudio while reading these notes (which we strongly recommend!), be sure to start off by loading the two packages that are necessary for the tutorial by running the following code.</p>
-<section id="calculating-numerical-summaries" class="level3">
-<h3 class="anchored" data-anchor-id="calculating-numerical-summaries">Calculating Numerical Summaries</h3>
-<p>One example of a numerical variable we could have examine is the body mass of a particular penguin (measured in grams). Let’s calculate both a measure of center and spread for this variable.</p>
-<p>To get an idea of what summaries we should pick, let’s revisit the density plot from earlier.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stat20data)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>What we can glean from this figure is that the distribution of body masses across <em>all species of penguin</em> is skewed right. This means that, for instance, a more typical observation lies closer to 4000 grams than 5000 grams.</p>
-<p>If we take an average, it is likely to be pulled to the right by the larger, but less typical, observations. The median observation, however, would be more resistant to this pull. Therefore, the median might be a nice choice for a measure of center. Similarly, since the IQR is initially constructed from the median, it will serve well here as a measure of spread.</p>
-<p>Now, let’s calculate these values using <code>summarize</code> (you can also spell it <code>summarise</code> and it’ll work just the same). As is custom with <code>dplyr</code> functions, the first argument is the data frame you are working with. The subsequent argument(s) tell the computer what to do, referring to column names as needed. For <code>summarize</code>, each such argument is a calculation to perform.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(penguins, </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>          <span class="fu">median</span>(body_mass_g),</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>          <span class="fu">IQR</span>(body_mass_g))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  `median(body_mass_g)` `IQR(body_mass_g)`
-                  &lt;int&gt;              &lt;dbl&gt;
-1                  4050               1225</code></pre>
-</div>
-</div>
-<p>The result of <code>summarize</code> is a <em>new data frame</em> (in this case, one row by two columns). Notice that the column names are kind of ugly - they are just the code used to make the calculation. You can rename these columns to whatever you like. Perhaps something like this:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(penguins, </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">body_mass_median =</span> <span class="fu">median</span>(body_mass_g),</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">body_mass_IQR =</span> <span class="fu">IQR</span>(body_mass_g))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 2
-  body_mass_median body_mass_IQR
-             &lt;int&gt;         &lt;dbl&gt;
-1             4050          1225</code></pre>
-</div>
-</div>
-<p>Based on what we’ve found, the median here supports the claim we made above: that a typical penguin has a body mass closer to 4000 grams than to 5000 grams. The middle half of the penguins have body masses within a range of 1225 grams.</p>
+<section id="three-useful-functions" class="level3">
+<h3 class="anchored" data-anchor-id="three-useful-functions">Three useful functions</h3>
+<section id="rep-replicates-values-in-a-vector" class="level4">
+<h4 class="anchored" data-anchor-id="rep-replicates-values-in-a-vector">1. <code>rep()</code>: replicates values in a vector</h4>
+<p>Sometimes we need to create vectors with repeated values. In these cases, <code>rep()</code> is very useful.</p>
+<ul>
+<li><strong>Arguments</strong>
+<ul>
+<li><code>x</code>: the vector or list that is to be repeated. This <em>must</em> be specified</li>
+<li><code>times</code>: the number of times we should repeat the elements of <code>x</code>. This could be a vector the same length as <code>x</code> detailing how many times each element is to be repeated, or it could be a single number, in which case the entire <code>x</code> is repeated that many times.</li>
+<li><code>each</code>: the default is 1, and if specified, each element of <code>x</code> is repeated <code>each</code> times.</li>
+</ul></li>
+</ul>
 </section>
-<section id="groupwise-operations" class="level3">
-<h3 class="anchored" data-anchor-id="groupwise-operations">Groupwise Operations</h3>
-<p>Let’s return to the bill length examine of a particular penguin, measured in millimeters. Here is the density plot for <em>all of the data</em>; for simplicity, earlier we showed you the plot for only the first 16 observations.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>This plot is interesting. It appears we have a bimodal shape! While it’s tempting to state that the data is roughly symmetric and calculate an overall mean, we should first see if there are any other variables at play. It stands to reason that different species of penguin might have different anatomical features. Let’s add species to the mix by using the <code>color</code> aesthetic (see if you can code along)!</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span> bill_length_mm,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Aha! We now see that each penguin species has its own shape of distribution when it comes to bill length.</p>
-<p>The example above demonstrates a very common scenario: you want to perform some calculations on one particular group of observations in your data set. But what if you want to do that same calculation for every group? For example, what if we’d like to find the average and standard deviation of bill length among each species of penguin <em>separately</em>?</p>
-<p>This task - performing an operation on all groups of a data set one-by-one - is such a common data science task that nearly every software tool has a good solution. In the <code>dplyr</code> package, the solution is the <strong><code>group_by()</code></strong> function. Let’s see it in action.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>grouped_penguins <span class="ot">&lt;-</span> <span class="fu">group_by</span>(penguins, species)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Like most <code>tidyverse</code> functions, the first argument to <code>group_by()</code> is a data frame. The second argument is the name of the variable that you want to use to delineate groups. In this case, we want to group by species to calculate three separate mean/standard deviation pairs.</p>
-<p>Now, assuming we roll with our new <code>grouped_penguins</code> data frame, we can use <code>summarize()</code> like we did before!</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(grouped_penguins, </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">bill_length_mean =</span> <span class="fu">mean</span>(bill_length_mm),</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">bill_length_sd =</span> <span class="fu">sd</span>(bill_length_mm))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
-  species   bill_length_mean bill_length_sd
-  &lt;fct&gt;                &lt;dbl&gt;          &lt;dbl&gt;
-1 Adelie                38.8           2.66
-2 Chinstrap             48.8           3.34
-3 Gentoo                47.6           3.11</code></pre>
-</div>
-</div>
-<p>From both the visuals and the numbers, we can see that Adelie penguins have much smaller bill lengths on average when compared to Chinstrap and Gentoo penguins. We also see that the Adelie distribution of bill lengths is less variable than the distributions of the other two species.</p>
+<section id="replicate-repeat-a-specific-set-of-tasks-a-large-number-of-times." class="level4">
+<h4 class="anchored" data-anchor-id="replicate-repeat-a-specific-set-of-tasks-a-large-number-of-times.">2. <code>replicate()</code>: repeat a specific set of tasks a large number of times.</h4>
+<ul>
+<li><strong>Arguments</strong>
+<ul>
+<li><code>n</code>: the number of times we want to repeat the task. This <em>must</em> be specified</li>
+<li><code>expr</code>: the task we want to repeat, usually an expression that is some combinations of functions, for example, maybe we take a sample from a vector, and then sum the sample values.</li>
+</ul></li>
+</ul>
 </section>
-<section id="plotting-with-categorical-variables" class="level3">
-<h3 class="anchored" data-anchor-id="plotting-with-categorical-variables">Plotting with Categorical Variables</h3>
-<p>Finally, let’s return to the violin plot of bill lengths grouped by species of penguin (from the Notes page).</p>
+<section id="geom_col-plotting-with-probability" class="level4">
+<h4 class="anchored" data-anchor-id="geom_col-plotting-with-probability">3. <code>geom_col()</code>: plotting with probability</h4>
+<p>When plotting probability histograms, we know exactly what the the height of each bar should be. This is as opposed to the bar charts you have seen before (and empirical histograms), where we are just trying to visualize the data that we have collected.</p>
+<p><code>geom_col()</code> creates a bar chart in which the heights represent numbers that can be specified via an aesthetic. In other words, the y variable <em>will</em> appear in our call to <code>aes()</code>!</p>
+</section>
+</section>
+<section id="example-rolling-a-die-twice-and-summing-the-spots" class="level3">
+<h3 class="anchored" data-anchor-id="example-rolling-a-die-twice-and-summing-the-spots">Example: Rolling a die twice and summing the spots</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code along
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As you read through the code in this section, keep RStudio open in another window to code along at the console. <strong>Keep in mind that we use <code>set.seed()</code> more than once for demonstration purposes only.</strong></p>
+</div>
+</div>
+<p>Suppose we want to simulate the task of rolling a pair of die and summing the two spots. We can accomplish this task and examine our results using the functions we have just introduced. First, we will make a vector representing a fair, six-sided die.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span> bill_length_mm,</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> species)) <span class="sc">+</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>die <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">6</span>, <span class="at">by =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-</div>
-<p>What if I wanted the Adelie violin to show up on the top of the graph? By default, the violin plot puts the level first in the alphabetical order on the bottom of the plot. Therefore, I need to <em>reorder</em> the levels of species to put Adelie at the top. This is where <code>factor()</code> will do the job!</p>
-<p>We use the <code>dplyr</code> function <strong><code>mutate()</code></strong> to change a column, or to add a new column (which we will explore next week). Below, we overwrite the <code>species</code> column with a factor-ized version of itself, setting the order in which the species should always be displayed.</p>
+<section id="obtaining-a-sum" class="level4">
+<h4 class="anchored" data-anchor-id="obtaining-a-sum">Obtaining a sum</h4>
+<section id="method-1---replicate" class="level5">
+<h5 class="anchored" data-anchor-id="method-1---replicate">Method 1 - <code>replicate()</code></h5>
+<p>We can use the <code>sample()</code> function to roll the die twice; this will output a vector with two die numbers. Then, we can take the sum of this vector by nesting the call to <code>sample()</code> inside of sum.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="ot">&lt;-</span> <span class="fu">mutate</span>(penguins, </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">species =</span> <span class="fu">factor</span>(species, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Gentoo"</span>, <span class="st">"Chinstrap"</span>, <span class="st">"Adelie"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">214</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">sample</span>(die, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
 </div>
-<p>A few things are happening here:</p>
-<ol type="1">
-<li>The <code>mutate</code> function is called, passing it our data frame (<code>penguins</code>) and one thing to do: change the <code>species</code> column to a factor, where the categories go in this particular order.</li>
-<li>The result is a new dataframe, which we use to overwrite our original dataframe. (<code>penguins &lt;- ...</code>). This is common practice when you are cleaning up your data to be the way you want – you overwrite a dataframe with a new version of itself.</li>
-</ol>
-<p>Now, if we rerun the exact same code, the new category order is respected:</p>
+</div>
+<p>If we would like to repeat this action many times (for instance, in a game of Monopoly, each player has to roll two dice on their turn and sum the spots), the <code>replicate()</code> function will come in handy. In the following line of code, we obtain 10 sums.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span> bill_length_mm,</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> species)) <span class="sc">+</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">replicate</span>(<span class="at">n=</span> <span class="dv">10</span>, <span class="at">expr =</span> <span class="fu">sum</span>(<span class="fu">sample</span>(die, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 11  8  8 12  5  7  8  7 10  7</code></pre>
 </div>
 </div>
 </section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>A summary of a summaries…this better be brief! Summaries of numerical data - graphical and numerical - often involve choices of what information to include and what information to omit. These choices involve a degree of judgement and knowledge of the criteria that were used to construct the commonly used statistics and graphics.</p>
+<section id="method-2---rep" class="level5">
+<h5 class="anchored" data-anchor-id="method-2---rep">Method 2 - <code>rep()</code></h5>
+<p>We could also roll the die in advance and then sample from the possible sums: 2 through 12. However, when rolling the two die, there is only one way to get a sum of <span class="math inline">\(2\)</span> (both dice need to be one), but six ways to get a sum of <span class="math inline">\(7\)</span>. This shows that if we want to represent this action of rolling a pair of dice and taking the sum of spots, we have to use a box in which values will be repeated to reflect their probability. We can use the <code>times</code> argument of the <code>rep()</code> function to make such a box. The number <span class="math inline">\(2\)</span> is repeated once, the number <span class="math inline">\(3\)</span> is repeated twice, and so on until the number <span class="math inline">\(7\)</span> is repeated six times. We can then sample once from this box.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>possible_sums <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">2</span>, <span class="at">by =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">12</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>correct_sums <span class="ot">&lt;-</span> <span class="fu">rep</span>(possible_sums, </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">times =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>))</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>correct_sums</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  2  3  3  4  4  4  5  5  5  5  6  6  6  6  6  7  7  7  7  7  7  8  8  8  8
+[26]  8  9  9  9  9 10 10 10 11 11 12</code></pre>
+</div>
+</div>
+<p>To get 10 sums as we did before, we just need to sample with ten times with replacement from this new box, <code>correct_sums</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="at">x =</span> correct_sums, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 7 4 8 9 2 7 4 7 6 8</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="visualizing-our-results" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-our-results">Visualizing our results</h3>
+<section id="making-a-probability-histogram-with-geom_col" class="level4">
+<h4 class="anchored" data-anchor-id="making-a-probability-histogram-with-geom_col">Making a probability histogram with <code>geom_col()</code></h4>
+<p>First, let’s create a vector with the probabilities associated with each possible that can be obtained from rolling two dice. We are taking these probabilities from the drawn probability histogram earlier in the notes.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>prob_sums <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>)<span class="sc">/</span><span class="dv">36</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Now, using the above and the <code>possible_sums</code> vector from before, we can make a data frame with the information about the probability distribution and create a probability histogram, which in turn can be used to make a plot with <code>geom_col()</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>prob_hist <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(possible_sums, prob_sums) <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(possible_sums),</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">y =</span> prob_sums)) <span class="sc">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"goldenrod"</span>) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"sum value"</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"probability"</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>prob_hist</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tutorial_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The use of <code>factor()</code> is to make sure that for the purposes of the plot, that the sum values are treated categorically.</p>
+</section>
+<section id="performing-a-simulation-and-making-an-empirical-histogram" class="level4">
+<h4 class="anchored" data-anchor-id="performing-a-simulation-and-making-an-empirical-histogram">Performing a simulation and making an empirical histogram</h4>
+<p>Let’s simulate rolling two die and and computing a sum fifty times Then, we can make a data frame out of our results and find the total amount of rolls, grouped by face. This can be done with the <code>n()</code> summary function– and if we divide by 50, we can get the sample proportions of each sum.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">214</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="at">n=</span> <span class="dv">50</span>, </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">expr =</span> <span class="fu">sum</span>(<span class="fu">sample</span>(die, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>empirical <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(results) <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(results) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">props =</span> <span class="fu">n</span>()<span class="sc">/</span><span class="dv">50</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>empirical</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 11 × 2
+   results props
+     &lt;dbl&gt; &lt;dbl&gt;
+ 1       2  0.04
+ 2       3  0.02
+ 3       4  0.06
+ 4       5  0.1 
+ 5       6  0.08
+ 6       7  0.24
+ 7       8  0.1 
+ 8       9  0.12
+ 9      10  0.14
+10      11  0.08
+11      12  0.02</code></pre>
+</div>
+</div>
+<p>Now, we can construct an empirical histogram using the <code>empirical</code> data frame.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>emp_50 <span class="ot">&lt;-</span> empirical <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(results),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">y =</span> props)) <span class="sc">+</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"sum value"</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"sample proportion"</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>emp_50</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tutorial_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="384"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="comparing-our-results-to-the-truth" class="level4">
+<h4 class="anchored" data-anchor-id="comparing-our-results-to-the-truth">Comparing our results to the truth</h4>
+<p>You may have wondered why we bothered to save the plot objects. The reason is that we can use a nifty <a href="https://patchwork.data-imaginist.com/articles/patchwork.html">library called <code>patchwork</code></a> which will help us to more easily visualize multiple plots at once by using mathematical and logical syntax. For instance, using <code>+</code> will put plots side by side.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>prob_hist <span class="sc">+</span> emp_50</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tutorial_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>With only 50 experiments run, we see that the empirical histogram doesn’t quite match. However, modify the above code by increasing the number of repetitions, and you will see the empirical histogram begin to resemble more closely true probability distribution. This is an example of <strong>long-run relative frequency.</strong></p>
 
 
 <script type="ojs-module-contents">
@@ -446,6 +461,7 @@ eyJjb250ZW50cyI6W119
 W10=
 </script>
 </section>
+</section>
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
@@ -453,7 +469,7 @@ eyJjb250ZW50cyI6W119
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
-window._ojs.paths.runtimeToDoc = "../../2-summarizing-data/02-summarizing-numerical-data";
+window._ojs.paths.runtimeToDoc = "../../3-generalization/03-probability-dsns";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "../..";
 window._ojs.selfContained = false;
@@ -859,18 +875,6 @@ window._ojs.runtime.interpretFromScriptTags();
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../2-summarizing-data/01-summarizing-categorical-data/tutorial.html" class="pagination-link" aria-label="Summarizing Categorical Data">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Summarizing Categorical Data</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../2-summarizing-data/03-a-grammar-of-graphics/tutorial.html" class="pagination-link" aria-label="A Grammar of Graphics">
-        <span class="nav-page-text">A Grammar of Graphics</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
