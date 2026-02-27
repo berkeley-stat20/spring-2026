@@ -7,7 +7,9 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/countdown-0.5.0/countdown.js"></script>
+<link href="../../site_libs/quarto-contrib/countdown-0.5.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="STAT 20: Introduction to Probability and Statistics">
@@ -156,65 +158,76 @@ STAT 20: Introduction to Probability and Statistics
 </div>
 
 </section>
-<section id="some-thoughts-on-expected-values" class="slide level2">
-<h2>Some thoughts on expected values…</h2>
+<section class="slide level2">
 
-<img data-src="images/dilbert-ev.png" data-fig-aligned="center" width="500" class="r-stretch"></section>
-<section>
-<section id="concept-review" class="title-slide slide level1 center">
-<h1>Concept Review</h1>
+<!--
 
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-<p>Let <span class="math inline">\(X\)</span> be a random variable such that <span class="math display">\[
+## Some thoughts on expected values...
+
+![](images/dilbert-ev.png){fig-aligned="center" width="500"}
+
+-->
+<!--
+
+# Concept Review
+
+##
+
+Let $X$ be a random variable such that 
+$$
 X = \begin{cases}
-            -1, &amp; \text{ with probability } 1/3\\
-            0, &amp;  \text{ with probability } 1/6\\
-            1, &amp;  \text{ with probability } 4/15 \\
-            2, &amp; \text{ with probability } 7/30 \\
+            -1, & \text{ with probability } 1/3\\
+            0, &  \text{ with probability } 1/6\\
+            1, &  \text{ with probability } 4/15 \\
+            2, & \text{ with probability } 7/30 \\
          \end{cases}
-\]</span></p>
-<ol type="a">
-<li>Draw the graph of the cdf of <span class="math inline">\(X\)</span></li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_8d990024" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+$$
+
+(a) Draw the graph of the cdf of $X$ 
+
+
+::: {.cell}
+::: {.cell-output-display}
+
+```{=html}
+<div class="countdown" id="timer_50ed86e8" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">08</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
-</div>
-</div>
-<p><br>
-</p>
-<ol start="2" type="a">
-<li>Compute the expected value and variance of <span class="math inline">\(X\)</span></li>
-</ol>
-<aside class="notes">
-<p>write down pmf with denominator 30, and draw cdf on the board. P(X = -1)= 5/30, P(X = 0)= 10/30, P(X = 1)= 8/30, P(X = 2)= 7/30 E(X) = (-1)(5/30) + 0(10/30) + 1(8/30) + 2(7/30) (-10 + 0 + 8 + 14)/30 = 12/30 = 2/5 Var(X) = E(X^2) - 4/25 = (10 + 0 + 8 +28)/30 -4/25 = 23/15- 4/25 ~~ 1.37333 Graph the pmf and mark the expectation The numbers are not pretty but the point is to show them the computation and graph The rest of the ideas can be recapped as you go over the concept questions You may want to review linearity of expectation here, or save it for when going over the PS</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section></section>
+```
+
+:::
+:::
+
+
+\
+
+(b) Compute the expected value and variance of $X$
+
+:::{.notes}
+write down pmf with denominator 30, and draw cdf on the board. 
+P(X = -1)= 5/30, P(X = 0)= 10/30,  P(X = 1)= 8/30, P(X = 2)= 7/30
+E(X) = (-1)(5/30) + 0(10/30) + 1(8/30) + 2(7/30)
+(-10 + 0 + 8 + 14)/30 = 12/30 = 2/5
+Var(X) = E(X^2) - 4/25 = (10 + 0 + 8 +28)/30 -4/25 = 23/15- 4/25 ~~ 1.37333
+Graph the pmf and mark the expectation
+The numbers are not pretty but the point is to show them the computation and graph
+The rest of the ideas can be recapped as you go over the concept questions
+You may want to review linearity of expectation here, or save it for when going over the PS
+:::
+
+-->
+</section>
 <section>
 <section id="concept-questions" class="title-slide slide level1 center">
 <h1>Concept Questions</h1>
 
 </section>
-<section id="section-1" class="slide level2">
+<section id="section" class="slide level2">
 <h2></h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_26e3e905" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_aabe875e" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -229,7 +242,7 @@ X = \begin{cases}
 \end{cases}
 \]</span></p>
 <p>Consider the box with tickets: <span class="math inline">\(\fbox{3}\, \fbox{3}\, \fbox{3} \,\fbox{4}  \,\fbox{4} \,\fbox{4} \,\fbox{4} \,\fbox{5} \,\fbox{5}\, \fbox{5} \,\fbox{5} \,\fbox{5}\)</span></p>
-<p>Suppose we draw once from this box and let <span class="math inline">\(Y\)</span> be the value of the ticket drawn. Which random variable has a higher expectation?</p>
+<p>Suppose we draw once from this box and let <span class="math inline">\(Y\)</span> be the value of the ticket drawn. Which random variable has a higher expected value?</p>
 <div class="poll">
 <p>The expected value of <span class="math inline">\(X\)</span> is ____ the expected value of <span class="math inline">\(Y\)</span>.</p>
 </div>
@@ -247,13 +260,13 @@ X = \begin{cases}
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_2d53bcc2" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_a2187736" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
@@ -275,11 +288,11 @@ X = \begin{cases}
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-3" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_a8907b89" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_e6ab55b0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -287,14 +300,14 @@ X = \begin{cases}
 </div>
 <p>Let <span class="math inline">\(X\)</span> be a discrete uniform random variable on the set <span class="math inline">\(\{-1, 0, 1\}\)</span>.</p>
 <div class="poll">
-<p>If <span class="math inline">\(Y=X^2\)</span>, what is <span class="math inline">\(E(Y)\)</span>?</p>
+<p>If <span class="math inline">\(Y=X^2\)</span>, what is <span class="math inline">\(E(Y)\)</span> and <span class="math inline">\(Var(Y)\)</span>?</p>
 </div>
 </section>
-<section id="section-4" class="slide level2">
+<section id="section-3" class="slide level2">
 <h2></h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f9e1b510" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_a0dc5da0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -330,7 +343,7 @@ Evgeni bakes a cake and invites two friends to join him in eating it. The cake w
 ::: {.cell-output-display}
 
 ```{=html}
-<div class="countdown" id="timer_ea18c187" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_3d3086b3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -362,7 +375,7 @@ Prefer 50 because the square root law tells us the the spread of the distributio
 ::: {.cell-output-display}
 
 ```{=html}
-<div class="countdown" id="timer_8d0b822a" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_1309d6d5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -398,7 +411,7 @@ The EV is a constant, and note that the box average is (0+2+3+4+6)/5 = 3, so the
 ::: {.cell-output-display}
 
 ```{=html}
-<div class="countdown" id="timer_2589b2f1" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_7f9103ea" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -484,9 +497,41 @@ geom_col(fill = "goldenrod2") + ???
 
 
 -->
-
-
 </section></section>
+<section id="problem-set-expected-value-and-variance" class="title-slide slide level1 center">
+<h1>Problem Set: Expected Value and Variance</h1>
+<div id="timer_207831cbec763a126d457797c0584cc792f25b63" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+</section>
+
+<section id="break" class="title-slide slide level1 center">
+<h1>Break</h1>
+<div id="timer_207831cbec763a126d457797c0584cc792f25b63" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+</section>
+
+<section id="lab-7-elections" class="title-slide slide level1 center">
+<h1>Lab 7: Elections</h1>
+<div id="timer_207831cbec763a126d457797c0584cc792f25b63" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">25</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../../site_libs/quarto-contrib/quarto-project/stat20/stat20slides/stat20-hex-vsmall.png" class="slide-logo"></p>
