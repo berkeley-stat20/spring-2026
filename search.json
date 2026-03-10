@@ -4,21 +4,21 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: Getting Started\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights I\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 4: Flights II\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 5: Probability Foundations\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 6: Probability Distributions\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 7: Elections\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: Getting Started\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights I\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 4: Flights II\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 5: Probability Foundations\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 6: Probability Distributions\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 7: Elections\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 8: People's Park\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#labs",
     "href": "assignments.html#labs",
     "title": "Assignments",
     "section": "",
-    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: Getting Started\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights I\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 4: Flights II\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 5: Probability Foundations\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 6: Probability Distributions\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 7: Elections\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab assignments are an opportunity to put the concepts from the notes into practice to answer questions about a real data set. Your lab report should be a pdf file generated from a fully reproducible qmd file. For a helpful R reference, see base R, data visualization (ggplot2), and data wrangling (dplyr).\n\n\n\n\n\n\n\n\nLab 1: Getting Started\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 2: Class Survey\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 3: Flights I\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 4: Flights II\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 5: Probability Foundations\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 6: Probability Distributions\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 7: Elections\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\n\n\nLab 8: People's Park\n\n  \n    Instructions\n  \n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "assignments.html#problem-sets",
     "href": "assignments.html#problem-sets",
     "title": "Assignments",
     "section": "Problem Sets",
-    "text": "Problem Sets\nOn most class days, we will hand out a sheet of paper called a “problem set.” These are pen-and-paper practice problems that we work on in class. The goal of the problem sets is simply practice: they help you drill the techniques needed to complete the labs. You will scan and submit both problem sets for a given week as a single assignment each Tuesday on Gradescope. Use the “scan to pdf” feature on your phone to get all sides of both sheets into a single PDF, and submit that. The names of the assignments on gradescope tell you the names of the problem sets that are expected.\n\n\n\nPS: Multiple Linear Regression\n\n\nPS: Understanding the World With Data\n\n\nPS: Taxonomy of Data\n\n\nPS: Summarizing Categorical Data\n\n\nPS: Summarizing Numerical Data\n\n\nPS: A Grammar of Graphics\n\n\nPS: Conditioning\n\n\nPS: Summarizing Numerical Associations\n\n\nPS: Probability Foundations\n\n\nPS: Computing Probabilities\n\n\nPS: Probability Distributions\n\n\nPS: Random Variables\n\n\nPS: Expected Value and Variance\n\n\nPS: Quiz Review\n\n\nNo matching items"
+    "text": "Problem Sets\nOn most class days, we will hand out a sheet of paper called a “problem set.” These are pen-and-paper practice problems that we work on in class. The goal of the problem sets is simply practice: they help you drill the techniques needed to complete the labs. You will scan and submit both problem sets for a given week as a single assignment each Tuesday on Gradescope. Use the “scan to pdf” feature on your phone to get all sides of both sheets into a single PDF, and submit that. The names of the assignments on gradescope tell you the names of the problem sets that are expected.\n\n\n\nPS: Multiple Linear Regression\n\n\nPS: Understanding the World With Data\n\n\nPS: Taxonomy of Data\n\n\nPS: Summarizing Categorical Data\n\n\nPS: Summarizing Numerical Data\n\n\nPS: A Grammar of Graphics\n\n\nPS: Conditioning\n\n\nPS: Summarizing Numerical Associations\n\n\nPS: Probability Foundations\n\n\nPS: Computing Probabilities\n\n\nPS: Probability Distributions\n\n\nPS: Random Variables\n\n\nPS: Expected Value and Variance\n\n\nPS: Quiz Review\n\n\nPS: From Samples to Populations\n\n\nNo matching items"
   },
   {
     "objectID": "notes.html",
@@ -142,67 +142,116 @@
     ]
   },
   {
-    "objectID": "3-generalization/labs/elections/slides.html#iran-election",
-    "href": "3-generalization/labs/elections/slides.html#iran-election",
-    "title": "Lab: Elections",
-    "section": "2009 Iran Election",
-    "text": "2009 Iran Election\n\n\n\nBackground\n\nOngoing public sentiment that previous election was fraudulent\nThe highest voter turnout in Iran’s history\n\n\nLeading candidates\n\nMahmoud Ahmadinejad: Leader of conservatives and incumbent president.\nMir-Hossein Mousavi: Reformist and former prime minister. Seeking rapid political evolution.\n\n\n\n\n\n\n\n\n\nOutcome\nAhmadinejad won the election with 62.6% of the votes cast, while Mousavi received 33.75% of the votes cast."
-  },
-  {
-    "objectID": "3-generalization/labs/elections/slides.html#post-election-controversies-and-unrest",
-    "href": "3-generalization/labs/elections/slides.html#post-election-controversies-and-unrest",
-    "title": "Lab: Elections",
-    "section": "Post-election controversies and unrest",
-    "text": "Post-election controversies and unrest\n\n\n\n\n\nAllegations of fraud\nPublic protests and unrests\nThe green wave movement, led by Mousavi, against the allegedly fraudulent election and Ahmadinejad’s regime"
-  },
-  {
-    "objectID": "3-generalization/labs/elections/slides.html#section",
-    "href": "3-generalization/labs/elections/slides.html#section",
-    "title": "Lab: Elections",
+    "objectID": "3-generalization/labs/elections/lab.html",
+    "href": "3-generalization/labs/elections/lab.html",
+    "title": "Lab 7: Elections",
     "section": "",
-    "text": "Was the election fraudulent?"
+    "text": "On June 12 2009, the Republic of Iran held an election where President (and conservative leader) Mahmoud Ahmadinejad sought re-election against three challengers. The foremost of these was Mir-Hossein Mousavi, a reformist and former prime minister. Mousavi ran a more left-leaning campagign that sought rapid political evolution. When it was announced that Ahmadinejad had won handily, there were widespread allegations of election fraud, especially for supporters of Mousavi and another like-minded challenger, Mehdi Karroubi. These allegations bled over into protests known as the Green Movement. Whether or not election fraud actually took place is still contested.\nIn this lab, we will attempt to explore the possibility of election fraud using the results from the 2009 Iran presidential eleection, which are contained in the iran data frame within the stat20data library."
   },
   {
-    "objectID": "3-generalization/labs/elections/slides.html#section-1",
-    "href": "3-generalization/labs/elections/slides.html#section-1",
-    "title": "Lab: Elections",
+    "objectID": "3-generalization/labs/elections/lab.html#the-data",
+    "href": "3-generalization/labs/elections/lab.html#the-data",
+    "title": "Lab 7: Elections",
     "section": "",
-    "text": "What is the distribution of city/town populations in all cities and towns in California?"
+    "text": "On June 12 2009, the Republic of Iran held an election where President (and conservative leader) Mahmoud Ahmadinejad sought re-election against three challengers. The foremost of these was Mir-Hossein Mousavi, a reformist and former prime minister. Mousavi ran a more left-leaning campagign that sought rapid political evolution. When it was announced that Ahmadinejad had won handily, there were widespread allegations of election fraud, especially for supporters of Mousavi and another like-minded challenger, Mehdi Karroubi. These allegations bled over into protests known as the Green Movement. Whether or not election fraud actually took place is still contested.\nIn this lab, we will attempt to explore the possibility of election fraud using the results from the 2009 Iran presidential eleection, which are contained in the iran data frame within the stat20data library."
   },
   {
-    "objectID": "3-generalization/labs/elections/slides.html#section-2",
-    "href": "3-generalization/labs/elections/slides.html#section-2",
-    "title": "Lab: Elections",
+    "objectID": "3-generalization/labs/elections/lab.html#question-1",
+    "href": "3-generalization/labs/elections/lab.html#question-1",
+    "title": "Lab 7: Elections",
+    "section": "Question 1",
+    "text": "Question 1\nWhat is the unit of observation in the iran data frame? Take a good look at the rows of the data frame before answering this!"
+  },
+  {
+    "objectID": "3-generalization/labs/elections/lab.html#question-2",
+    "href": "3-generalization/labs/elections/lab.html#question-2",
+    "title": "Lab 7: Elections",
+    "section": "Question 2",
+    "text": "Question 2\n\npart a\nVisualize the distribution of the vote counts for Ahmadinejad with ggplot2 code. Label and title your axes.\n\n\npart b\nCalculate an appropriate measure of center for the data.\n\n\npart c\nCalculate an appropriate measure of spread for the data.\n\n\npart d\nUsing parts a-c, describe the distribution of vote counts for Ahmadinejad in one to two sentences."
+  },
+  {
+    "objectID": "3-generalization/labs/elections/lab.html#question-3",
+    "href": "3-generalization/labs/elections/lab.html#question-3",
+    "title": "Lab 7: Elections",
+    "section": "Question 3",
+    "text": "Question 3\nOne common theory on how to determine whether an election is fair is as follows:\n\nIn a normally occurring, fair election, the first digit of the vote counts for each voting precinct should follow Benford’s Law. If they do not, that might suggest that vote counts have been manually altered.\n\n\nBenford’s Law is not any universal, binding statute but actually a probability distribution on the set \\(\\{1,2,3,4,5,6,7,8,9\\}\\). Let \\(Y\\) be a random variable following the Benford’s Law probability distribution. The probability mass function of \\(Y\\) is as follows:\n\\[f(y) = log_{10}(1 + \\frac{1}{y})\\]\n\npart a\nCreate two vectors:\n\nThe first vector, y, contains the values 1,2,3, …, 9.\nThe second vector, f_y, contains the values of \\(f(1), f(2), f(3), ..., f(9)\\). See if you can look up the name of a function that can help you with this in the Taxonomy of Data tutorial!\n\n\n\npart b\nUse these vectors to calculate \\(E(Y)\\) , \\(Var(Y)\\) and \\(SD(Y)\\)\n\n\npart c\nWhat might 366 draws (the amount of rows in the iran dataframe) from \\(Y\\) (the Benford’s Law probability distribution) look like? To find out, use your vectors from part a.\n\nWrite R code to take random sample of size 366 from \\(Y\\).\nSave your result into a vector called benfords_sim .\nCreate a one-column data frame called benfords_df.\n\n\n\npart d\nUsing benfords_df and ggplot2 code, create an empirical histogram of the values in the simulation. Label your axes and title your plot Benford’s Law Simulation.\n\n\npart e\nDescribe what you see in the visualization in one to two sentences."
+  },
+  {
+    "objectID": "3-generalization/labs/elections/lab.html#question-4",
+    "href": "3-generalization/labs/elections/lab.html#question-4",
+    "title": "Lab 7: Elections",
+    "section": "Question 4",
+    "text": "Question 4\nWhat do the first digit empirical distributions look like for the four candidates in the Iranian presidential election?\n\npart a\nAdd a new column to iran which contains the first digit of Ahmadinejad’s vote counts. To help you, you may make use of the get_first() function which exists inside the stat20data package.\n\n\npart b\nMake a visualization of the first digit of the vote counts for Ahmadinejad. Label your axes and title the plot “Ahmadinejad”.\n\n\npart c\nRepeat the steps of parts a–b for the remaining three candidates in the data frame. Then, combine the four plots into a single visualization using the patchwork library.\n\n\npart d\nHow well do the observed first digit distributions from this question follow the the one you created in Question 3 by sampling from Benford’s Law? Answer in two to three sentences."
+  },
+  {
+    "objectID": "3-generalization/labs/elections/lab.html#question-5",
+    "href": "3-generalization/labs/elections/lab.html#question-5",
+    "title": "Lab 7: Elections",
+    "section": "Question 5",
+    "text": "Question 5\nWe will now take a look at precinct-level data from a presidential election in the United States; specifically, the election results from Georgia from the year 2020, which saw Joe Biden pull out a shocking victory in the state. This particular result was at the forefront of incumbent president Donald Trump’s claims of election fraud (these claims have been widely debunked by independent news agencies). You can read in the ga_2020 data frame, which contains these results, by copying in the following code cell to your document.\n\nga_2020 &lt;- read_csv(\"https://raw.githubusercontent.com/openelections/openelections-data-ga/refs/heads/master/2020/20201103__ga__general.csv\")\n\nThe data comes from OpenElections, a project which has compiled election results for all fifty states across many different election cycles, including 2020 and 2024. Take a look at the data before you proceed!\n\npart a\nWrite code to create a plot for the first digit distributions of votes for Joe Biden and for Donald Trump. Combine the plots into a single visualization using the patchwork library.\n\n\npart b\nHow well do the observed first digit distributions from this question (the U.S. election in 2020) follow:\n\nthe one you created in Question 3 by sampling from Benford’s Law?\nthe ones you created in Question 4 (Iranian election in 2009)?\n\nAddress each comparison in at least two sentences."
+  },
+  {
+    "objectID": "3-generalization/labs/elections/lab.html#question-6",
+    "href": "3-generalization/labs/elections/lab.html#question-6",
+    "title": "Lab 7: Elections",
+    "section": "Question 6",
+    "text": "Question 6\n\npart a\nAssuming the theory of the Benford’s Law is true, do the results of Questions 4 and 5 suggest the votes in Iranian election may have been manually altered? Answer in two to three sentences.\n\n\npart b\nAssuming the theory of the Benford’s Law is true, do the results of Questions 5 suggest the Georgia votes in the U.S. presidential election may have been manually altered? Answer in two to three sentences.\n\n\npart c\nComment on to the extent to which you believe the Benford’s Law is suitable to detect election fraud in two to three sentences."
+  },
+  {
+    "objectID": "3-generalization/labs/peoples-park/slides.html#section",
+    "href": "3-generalization/labs/peoples-park/slides.html#section",
+    "title": "Lab: People’s Park",
     "section": "",
-    "text": "What is the distribution of the first digit of city/town populations in all cities and towns in California?\n\n\n(these extensive notes were the instructions to TAs when facilitating this spring 2022)\nThis first component can be done either during Berkeley time or at the start of class along with students. It depends on how long you expect the rest of the lesson to take and what you’d like to emphasize: [Write on the board the two “fundamental” distributions that we’ve covered so far: the Binomial and the Bernoulli. ?var:site-urllectures/14/binomial.html#/bernoulli-distributionl will give you a sense of the notation and layout that’s used. Best to replicate each element of these slides, including the plots.]\nIt’s reasonable to ask students to close their laptops for the first part of class.\nAsk students for a guess or two at the population of Berkeley. Write on board then go to Wikipedia and get the true answer and correct the one(s) on the board. From there, follows links through Wikipedia to other towns and cities in California, building up a list of 10 city names and their populations (randomly picking a few of these links is a good method: https://en.wikipedia.org/wiki/Category:Incorporated_cities_and_towns_in_California). Structure this on the board as a data frame with two columns: city and population, and 10 rows.\nAsk students to sketch the distribution of two variables: 1. What they expect the population variable to look like were they to collect the population of all the cities and towns in California. 2. The distribution of the value of the first digit in the population counts of all of these town. This is probably best done think-pair share: give a couple minutes to for them to sketch silently, then ask them to share with a neighbor, then ask a pair to describe their distributions as you draw it on the board.\nProbing questions: 1. Where does this variable sit in the Data Taxonomy? 2. What is the range of possible values this variable can take? 3. What geometry will you use? 4. What shape/modality/center/spread would you expect to see? 5. What labels belong on the axes? 6. What is a good title for this plot?\nThe first should be a histogram or density plot (boxplot is meh) that is heavily right skewed. The second should be a barchart on the integers 1-9, each one having decreasing probabilities.\nWrite out Benford’s Law in a similar way to the other named distributions and describe it as a distribution that we’re going to try to use to describe vote counts. Start the calculation of E and V of Benford’s Law just so that students can see what goes into each term of those sums (I’m actually not sure what the base_10 Benfords E and V are)."
+    "text": "This is a promo video produced by the University to make an argument for the project. This was released at roughly the same time as the survey results."
   },
   {
-    "objectID": "3-generalization/labs/elections/slides.html#benfords-law-1",
-    "href": "3-generalization/labs/elections/slides.html#benfords-law-1",
-    "title": "Lab: Elections",
-    "section": "Benford’s “Law”",
-    "text": "Benford’s “Law”\nLet \\(X\\) be the first digit of a randomly selected number. \\(X \\sim Benfords()\\) if\n\\[P(X = x) = \\log_{10}\\left(1 + 1/x \\right)\\]"
+    "objectID": "3-generalization/labs/peoples-park/slides.html#peoples-park-project",
+    "href": "3-generalization/labs/peoples-park/slides.html#peoples-park-project",
+    "title": "Lab: People’s Park",
+    "section": "People’s Park Project",
+    "text": "People’s Park Project\nThe University wishes to turn a university-owned plot of land called People’s Park into housing.\n\n\nOpponents\n\nAdvocates for the homeless residents living on site\nNeighbors who don’t want a tall tower built\nHistorical preservationists who want to preserve it for its role in countercultural movement of the ’60s.\n\n\nProponents\n\nAdvocates for affordable housing\nNeighbors who want the blight and crime gone\nStudents who want easier access to housing\nCity of Berkeley who wants more housing built"
   },
   {
-    "objectID": "3-generalization/labs/elections/slides.html#fraud-detection-using-benfords-law",
-    "href": "3-generalization/labs/elections/slides.html#fraud-detection-using-benfords-law",
-    "title": "Lab: Elections",
-    "section": "Fraud detection using Benford’s Law",
-    "text": "Fraud detection using Benford’s Law\n\nA common theory is that in a normally occurring, fair, election, the first digit of the vote counts county-by-county should follow Benford’s Law. If they do not, that might suggest that vote counts have been manually altered.\n\n\n\nThis theory was brought to bear to determine whether the 2009 presidential election in Iran showed irregularities1.\n\n\nhttps://physicsworld.com/a/benfords-law-and-the-iranian-e/"
+    "objectID": "3-generalization/labs/peoples-park/slides.html#the-chancellors-survey",
+    "href": "3-generalization/labs/peoples-park/slides.html#the-chancellors-survey",
+    "title": "Lab: People’s Park",
+    "section": "The Chancellor’s Survey",
+    "text": "The Chancellor’s Survey\n\n\n\n\n\nChancellor Carol Christ\n\n\n\nIn fall of 2021, the Chancellor’s Office commissioned a survey of the Berkeley community to gauge opinions on people’s park.\n\n\n\nIn this lab you will gain access to this survey data."
   },
   {
-    "objectID": "3-generalization/labs/elections/slides.html#lab-elections",
-    "href": "3-generalization/labs/elections/slides.html#lab-elections",
-    "title": "Lab: Elections",
-    "section": "Lab: Elections",
-    "text": "Lab: Elections\nIn this lab we will:\n\nExamine the Benford’s Law probability distribution\n\n\n\nCompare the first digits of vote counts in the 2009 Iranian election to this distribution\n\n\n\n\nReach a conclusion on whether the election was fraudulent (or whether the Benford’s Law is a good tool at detecting fraud in the first place)."
+    "objectID": "3-generalization/labs/peoples-park/slides.html#part-i-understanding-the-context-of-the-data",
+    "href": "3-generalization/labs/peoples-park/slides.html#part-i-understanding-the-context-of-the-data",
+    "title": "Lab: People’s Park",
+    "section": "Part I: Understanding the Context of the Data",
+    "text": "Part I: Understanding the Context of the Data\n\n\n\nReference Materials\n\nChancellor’s Email\nBackground Methods PDF\nQuestionnaire\n\n\n  \n    −\n    +\n \n 25:00"
   },
   {
-    "objectID": "3-generalization/labs/elections/learning-objectives.html",
-    "href": "3-generalization/labs/elections/learning-objectives.html",
-    "title": "Stat 20",
+    "objectID": "3-generalization/labs/peoples-park/lab.html",
+    "href": "3-generalization/labs/peoples-park/lab.html",
+    "title": "Lab 8: People’s Park",
     "section": "",
-    "text": "Write down a probability model for vote counts.\nReview\n\n\nUnit of observation\n\n\n\nlibrary(rvest)\n# Reading in the table from Wikipedia\ntab &lt;- read_html(\"https://en.wikipedia.org/wiki/List_of_tallest_buildings\") %&gt;% \n  html_node(\".wikitable\") %&gt;%\n  html_table(fill = TRUE)\n\nReferences:\nOriginal iran analysis:\nhttps://www.researchgate.net/publication/45856921_A_first-digit_anomaly_in_the_2009_Iranian_presidential_election\nhttps://arxiv.org/pdf/0906.2789.pdf\nFollow up by walter mebane:\nhttp://websites.umich.edu/~wmebane/note18jun2009.pdf\nGelman’s take:"
+    "text": "library(stat20data)\ndata(ppk)"
+  },
+  {
+    "objectID": "3-generalization/labs/peoples-park/lab.html#the-data",
+    "href": "3-generalization/labs/peoples-park/lab.html#the-data",
+    "title": "Lab 8: People’s Park",
+    "section": "The Data",
+    "text": "The Data\nOn September 30, 2021 Chancellor Carol Christ sent an e-mail out to the UC Berkeley community informing them that the UC Regents approved UC Berkeley’s planned development on the People’s Park property. Development on the land had been a focus for the UC for some time and this e-mail was the most significant step taken by the administration so far.\nChancellor Christ mentioned that keeping student opinion in mind was important to the university. To that end, the UC Berkeley sent out a Google form survey in hopes of garnering student perspectives on “housing issues in general, and plans for People’s Park in particular”. Within the survey, students were asked their opinions on the People’s Park project and then shown more details about the project. Their opinions were then gauged again.\nAccording to the e-mail and materials linked in the Chancellor’s e-mail, not only were students in support of the project initially, but once students learned more about the project, their support for the project grew.\n\nThe Statistics department obtained a partial version of the dataset obtained in the survey: the ppk data frame in the stat20data library.\nYou are also given access to a few documents (click on the links below):\n\na summary of the survey details as given by the facilitator Qualtrics,\na copy of the Google Form that was sent out to students\na copy of Chancellor Christ’s e-mail to students.\n\n\nAcross the next two weeks (this week’s lab and next), you will be performing inference to determine if the survey was able to change student opinion in the way that the chancellor’s e-mail described."
+  },
+  {
+    "objectID": "3-generalization/labs/peoples-park/lab.html#questions-understanding-context",
+    "href": "3-generalization/labs/peoples-park/lab.html#questions-understanding-context",
+    "title": "Lab 8: People’s Park",
+    "section": "Questions: Understanding context",
+    "text": "Questions: Understanding context\nFor these questions, use the provided documents to inform your answers.\n\nQuestion 1\nWhat do you think was the goal(s) of the Chancellor’s office in commissioning this survey? Answer in at least two to three sentences.\n\n\nQuestion 2\nWrite down\n\nthe initial number of students selected to take the survey;\nthe final sample size that actually did take the survey;\nthe response rate.\n\n\nThe population parameter that we will focus on in this lab is the overall change in support (yes/no) after respondents were exposed to the information on page 14 of the Google Form survey.\n\n\nQuestion 3\nIdentify a possible source of bias and whether it is selection, measurement, or nonresponse bias. How do you expect this source will affect the point estimate of the parameter?\n\n\nQuestion 4\nIdentify a possible source of variation and whether it is sampling or measurement variability. How do you expect this source will affect an interval estimate of the parameter?"
+  },
+  {
+    "objectID": "3-generalization/labs/peoples-park/lab.html#questions-computing-on-the-data",
+    "href": "3-generalization/labs/peoples-park/lab.html#questions-computing-on-the-data",
+    "title": "Lab 8: People’s Park",
+    "section": "Questions: Computing on the data",
+    "text": "Questions: Computing on the data\nNow it is time to access the ppk data frame!\n\nQuestion 5\nWhat is the unit of observation in the ppk data frame? Answer in at least one sentence.\n\n\nBEFORE MOVING TO QUESTION 6: a note on missing data\nAs you take a look at the ppk data frame, you may notice that some data is missing. Data entries that are missing or not collected are labeled as NA in R.\nThere are many ways to handle situations like this, but in this lab, when performing calculations that involve columns containing NA entries, you can remove them before starting your calculation using the drop_na() function, which scans any columns that you provide and drop any rows (observations) with NA in that column. For example, imagine that someone would like to work with scale option one in the seventh question on the Google form, and notices there is missing data. They might precede the calculation as follows:\n\nppk |&gt;\n  drop_na(Q7_1) |&gt;\n  ... # continue with the calculation\n\nMake sure not to use drop_na() without first specifying the columns, or you may get rid of more data than you need to!\n\n\n\n\nQuestion 6\n\npart a\nWrite code to construct a 95% confidence interval for the mean rating of the condition of People’s Park. Your answer should come in the form of a data frame containing the lower and upper bounds of this interval in a single pipeline.\n\n\npart b\nInterpret the confidence interval you constructed in the context of the problem in at least one sentence.\n\n\n\nQuestion 7\n\npart a\nAdd a new column to the ppk data frame called support_before that takes the response data (in text form) from Question 18 on the Google Form and returns TRUE for answers of \"Very strongly support\", \"Strongly support\", and \"Somewhat support\" and FALSE otherwise. Recall that you can use the %in% operator to check if the response is one of these three values.\n\n\npart b\nRepeat the process of part a but instead for the response data from Question 21 on the Google Form. Call this column support_after.\n\n\npart c\nCreate a data structure which displays, for each class (freshman, sophomore, etc) the proportion that supported the People’s Park project:\n\nbefore they received additional information about the project\nafter they received this information\n\n\n\npart d\nAdd a third column to the data frame called change_in_support that subtracts support_before from support_after.\n\n\n\nQuestion 8\n\npart a\nWrite code to construct a 95% confidence interval for the mean change in support for the Project across the entire population after being exposed to additional information about the project. Your answer should come in the form of a data frame containing the lower and upper bounds of this interval in a single pipeline.\n\n\npart b\nInterpret the confidence interval you constructed in the context of the problem in at least one sentence.\n\n\npart c\n\nDoes your interval from the previous question contain 0?\nWhat are the implications of that for those working in the Chancellor’s Office on the People’s Park Project?\n\nAnswer in at least two sentences."
   },
   {
     "objectID": "3-generalization/03-probability-dsns/tutorial.html",
@@ -2616,7 +2665,7 @@
     "href": "3-generalization/06-normal-approx/slides.html#section-1",
     "title": "Normal Approximation",
     "section": "",
-    "text": "−+\n02:00\n\n\n\nOne hundred draws will be made with replacement from a box with tickets \\(\\fbox{-10}\\, \\fbox{0}\\, \\fbox{5} \\,\\fbox{10}  \\,\\fbox{20}\\). Find the expected value of the sum (\\(S_n\\)) of the one hundred draws and the average of the one hundred draws (\\(\\bar{X}_n\\))*\n\n\n\\(\\mathbb{E}(S_n)\\) = 500, \\(\\mathbb{E}(\\bar{X}_n)\\) = 5\n\\(\\mathbb{E}(S_n)\\) = 5, \\(\\mathbb{E}(\\bar{X}_n)\\) = 500\nWe cannot treat the one hundred draws as i.i.d. random variables, as done in the answers above, because the draws are being made with replacement.\n\n\n * Inspired by the text Statistics by Freedman, Pisani, and Purves \n\nThe EV is a constant, and note that the box average is (0+2+3+4+6)/5 = 3, so the EV of a single draw is 3, and the EV of the sum of 100 draws is \\(100\\times 3 = 300\\). The give or take number given here is the box SD \\(\\times 10 = 2\\times 10 = 20\\). You can let \\(X\\) be a random variable that is the value of one ticket drawn at random from this box, and then we want \\(S_{100}\\). This can be boardwork."
+    "text": "−+\n02:00\n\n\n\nOne hundred draws will be made with replacement from a box with tickets \\(\\fbox{-10}\\, \\fbox{0}\\, \\fbox{5} \\,\\fbox{10}  \\,\\fbox{20}\\). Find the expected value of the sum (\\(S_n\\)) of the one hundred draws and the average of the one hundred draws (\\(\\bar{X}_n\\)).*\n\n\n\\(\\mathbb{E}(S_n)\\) = 500, \\(\\mathbb{E}(\\bar{X}_n)\\) = 5\n\\(\\mathbb{E}(S_n)\\) = 5, \\(\\mathbb{E}(\\bar{X}_n)\\) = 500\nWe cannot treat the one hundred draws as i.i.d. random variables, as done in the answers above, because the draws are being made with replacement.\n\n\n * Inspired by the text Statistics by Freedman, Pisani, and Purves \n\nThe EV is a constant, and note that the box average is (0+2+3+4+6)/5 = 3, so the EV of a single draw is 3, and the EV of the sum of 100 draws is \\(100\\times 3 = 300\\). The give or take number given here is the box SD \\(\\times 10 = 2\\times 10 = 20\\). You can let \\(X\\) be a random variable that is the value of one ticket drawn at random from this box, and then we want \\(S_{100}\\). This can be boardwork."
   },
   {
     "objectID": "3-generalization/06-normal-approx/slides.html#section-2",
@@ -2812,88 +2861,188 @@
     ]
   },
   {
-    "objectID": "3-generalization/labs/peoples-park/slides.html#section",
-    "href": "3-generalization/labs/peoples-park/slides.html#section",
-    "title": "Lab: People’s Park",
+    "objectID": "3-generalization/07-from-samps-to-pops/slides.html#section",
+    "href": "3-generalization/07-from-samps-to-pops/slides.html#section",
+    "title": "From Samples to Populations",
     "section": "",
-    "text": "This is a promo video produced by the University to make an argument for the project. This was released at roughly the same time as the survey results."
+    "text": "The top plots are population distributions; the bottom two are sampling distributions of the means from many samples of size 200. Match numbers to letters.\n\n\nCorrect answer: It depends on the sampling process.\nThese sampling distributions were actually made from taking samples of size 200 with replacement from populations of size 100. Most students will assume this when they first answer and choose 1-B, 2-A. This is a good opportunity to cue them to think very carefully about exactly how it is worded, then give them time to discuss and revote.\n\n\n  \n    −\n    +\n \n 01:00"
   },
   {
-    "objectID": "3-generalization/labs/peoples-park/slides.html#peoples-park-project",
-    "href": "3-generalization/labs/peoples-park/slides.html#peoples-park-project",
-    "title": "Lab: People’s Park",
-    "section": "People’s Park Project",
-    "text": "People’s Park Project\nThe University wishes to turn a university-owned plot of land called People’s Park into housing.\n\n\nOpponents\n\nAdvocates for the homeless residents living on site\nNeighbors who don’t want a tall tower built\nHistorical preservationists who want to preserve it for its role in countercultural movement of the ’60s.\n\n\nProponents\n\nAdvocates for affordable housing\nNeighbors who want the blight and crime gone\nStudents who want easier access to housing\nCity of Berkeley who wants more housing built"
-  },
-  {
-    "objectID": "3-generalization/labs/peoples-park/slides.html#the-chancellors-survey",
-    "href": "3-generalization/labs/peoples-park/slides.html#the-chancellors-survey",
-    "title": "Lab: People’s Park",
-    "section": "The Chancellor’s Survey",
-    "text": "The Chancellor’s Survey\n\n\n\n\n\nChancellor Carol Christ\n\n\n\nIn fall of 2021, the Chancellor’s Office commissioned a survey of the Berkeley community to gauge opinions on people’s park.\n\n\n\nIn this lab you will gain access to this survey data."
-  },
-  {
-    "objectID": "3-generalization/labs/peoples-park/slides.html#part-i-understanding-the-context-of-the-data",
-    "href": "3-generalization/labs/peoples-park/slides.html#part-i-understanding-the-context-of-the-data",
-    "title": "Lab: People’s Park",
-    "section": "Part I: Understanding the Context of the Data",
-    "text": "Part I: Understanding the Context of the Data\n\n\n\nReference Materials\n\nChancellor’s Email\nBackground Methods PDF\nQuestionnaire\n\n\n  \n    −\n    +\n \n 25:00"
-  },
-  {
-    "objectID": "3-generalization/labs/elections/lab.html",
-    "href": "3-generalization/labs/elections/lab.html",
-    "title": "Lab 7: Elections",
+    "objectID": "3-generalization/07-from-samps-to-pops/slides.html#section-1",
+    "href": "3-generalization/07-from-samps-to-pops/slides.html#section-1",
+    "title": "From Samples to Populations",
     "section": "",
-    "text": "On June 12 2009, the Republic of Iran held an election where President (and conservative leader) Mahmoud Ahmadinejad sought re-election against three challengers. The foremost of these was Mir-Hossein Mousavi, a reformist and former prime minister. Mousavi ran a more left-leaning campagign that sought rapid political evolution. When it was announced that Ahmadinejad had won handily, there were widespread allegations of election fraud, especially for supporters of Mousavi and another like-minded challenger, Mehdi Karroubi. These allegations bled over into protests known as the Green Movement. Whether or not election fraud actually took place is still contested.\nIn this lab, we will attempt to explore the possibility of election fraud using the results from the 2009 Iran presidential eleection, which are contained in the iran data frame within the stat20data library."
+    "text": "Scenario 1: Calling on the front row\n\n\nThis is the example from the notes, where the prof just takes a sample of size n = 18 from the first row. 1st year students are 10 times more likely to be drawn than 4th year students. The result is that most of the sample means are below the true population parameter (the blue vertical line)."
   },
   {
-    "objectID": "3-generalization/labs/elections/lab.html#the-data",
-    "href": "3-generalization/labs/elections/lab.html#the-data",
-    "title": "Lab 7: Elections",
+    "objectID": "3-generalization/07-from-samps-to-pops/slides.html#section-2",
+    "href": "3-generalization/07-from-samps-to-pops/slides.html#section-2",
+    "title": "From Samples to Populations",
     "section": "",
-    "text": "On June 12 2009, the Republic of Iran held an election where President (and conservative leader) Mahmoud Ahmadinejad sought re-election against three challengers. The foremost of these was Mir-Hossein Mousavi, a reformist and former prime minister. Mousavi ran a more left-leaning campagign that sought rapid political evolution. When it was announced that Ahmadinejad had won handily, there were widespread allegations of election fraud, especially for supporters of Mousavi and another like-minded challenger, Mehdi Karroubi. These allegations bled over into protests known as the Green Movement. Whether or not election fraud actually took place is still contested.\nIn this lab, we will attempt to explore the possibility of election fraud using the results from the 2009 Iran presidential eleection, which are contained in the iran data frame within the stat20data library."
+    "text": "How would the sampling distribution change if instead of calling on the front row, the Prof. put all 527 names on tickets in a box, mixed them up, then drew 18 names without replacement? Select the most dramatic change.\n\n\nThis describes a simple random sample, the sampling distribution will move up to be centered around the parameter.\nTakehome: sampling variability for an average increases or decreases with changing sample size according to 1/sqrt(n).\nTakehome: if there is little / no variability in the sampling process, there really isn’t much of a sampling distribution. It’s more like a constant and your only concern is bias.\n\n\n  \n    −\n    +\n \n 01:00"
   },
   {
-    "objectID": "3-generalization/labs/elections/lab.html#question-1",
-    "href": "3-generalization/labs/elections/lab.html#question-1",
-    "title": "Lab 7: Elections",
-    "section": "Question 1",
-    "text": "Question 1\nWhat is the unit of observation in the iran data frame? Take a good look at the rows of the data frame before answering this!"
+    "objectID": "3-generalization/07-from-samps-to-pops/slides.html#section-3",
+    "href": "3-generalization/07-from-samps-to-pops/slides.html#section-3",
+    "title": "From Samples to Populations",
+    "section": "",
+    "text": "Scenario 2: Drawing names from a box"
   },
   {
-    "objectID": "3-generalization/labs/elections/lab.html#question-2",
-    "href": "3-generalization/labs/elections/lab.html#question-2",
-    "title": "Lab 7: Elections",
-    "section": "Question 2",
-    "text": "Question 2\n\npart a\nVisualize the distribution of the vote counts for Ahmadinejad with ggplot2 code. Label and title your axes.\n\n\npart b\nCalculate an appropriate measure of center for the data.\n\n\npart c\nCalculate an appropriate measure of spread for the data.\n\n\npart d\nUsing parts a-c, describe the distribution of vote counts for Ahmadinejad in one to two sentences."
+    "objectID": "3-generalization/07-from-samps-to-pops/slides.html#section-4",
+    "href": "3-generalization/07-from-samps-to-pops/slides.html#section-4",
+    "title": "From Samples to Populations",
+    "section": "",
+    "text": "How would the sampling distribution change if instead of calling on the front row, the Prof. put all 527 names on tickets in a box, mixed them up, then drew 8 names without replacement instead of 18?\n\n\nThe sampling distribution will still be centered about the parameter, but the standard deviation would decrease.\nA follow up question if you’d like:\n\nReturning to the “calling on the front row” sampling method and plot: what would happen if, by the end of the semester, 90% of students sit in the same seat every class period? Answer: in that case there would be very little variability from one day / sample to the next and the SD of the sampling distribution would decrease dramatically."
   },
   {
-    "objectID": "3-generalization/labs/elections/lab.html#question-3",
-    "href": "3-generalization/labs/elections/lab.html#question-3",
-    "title": "Lab 7: Elections",
-    "section": "Question 3",
-    "text": "Question 3\nOne common theory on how to determine whether an election is fair is as follows:\n\nIn a normally occurring, fair election, the first digit of the vote counts for each voting precinct should follow Benford’s Law. If they do not, that might suggest that vote counts have been manually altered.\n\n\nBenford’s Law is not any universal, binding statute but actually a probability distribution on the set \\(\\{1,2,3,4,5,6,7,8,9\\}\\). Let \\(Y\\) be a random variable following the Benford’s Law probability distribution. The probability mass function of \\(Y\\) is as follows:\n\\[f(y) = log_{10}(1 + \\frac{1}{y})\\]\n\npart a\nCreate two vectors:\n\nThe first vector, y, contains the values 1,2,3, …, 9.\nThe second vector, f_y, contains the values of \\(f(1), f(2), f(3), ..., f(9)\\). See if you can look up the name of a function that can help you with this in the Taxonomy of Data tutorial!\n\n\n\npart b\nUse these vectors to calculate \\(E(Y)\\) , \\(Var(Y)\\) and \\(SD(Y)\\)\n\n\npart c\nWhat might 366 draws (the amount of rows in the iran dataframe) from \\(Y\\) (the Benford’s Law probability distribution) look like? To find out, use your vectors from part a.\n\nWrite R code to take random sample of size 366 from \\(Y\\).\nSave your result into a vector called benfords_sim .\nCreate a one-column data frame called benfords_df.\n\n\n\npart d\nUsing benfords_df and ggplot2 code, create an empirical histogram of the values in the simulation. Label your axes and title your plot Benford’s Law Simulation.\n\n\npart e\nDescribe what you see in the visualization in one to two sentences."
+    "objectID": "3-generalization/labs/peoples-park/part-2.html",
+    "href": "3-generalization/labs/peoples-park/part-2.html",
+    "title": "People’s Park",
+    "section": "",
+    "text": "In answering the following questions, it will be helpful to consult"
   },
   {
-    "objectID": "3-generalization/labs/elections/lab.html#question-4",
-    "href": "3-generalization/labs/elections/lab.html#question-4",
-    "title": "Lab 7: Elections",
-    "section": "Question 4",
-    "text": "Question 4\nWhat do the first digit empirical distributions look like for the four candidates in the Iranian presidential election?\n\npart a\nAdd a new column to iran which contains the first digit of Ahmadinejad’s vote counts. To help you, you may make use of the get_first() function which exists inside the stat20data package.\n\n\npart b\nMake a visualization of the first digit of the vote counts for Ahmadinejad. Label your axes and title the plot “Ahmadinejad”.\n\n\npart c\nRepeat the steps of parts a–b for the remaining three candidates in the data frame. Then, combine the four plots into a single visualization using the patchwork library.\n\n\npart d\nHow well do the observed first digit distributions from this question follow the the one you created in Question 3 by sampling from Benford’s Law? Answer in two to three sentences."
+    "objectID": "3-generalization/labs/peoples-park/part-2.html#part-ii-computing-on-the-data",
+    "href": "3-generalization/labs/peoples-park/part-2.html#part-ii-computing-on-the-data",
+    "title": "People’s Park",
+    "section": "Part II: Computing on the Data",
+    "text": "Part II: Computing on the Data\nThe data collected by the Chancellor’s Office on Cal students can be found as ppk in the stat20data package.\nThe ppk data set represents a subset of questions that were asked in the questionnaire and have had random noise added to them. The results, in aggregate, share similar statistical properties to the raw data, but a given row no longer reflects an individual student’s response completely.\n\nQuestion 1\nPrint the first few rows with the columns that correspond to the responses to survey questions 1, 7, and 8 (Note: we have changed the data back from all numerical data, as suggested by part 1 question 8, to a mix of numerical and categorical data). Please comment on whether your encoding of the data from Q7 on the questionnaire matches the encoding in ppk.\n\n\nQuestion 2\nReturn to your sketches from lab part 1, question 9. Create those visualizations (or more appropriate analogues) using the questionnaire data. For each, add a title and axis labels to make it clear what they are showing, and describe the distribution in words. If your visualization is of ordinal data, the bars should be ordered accordingly. For part a here, you’re welcome to select just one of the priorities to visualize.\n\nQuestion 9\nQuestion 10\nQuestion 18 and 21 (showing, for each individual student, the change from before and after the information in one plot)\n\n\n\nQuestion 3\nCreate a new column called support_before that takes the response data from question 18 and returns TRUE for answers of “Very strongly support”, “Strongly support”, and “Somewhat support” and FALSE otherwise. Use %in% to check if the response is one of these three values. What proportion of the survey participants in each class (freshman, sophomore, etc) supported the People’s Park Project before being presented with the information on the bottom of page 14?\n\n\nQuestion 4\nRepeat the previous question but this time drop any rows with NA (missing data) before starting your calculation. This can be done by using the drop_na() function, which scans any columns that you provide and drop any rows with NA in that column.\n\nppk |&gt;\n  drop_na(Q18_words)\n\nDoes the proportion change? If it does, which proportion do you think most consumers of this data analysis will assume they’re looking at?\n\nFor the remaining questions in this lab, drop rows with NAs in the columns that you’re using for that question.\n\n\n\nQuestion 5\nWhat is the mean and median rating of the condition of People’s Park (question 15 on the survey)?\n\n\nQuestion 6\nCreate a new column called change_in_support that measures the change in support from question 18 to 21 of the survey. What is the mean change in support of the survey participants in each class (freshman, sophomore, etc) for the People’s Park Project after reading the information? What assumption must you make about the values of the Likert scale in order for these statistics to be informative?\n\n\nQuestion 7\nConstruct one additional visualization that captures a variable or relationship between two variables that you are interested in. Describe the structure that you see in the plot.\n\n\nQuestion 8\nCreate a 95% confidence intervals for the mean rating of the condition of People’s Park using the normal curve. Interpret the interval in the context of the problem in a clear sentence.\n\n\nQuestion 9\nCreate a 95% confidence interval using the normal curve for the overall proportion of students who support the People’s Park Project without having been exposed to the information on page 14. Interpret the interval in the context of the problem in a clear sentence. Does your point estimate approximately match that reported in the Chancellor’s email?\n\n\nQuestion 10\nSelect a confidence level lower than 95% and recalculate the interval from the previous question to express this confidence level. In general, are intervals with higher confidence wider or narrower than those with lower confidence?\n\n\nQuestion 11\nUsing the normal curve, create a 95% confidence interval for the mean change in support for the Project across the entire population after being exposed to the information on page 14.\n\n\nQuestion 12\nDoes your interval from the previous question contain 0? What are the implications of that for those working in the Chancellor’s Office on the People’s Park Project?\n\n\nLast Question\nWill you ensure that your submission to Gradescope…\n\nis of a pdf generated from a qmd file,\nhas all of your code visible to readers,\nand assigns each of the questions to all pages that show your work for that question?\n\n(This one is easy! Just answer “yes” or “no”)"
   },
   {
-    "objectID": "3-generalization/labs/elections/lab.html#question-5",
-    "href": "3-generalization/labs/elections/lab.html#question-5",
-    "title": "Lab 7: Elections",
-    "section": "Question 5",
-    "text": "Question 5\nWe will now take a look at precinct-level data from a presidential election in the United States; specifically, the election results from Georgia from the year 2020, which saw Joe Biden pull out a shocking victory in the state. This particular result was at the forefront of incumbent president Donald Trump’s claims of election fraud (these claims have been widely debunked by independent news agencies). You can read in the ga_2020 data frame, which contains these results, by copying in the following code cell to your document.\n\nga_2020 &lt;- read_csv(\"https://raw.githubusercontent.com/openelections/openelections-data-ga/refs/heads/master/2020/20201103__ga__general.csv\")\n\nThe data comes from OpenElections, a project which has compiled election results for all fifty states across many different election cycles, including 2020 and 2024. Take a look at the data before you proceed!\n\npart a\nWrite code to create a plot for the first digit distributions of votes for Joe Biden and for Donald Trump. Combine the plots into a single visualization using the patchwork library.\n\n\npart b\nHow well do the observed first digit distributions from this question (the U.S. election in 2020) follow:\n\nthe one you created in Question 3 by sampling from Benford’s Law?\nthe ones you created in Question 4 (Iranian election in 2009)?\n\nAddress each comparison in at least two sentences."
+    "objectID": "3-generalization/labs/elections/learning-objectives.html",
+    "href": "3-generalization/labs/elections/learning-objectives.html",
+    "title": "Stat 20",
+    "section": "",
+    "text": "Write down a probability model for vote counts.\nReview\n\n\nUnit of observation\n\n\n\nlibrary(rvest)\n# Reading in the table from Wikipedia\ntab &lt;- read_html(\"https://en.wikipedia.org/wiki/List_of_tallest_buildings\") %&gt;% \n  html_node(\".wikitable\") %&gt;%\n  html_table(fill = TRUE)\n\nReferences:\nOriginal iran analysis:\nhttps://www.researchgate.net/publication/45856921_A_first-digit_anomaly_in_the_2009_Iranian_presidential_election\nhttps://arxiv.org/pdf/0906.2789.pdf\nFollow up by walter mebane:\nhttp://websites.umich.edu/~wmebane/note18jun2009.pdf\nGelman’s take:"
   },
   {
-    "objectID": "3-generalization/labs/elections/lab.html#question-6",
-    "href": "3-generalization/labs/elections/lab.html#question-6",
-    "title": "Lab 7: Elections",
-    "section": "Question 6",
-    "text": "Question 6\n\npart a\nAssuming the theory of the Benford’s Law is true, do the results of Questions 4 and 5 suggest the votes in Iranian election may have been manually altered? Answer in two to three sentences.\n\n\npart b\nAssuming the theory of the Benford’s Law is true, do the results of Questions 5 suggest the Georgia votes in the U.S. presidential election may have been manually altered? Answer in two to three sentences.\n\n\npart c\nComment on to the extent to which you believe the Benford’s Law is suitable to detect election fraud in two to three sentences."
+    "objectID": "3-generalization/labs/elections/slides.html#iran-election",
+    "href": "3-generalization/labs/elections/slides.html#iran-election",
+    "title": "Lab: Elections",
+    "section": "2009 Iran Election",
+    "text": "2009 Iran Election\n\n\n\nBackground\n\nOngoing public sentiment that previous election was fraudulent\nThe highest voter turnout in Iran’s history\n\n\nLeading candidates\n\nMahmoud Ahmadinejad: Leader of conservatives and incumbent president.\nMir-Hossein Mousavi: Reformist and former prime minister. Seeking rapid political evolution.\n\n\n\n\n\n\n\n\n\nOutcome\nAhmadinejad won the election with 62.6% of the votes cast, while Mousavi received 33.75% of the votes cast."
+  },
+  {
+    "objectID": "3-generalization/labs/elections/slides.html#post-election-controversies-and-unrest",
+    "href": "3-generalization/labs/elections/slides.html#post-election-controversies-and-unrest",
+    "title": "Lab: Elections",
+    "section": "Post-election controversies and unrest",
+    "text": "Post-election controversies and unrest\n\n\n\n\n\nAllegations of fraud\nPublic protests and unrests\nThe green wave movement, led by Mousavi, against the allegedly fraudulent election and Ahmadinejad’s regime"
+  },
+  {
+    "objectID": "3-generalization/labs/elections/slides.html#section",
+    "href": "3-generalization/labs/elections/slides.html#section",
+    "title": "Lab: Elections",
+    "section": "",
+    "text": "Was the election fraudulent?"
+  },
+  {
+    "objectID": "3-generalization/labs/elections/slides.html#section-1",
+    "href": "3-generalization/labs/elections/slides.html#section-1",
+    "title": "Lab: Elections",
+    "section": "",
+    "text": "What is the distribution of city/town populations in all cities and towns in California?"
+  },
+  {
+    "objectID": "3-generalization/labs/elections/slides.html#section-2",
+    "href": "3-generalization/labs/elections/slides.html#section-2",
+    "title": "Lab: Elections",
+    "section": "",
+    "text": "What is the distribution of the first digit of city/town populations in all cities and towns in California?\n\n\n(these extensive notes were the instructions to TAs when facilitating this spring 2022)\nThis first component can be done either during Berkeley time or at the start of class along with students. It depends on how long you expect the rest of the lesson to take and what you’d like to emphasize: [Write on the board the two “fundamental” distributions that we’ve covered so far: the Binomial and the Bernoulli. ?var:site-urllectures/14/binomial.html#/bernoulli-distributionl will give you a sense of the notation and layout that’s used. Best to replicate each element of these slides, including the plots.]\nIt’s reasonable to ask students to close their laptops for the first part of class.\nAsk students for a guess or two at the population of Berkeley. Write on board then go to Wikipedia and get the true answer and correct the one(s) on the board. From there, follows links through Wikipedia to other towns and cities in California, building up a list of 10 city names and their populations (randomly picking a few of these links is a good method: https://en.wikipedia.org/wiki/Category:Incorporated_cities_and_towns_in_California). Structure this on the board as a data frame with two columns: city and population, and 10 rows.\nAsk students to sketch the distribution of two variables: 1. What they expect the population variable to look like were they to collect the population of all the cities and towns in California. 2. The distribution of the value of the first digit in the population counts of all of these town. This is probably best done think-pair share: give a couple minutes to for them to sketch silently, then ask them to share with a neighbor, then ask a pair to describe their distributions as you draw it on the board.\nProbing questions: 1. Where does this variable sit in the Data Taxonomy? 2. What is the range of possible values this variable can take? 3. What geometry will you use? 4. What shape/modality/center/spread would you expect to see? 5. What labels belong on the axes? 6. What is a good title for this plot?\nThe first should be a histogram or density plot (boxplot is meh) that is heavily right skewed. The second should be a barchart on the integers 1-9, each one having decreasing probabilities.\nWrite out Benford’s Law in a similar way to the other named distributions and describe it as a distribution that we’re going to try to use to describe vote counts. Start the calculation of E and V of Benford’s Law just so that students can see what goes into each term of those sums (I’m actually not sure what the base_10 Benfords E and V are)."
+  },
+  {
+    "objectID": "3-generalization/labs/elections/slides.html#benfords-law-1",
+    "href": "3-generalization/labs/elections/slides.html#benfords-law-1",
+    "title": "Lab: Elections",
+    "section": "Benford’s “Law”",
+    "text": "Benford’s “Law”\nLet \\(X\\) be the first digit of a randomly selected number. \\(X \\sim Benfords()\\) if\n\\[P(X = x) = \\log_{10}\\left(1 + 1/x \\right)\\]"
+  },
+  {
+    "objectID": "3-generalization/labs/elections/slides.html#fraud-detection-using-benfords-law",
+    "href": "3-generalization/labs/elections/slides.html#fraud-detection-using-benfords-law",
+    "title": "Lab: Elections",
+    "section": "Fraud detection using Benford’s Law",
+    "text": "Fraud detection using Benford’s Law\n\nA common theory is that in a normally occurring, fair, election, the first digit of the vote counts county-by-county should follow Benford’s Law. If they do not, that might suggest that vote counts have been manually altered.\n\n\n\nThis theory was brought to bear to determine whether the 2009 presidential election in Iran showed irregularities1.\n\n\nhttps://physicsworld.com/a/benfords-law-and-the-iranian-e/"
+  },
+  {
+    "objectID": "3-generalization/labs/elections/slides.html#lab-elections",
+    "href": "3-generalization/labs/elections/slides.html#lab-elections",
+    "title": "Lab: Elections",
+    "section": "Lab: Elections",
+    "text": "Lab: Elections\nIn this lab we will:\n\nExamine the Benford’s Law probability distribution\n\n\n\nCompare the first digits of vote counts in the 2009 Iranian election to this distribution\n\n\n\n\nReach a conclusion on whether the election was fraudulent (or whether the Benford’s Law is a good tool at detecting fraud in the first place)."
+  },
+  {
+    "objectID": "3-generalization/08-confidence-intervals/notes.html",
+    "href": "3-generalization/08-confidence-intervals/notes.html",
+    "title": "Confidence Intervals",
+    "section": "",
+    "text": "The process of generalizing from a statistic of a sample to a parameter of a population is known as statistical inference. The parameter of interest could be a mean, median, proportion, correlation coefficient, the coefficient of a linear model . . . the list goes on. In the scenario that unfolded in Pimentel Hall, the parameter was the mean year of the 527 students in the class. The process of estimating that parameter by calculating the sample mean of the 18 students who decided to sit in the front row that day induces a sampling distribution.\nThis sampling distribution captures the two sources of error that creep in while generalizing. The horizontal offset from the true population parameter (the red line) to the mean of the sampling distribution (the gold triangle) represents the bias. The spread of the sampling distribution represents the variation. In these lecture notes you’ll learn how to quantify sampling variability using two common tools.\nTo focus on the variation, let’s introduce a second example, one in which we will not need to worry about bias.",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "3-generalization/08-confidence-intervals/notes.html#a-simple-random-sample",
+    "href": "3-generalization/08-confidence-intervals/notes.html#a-simple-random-sample",
+    "title": "Confidence Intervals",
+    "section": "A Simple Random Sample",
+    "text": "A Simple Random Sample\n\nRestaurants in San Francisco\nEvery year, the city of San Francisco’s health department visits all the restaurants in the city and inspects them for food safety. Each restaurant is given an inspection score; these range from 100 (perfectly clean) to 48 (serious potential for contamination). We have these scores from 2016. Let’s build up to the sampling distribution bit by bit.\n\n\n\nThe Population Distribution\nOur population consists of the restaurants in San Francisco. Since the data are published online for all restaurants, we have a census1 of scores for every restaurant in the city.\n\n\n\n\n\n\n\n\n\nThe population distribution is skewed left with a long left tail. The highest possible score is 100. It appears that even scores are more popular than odd scores for scores in the 90s; in fact there are no scores of 99, 97, and 95.\nWe can calculate two parameters of this population:\nPopulation parameters, like the parameters of probability distributions, are usually given a Greek letter. The population mean is \\(\\mu\\), said “myoo”, and the population standard deviation is \\(\\sigma\\), said “sigma”.\n\nThe population mean, \\(\\mu\\), is 87.6.\nThe population SD, \\(\\sigma\\), is 8.9.\n\n\n\nThe Empirical Distribution\nAlthough we have data on all of the restaurants in the city, imagine that you’re an inspector who has visited a simple random sample of 100 restaurants. That is, you draw 100 times without replacement from the population, with each unit equally likely to be selected. This leads to a representative sample that will have no selection bias.\nThe distribution of this sample (an empirical distribution) looks like:\n\n\n\n\n\n\n\n\n\nThe sample statistics here are:\nWhile parameters are symbolized with Greek letters, statistics are usually symbolized with Latin letters.\n\nThe sample mean, \\(\\bar{x}\\), is 86.27.\nThe sample SD, \\(s\\), is 9.9.\n\nObserve that the empirical distribution resembles the population distribution because we are using a sampling method without with selection bias. It’s not a perfect match but the shape is similar. The sample average (\\(\\bar{x}\\)) and the sample SD (\\(s\\)) are also close to but not the same as the population average (\\(\\mu\\)) and SD (\\(\\sigma\\)).\n\n\nThe Sampling Distribution\nIf you compared your sample to that of another inspector who visited 100 restaurants, their sample would not be identical to yours, but it would still resemble the population distribution, and its \\(\\bar{x}\\) and \\(s\\) would be close to those of all the restaurants in the city.\nThe distribution of the possible values of the \\(\\bar{x}\\) of a simple random sample of 100 restaurants is the sampling distribution of the mean (of the sample). We can use it to, for example, find the chance that the sample mean will be over 88, or the chance that the sample mean will be between 85 and 95.\nOrdinarily this distribution takes some work to create, but in this thought-experiment have have access to the full population, so we can simply use the computer to simulate the process. We repeat 100,000 times the process of drawing a simple random sample of 100 restaurants. The full distribution looks like:\n\n\n\n\n\n\n\n\n\nWe can consider numerical summaries of this distribution:\n\nThe mean of the sampling distribution is 87.6.\nThe SD of the sampling distribution, which is called the Standard Error (SE), is 0.9. This convention of using a different name for the SD for the distribution of a statistic helps keep straight which kind of standard deviation we’re talking about.\n\nObserve that the sampling distribution of \\(\\bar{x}\\) doesn’t look anything like the population or sample. Instead, it’s roughly symmetric in shape with a center that matches \\(\\mu\\), and a small SE. The small size of the SE reflects the fact that the \\(\\bar{x}\\) tends to be quite close to \\(\\mu\\).\nAgain, the sampling distribution provides the distribution for the possible values of \\(\\bar{x}\\). From this distribution, we find that the chance \\(\\bar{x}\\) is over 88 is about 0.33, and the chance \\(\\bar{x}\\) is between 85 and 95 is roughly, 1.\n\n\nPutting the Three Panels Together\nLet’s look at these three aspects of this process side-by-side.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPopulation\nEmpirical\nSampling\n\n\n\n\nShape\nleft skew\nleft skew\nbell-shaped / normal\n\n\nMean\n\\(\\mu\\) = 87.6\n\\(\\bar{x}\\) = 86.27\n87.6\n\n\nSD\n\\(\\sigma\\) = 8.9\n\\(s\\) = 9.9\n0.89\n\n\n\nObserve that:\n\n\\(\\mu\\) and the mean of the sampling distribution are roughly the same.\n\\(\\sigma\\) and the SE of the sample averages are related in the following way2:\n\\[SE(\\bar{x}) \\approx \\frac{\\sigma}{\\sqrt{n}}\\]\nThe histogram of the sample averages is not skewed like the histogram of the population, on the contrary, it is symmetric and bell-shaped, like the normal curve.\nThe histogram of our sample of 100 resembles the population histogram.\nSince 100 is a pretty large sample,\n\n\\[\n\\begin{aligned}\n\\mu &\\approx \\bar{x} \\\\\n\\sigma &\\approx s \\\\\n\\end{aligned}\n\\]\nUp until this point, we’ve worked through this thought experiment with the unrealistic assumption that we know the population. Now we’re ready to make inferences in a setting where we don’t know the population.",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "3-generalization/08-confidence-intervals/notes.html#inference-for-a-population-average",
+    "href": "3-generalization/08-confidence-intervals/notes.html#inference-for-a-population-average",
+    "title": "Confidence Intervals",
+    "section": "Inference for a Population Average",
+    "text": "Inference for a Population Average\nDrawing on our understanding of the thought-experiment, we ask:\nWhat happens when you don’t see the population, you just have your sample, and you want to make an inference about the population?\nWe have serious gaps in our procedure for learning about the sampling distribution!\n\n\n\n\n\nTo start, we know we can use the sample average, \\(\\bar{x}\\), to infer the population average, \\(\\mu\\). This is called a point estimate for the population parameter.\nBut can we do better than that? Can we bring in more of the information that we have learned from the thought-experiment? For example, can we accompany our point estimate with a sense of its accuracy? Ideally, this would be the SE of the sample mean. Unfortunately, we don’t know the SE because it depends on \\(\\sigma\\). So now what do we do?\n\nStandard Error\nThe thought-experiment tells us that \\(s\\) is close to the \\(\\sigma\\) (when you have a SRS). So we can substitute the \\(s\\) into the formula for the SE.\n\\[ SE(\\bar{x}) \\approx \\frac{s}{\\sqrt{n}}\\]\nWhen presenting our findings, you might say, that based on a SRS of 100 restaurants in San Francisco, the average food safety score is estimated to be 86 with a standard error of about 1.\nSuppose someone took a sample of 25 restaurants and provided an estimate of the average food safety score. Is that only 1/4 as accurate because the sample is 1/4 the size of ours?\nSuppose someone took a sample of 100 restaurants in New York City where there are 50,000 restaurants (this is a made up number). Is their estimate only 1/10 as accurate because the number of units in the population is 10 times yours?\nWe can use the formula for the SE to answer these questions. In the table below, we have calculated SEs for a generic value of \\(\\sigma\\) and various choices of the population size and sample size.\n\n\n\nPopulation Size (\\(N\\))\n\nSample Size (\\(n\\))\n\n\n\n\n\n\n25\n100\n400\n\n\n500\n\\(SE = \\sigma/5\\)\n\\(SE = \\sigma/10\\)\n\\(SE = \\sigma/20\\)\n\n\n5,000\n\\(SE = \\sigma/5\\)\n\\(SE = \\sigma/10\\)\n\\(SE = \\sigma/20\\)\n\n\n50,000\n\\(SE = \\sigma/5\\)\n\\(SE = \\sigma/ 10\\)\n\\(SE = \\sigma/ 20\\)\n\n\n\nWhat do you notice about the relationship between sample size and population size and SE?\n\nThe absolute size of the population doesn’t enter into the accuracy of the estimate, as long as the sample size is small relative to the population.\nA sample of 400 is twice as accurate as a sample of 100, which in turn is twice as accurate as a sample of 25 (assuming the population is relatively much larger than the sample). The precision of estimating the population mean improves according to the square root of the sample size.\n\n\n\nConfidence Intervals\nConfidence intervals bring in more information from the thought-experiment. The confidence interval provides an interval estimate, instead of a point estimate, that is based on the spread of the sampling distribution of the statistic.\nWe have seen that the sampling distribution takes a familiar shape: that of the normal curve (also called the bell curve)3. Therefore we can fill in some of the holes in the thought-experiment with approximations.\n\n\n\n\n\nThis is the Central Limit Theorem in action. The CLT states that sums of random variables become normally distributed as \\(n\\) increases. Conveniently enough, most useful statistics are some version of a sum: \\(\\bar{x}\\) is a sum divided by \\(n\\) and \\(\\hat{p}\\) is a sum of variables that take values 0 or 1, divided by \\(n\\). This powerful mathematical result enables one of the most popular methods of constructing confidence intervals.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNormal Confidence Intervals\nWhen the sampling distribution is roughly normal in shape, then we can construct an interval that expresses exactly how much sampling variability there is. Using our single sample of data and the properties of the normal distribution, we can be 95% confident that the population parameter is within the following interval.\n\n\nThe number 1.96 doesn’t come out of thin air. Refer to the notes on the Normal Distribution to understand the origins.\n\\[[\\bar{x} - 1.96 SE, \\bar{x} + 1.96SE]\\]\nSo for a sample where the sample mean is 86 and the 95% confidence interval is [84.3, 88.2 ], you would say,\n\nI am 95% confident that the population mean is between 84.3 and 88.2.\n\nFor the particular interval that you have created, you don’t know if it contains the population mean or not. This is why we use the term confidence to describe it instead of probability. Probability comes into play when taking the sample, after that our confidence interval is a known observed value with nothing left to chance.\n\nConfidence not Probability\nTo be more precise about what is meant by “confidence”, let’s take 100 samples of size 25 from the restaurant scores, and calculate a 95% confidence interval for each of our 100 samples. How many of these 100 confidence intervals do you think will include the population mean?\nLet’s simulate it! At the bottom of the plot below, the horizontal line at the \\(y = 1\\) indicates the coverage of the confidence interval from the first sample. It stretches from roughly 84 to 91. The line above it at \\(y = 2\\) indicates the coverage of the confidence interval that resulted from the second sample, from roughly 85 to 92.5. Both of these confidence intervals happened to cover the true population parameter, indicated by the black vertical line.\n\n\n\n\n\n\n\n\n\nAs we look up the graph through the remaining intervals, we see that 95 of the 100 confidence intervals cover the population parameter. This is by design. If we simulate another 100 times, we may get a different number, but it is likely to be close to 95.",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "3-generalization/08-confidence-intervals/notes.html#inference-for-a-population-proportion",
+    "href": "3-generalization/08-confidence-intervals/notes.html#inference-for-a-population-proportion",
+    "title": "Confidence Intervals",
+    "section": "Inference for a Population Proportion",
+    "text": "Inference for a Population Proportion\nTo gain practice with making confidence intervals, we turn to another example. This time we sample from a population where the values are 0s and 1s. You will see that the process is very much the same, although there are a few simplifications that arise due to the nature of the population.\nSuppose we only want to eat at restaurants with food safety scores above 95. Let’s make a confidence interval for the proportion of restaurants in San Francisco with scores that are “excellent” (scores over 95). To tackle this problem, we can modify our population. Since we need only to keep track of whether a score is excellent, we can replace the scores on the tickets with 0s and 1s, where 1 indicates an excellent score. Of the 5766 restaurants in San Francisco, 1240 are excellent. We can think of our population as a box with 5766 tickets in it, and 1240 are marked 1, and 4526 are marked 0. This time let’s take a SRS of 25.\nThe thought-experiment appears as\n\n\n\n\n\n\n\n\n\n\n\n\n\nPopulation\nEmpirical\nSampling\n\n\n\n\nShape\nleft skew\nleft skew\nbell-shaped / normal\n\n\nMean\n\\(p\\) = 0.22\n\\(\\hat{p}\\) = 0.36\n0.22\n\n\nSD\n\\(\\sigma = \\sqrt{p(1-p)}\\) = 0.41\n\\(s\\) = 0.49\n0.08\n\n\n\nIn the special case of a 0-1 box:\n\nThe population average is the proportion of 1s in the box, let’s call this parameter \\(p\\).\nThe taking a draw from the population distribution taking a draw from a Bernoulli random variable, so \\(\\sigma = \\sqrt{p(1-p)}\\).\nThe sampling distribution has mean \\(p\\).\nThe sampling proportion, \\(\\hat{p}\\), is similar to \\(p\\).\nThe SE of the sample proportion4 is approximately \\(SE(\\hat{p}) = \\frac{\\sqrt{\\hat{p}(1-\\hat{p})}}{\\sqrt{n}}\\).\n\nWith an equation to estimate \\(SE\\) from our data in hand, we can form a 95% confidence interval.\n\\[\\left[\\hat{p} - 1.96 \\frac{\\sqrt{\\hat{p}(1-\\hat{p})}}{\\sqrt{n}}, \\hat{p} + 1.96 \\frac{\\sqrt{\\hat{p}(1-\\hat{p})}}{\\sqrt{n}}\\right]\\]",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "3-generalization/08-confidence-intervals/notes.html#summary",
+    "href": "3-generalization/08-confidence-intervals/notes.html#summary",
+    "title": "Confidence Intervals",
+    "section": "Summary",
+    "text": "Summary\nIn these notes, we have restricted ourselves to the simple random sample, where the only source of error that we’re concerned with is sampling variability. We outlined two tools for estimating that variability: the standard error (SE) and the confidence interval.\nWe saw how the size of the sample impacts the standard error of the estimate. The larger the sample, the more accurate our estimates are and in particular the accuracy improves according to \\(1/\\sqrt{n}\\). We also found that the size of the population doesn’t impact the accuracy, as long as the sample is small compared to the population.\nWe made confidence intervals for population averages and proportions using the normal distribution. This approach can be extended to other properties of a population, such as the median of a population, or the coefficient in a regression equation.\nThe confidence intervals that we have made are approximate in the following sense:\n\nWe’re approximating the shape of the unknown sampling distribution with the normal curve.\nThe SD of the sample is used in place of the SD of the population in calculating the SE of the statistic.\n\nThere are times when we are unwilling to make the assumption of normality. This is the topic of the next set of notes.",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "3-generalization/08-confidence-intervals/notes.html#footnotes",
+    "href": "3-generalization/08-confidence-intervals/notes.html#footnotes",
+    "title": "Confidence Intervals",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe terms census refers to a setting where you have access to the entire population.↩︎\nThis approximation becomes equality for a random sample with replacement. When we have a SRS, the exact formula is \\(SE(\\bar{x}) = \\sqrt{\\frac{N-n}{N-1}} \\sigma/\\sqrt{n}\\).\nThis additional term, called the finite population correction factor, adjusts for the fact that we are drawing without replacement. Here \\(N\\) is the number of tickets in the box (the size of the population) and \\(n\\) is the number of tickets drawn from the box (the size of the sample).\nTo help make sense of this correction factor, think about the following two cases:\n\nDraw \\(N\\) tickets from the box (that is, \\(n = N\\)).\nDraw only one ticket from the box.\n\nWhat happens to the SE in these two extreme cases?\nIn the first case, you will always see the entire population if you are drawing without replacement. So, the sample mean will exactly match the population mean. The sampling distribution has no variation, so \\(SE = 0\\).\nIn the second case, since you take only one draw from the box, it doesn’t matter if you replace it or not. So the SE for a SRS should match the SE when sampling with replacement in this special case. In settings when \\(N\\) is large relative to \\(n\\), it effectively behaves as if you are sampling with replacement.↩︎\nThis is not always the case. We’ll come back to this point later.↩︎\nThis calculation results from casting the total number of 1’s in a sample of size \\(n\\) as a binomial random variable with success probability \\(p\\). Call that random variable \\(Y\\). The variance of a binomial random variable is \\(Var(Y) = np(1-p)\\). Observing that sample proportion can be considered a binomial count divided by \\(n\\), and applying the properties of variance, we can find the variance of \\(\\hat{p}\\) as,\n\\[\\begin{eqnarray}\nVar(\\hat{p}) &= Var(\\frac{1}{n}Y) \\\\\n&= \\frac{1}{n^2}Var(Y) \\\\\n&= \\frac{1}{n^2}np(1-p) \\\\\n&= \\frac{p(1-p)}{n}\n\\end{eqnarray}\\]\nSo the standard error can be calculated as:\n\\[\\begin{eqnarray}\nSE(\\hat{p}) &= \\sqrt{Var(\\hat{p})} = \\sqrt{\\frac{p(1-p)}{n}}\n\\end{eqnarray}\\]\nWhen estimating the SE from data, we plug in \\(\\hat{p}\\) for \\(p\\).↩︎",
+    "crumbs": [
+      "Notes",
+      "Generalization",
+      "Confidence Intervals"
+    ]
   },
   {
     "objectID": "3-generalization/01-prob-foundations/notes.html",

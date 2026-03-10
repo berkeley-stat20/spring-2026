@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>People’s Park – Stat 20</title>
+<title>Lab 8: People’s Park – Stat 20</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,11 +114,11 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="People’s Park – Stat 20">
+<meta property="og:title" content="Lab 8: People’s Park – Stat 20">
 <meta property="og:description" content="Introduction to Probability and Statistics at UC Berkeley">
 <meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/labs/peoples-park/assets/stat20-hex.png">
 <meta property="og:site_name" content="Stat 20">
-<meta name="twitter:title" content="People’s Park – Stat 20">
+<meta name="twitter:title" content="Lab 8: People’s Park – Stat 20">
 <meta name="twitter:description" content="Introduction to Probability and Statistics at UC Berkeley">
 <meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/labs/peoples-park/assets/stat20-hex.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -187,7 +187,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">People’s Park</h1>
+<h1 class="title">Lab 8: People’s Park</h1>
 </div>
 
 
@@ -204,88 +204,128 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </header>
 
 
-<p>In answering the following questions, it will be helpful to consult</p>
-<ol type="1">
-<li><a href="references/chancellors-email.pdf">the email from Chancellor Christ</a>,</li>
-<li><a href="references/background-methods.pdf">slide describing the background and methodology</a>, and</li>
-<li><a href="references/questionnaire.pdf">the original questionnaire</a>.</li>
-</ol>
-<section id="part-ii-computing-on-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="part-ii-computing-on-the-data">Part II: Computing on the Data</h2>
-<p>The data collected by the Chancellor’s Office on Cal students can be found as <code>ppk</code> in the <code>stat20data</code> package.</p>
-<p>The <code>ppk</code> data set represents a subset of questions that were asked in the questionnaire and have had random noise added to them. The results, in aggregate, share similar statistical properties to the raw data, but a given row no longer reflects an individual student’s response completely.</p>
-<section id="question-1" class="level4">
-<h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
-<p>Print the first few rows with the columns that correspond to the responses to survey questions 1, 7, and 8 (Note: we have changed the data back from all numerical data, as suggested by part 1 question 8, to a mix of numerical and categorical data). Please comment on whether your encoding of the data from Q7 on the questionnaire matches the encoding in <code>ppk</code>.</p>
-</section>
-<section id="question-2" class="level4">
-<h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
-<p>Return to your sketches from lab part 1, question 9. Create those visualizations (or more appropriate analogues) using the questionnaire data. For each, add a title and axis labels to make it clear what they are showing, and describe the distribution in words. If your visualization is of ordinal data, the bars should be ordered accordingly. For part a here, you’re welcome to select just one of the priorities to visualize.</p>
-<ol type="a">
-<li>Question 9</li>
-<li>Question 10</li>
-<li>Question 18 and 21 (showing, for each individual student, the change from before and after the information in one plot)</li>
-</ol>
-</section>
-<section id="question-3" class="level4">
-<h4 class="anchored" data-anchor-id="question-3">Question 3</h4>
-<p>Create a new column called <code>support_before</code> that takes the response data from question 18 and returns <code>TRUE</code> for answers of “Very strongly support”, “Strongly support”, and “Somewhat support” and FALSE otherwise. <strong>Use <code>%in%</code> to check if the response is one of these three values.</strong> What proportion of the survey participants in each class (freshman, sophomore, etc) supported the People’s Park Project before being presented with the information on the bottom of page 14?</p>
-</section>
-<section id="question-4" class="level4">
-<h4 class="anchored" data-anchor-id="question-4">Question 4</h4>
-<p>Repeat the previous question but this time drop any rows with <code>NA</code> (missing data) before starting your calculation. This can be done by using the <code>drop_na()</code> function, which scans any columns that you provide and drop any rows with <code>NA</code> in that column.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ppk <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Q18_words)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stat20data)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(ppk)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Does the proportion change? If it does, which proportion do you think most consumers of this data analysis will assume they’re looking at?</p>
-<blockquote class="blockquote">
-<p>For the remaining questions in this lab, drop rows with <code>NA</code>s in the columns that you’re using for that question.</p>
-</blockquote>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
+<p>On September 30, 2021 Chancellor Carol Christ sent an e-mail out to the UC Berkeley community informing them that the UC Regents approved UC Berkeley’s planned development on the People’s Park property. Development on the land had been a focus for the UC for some time and this e-mail was the most significant step taken by the administration so far.</p>
+<p>Chancellor Christ mentioned that keeping student opinion in mind was important to the university. To that end, the UC Berkeley sent out a Google form survey in hopes of garnering student perspectives on “<em>housing issues in general, and plans for People’s Park in particular</em>”. Within the survey, students were asked their opinions on the People’s Park project and then shown more details about the project. Their opinions were then gauged again.</p>
+<p>According to the e-mail and materials linked in the Chancellor’s e-mail, not only were students in support of the project initially, but once students learned more about the project, their support for the project grew.</p>
+<ul>
+<li>The Statistics department obtained a partial version of the dataset obtained in the survey: the <code>ppk</code> data frame in the <code>stat20data</code> library.</li>
+<li>You are also given access to a few documents (click on the links below):
+<ul>
+<li><p><a href="references/background-methods.pdf">a summary of the survey details as given by the facilitator Qualtrics</a>,</p></li>
+<li><p><a href="references/questionnaire.pdf">a copy of the Google Form that was sent out to students</a></p></li>
+<li><p><a href="references/chancellors-email.pdf">a copy of Chancellor Christ’s e-mail to students</a>.</p></li>
+</ul></li>
+</ul>
+<p>Across the next two weeks (this week’s lab and next), you will be performing inference to determine if the survey was able to change student opinion in the way that the chancellor’s e-mail described.</p>
 </section>
-<section id="question-5" class="level4">
-<h4 class="anchored" data-anchor-id="question-5">Question 5</h4>
-<p>What is the mean and median rating of the condition of People’s Park (question 15 on the survey)?</p>
+<section id="questions-understanding-context" class="level2">
+<h2 class="anchored" data-anchor-id="questions-understanding-context">Questions: Understanding context</h2>
+<p>For these questions, use the provided documents to inform your answers.</p>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>What do you think was the goal(s) of the Chancellor’s office in commissioning this survey? Answer in at least two to three sentences.</p>
 </section>
-<section id="question-6" class="level4">
-<h4 class="anchored" data-anchor-id="question-6">Question 6</h4>
-<p>Create a new column called <code>change_in_support</code> that measures the change in support from question 18 to 21 of the survey. What is the mean change in support of the survey participants in each class (freshman, sophomore, etc) for the People’s Park Project after reading the information? What assumption must you make about the values of the Likert scale in order for these statistics to be informative?</p>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>Write down</p>
+<ul>
+<li><p>the initial number of students selected to take the survey;</p></li>
+<li><p>the final sample size that actually did take the survey;</p></li>
+<li><p>the response rate.</p></li>
+</ul>
+<hr>
+<p>The population parameter that we will focus on in this lab is the <em>overall change in support</em> (yes/no) after respondents were exposed to the information on page 14 of the Google Form survey.</p>
 </section>
-<section id="question-7" class="level4">
-<h4 class="anchored" data-anchor-id="question-7">Question 7</h4>
-<p>Construct one additional visualization that captures a variable or relationship between two variables that you are interested in. Describe the structure that you see in the plot.</p>
+<section id="question-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>Identify a possible source of bias and whether it is selection, measurement, or nonresponse bias. How do you expect this source will affect the point estimate of the parameter?</p>
 </section>
-<section id="question-8" class="level4">
-<h4 class="anchored" data-anchor-id="question-8">Question 8</h4>
-<p>Create a 95% confidence intervals for the mean rating of the condition of People’s Park using the normal curve. Interpret the interval in the context of the problem in a clear sentence.</p>
+<section id="question-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>Identify a possible source of variation and whether it is sampling or measurement variability. How do you expect this source will affect an interval estimate of the parameter?</p>
+<hr>
 </section>
-<section id="question-9" class="level4">
-<h4 class="anchored" data-anchor-id="question-9">Question 9</h4>
-<p>Create a 95% confidence interval using the normal curve for the overall proportion of students who support the People’s Park Project without having been exposed to the information on page 14. Interpret the interval in the context of the problem in a clear sentence. Does your point estimate approximately match that reported in the Chancellor’s email?</p>
 </section>
-<section id="question-10" class="level4">
-<h4 class="anchored" data-anchor-id="question-10">Question 10</h4>
-<p>Select a confidence level <em>lower</em> than 95% and recalculate the interval from the previous question to express this confidence level. In general, are intervals with higher confidence wider or narrower than those with lower confidence?</p>
+<section id="questions-computing-on-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="questions-computing-on-the-data">Questions: Computing on the data</h2>
+<p>Now it is time to access the <code>ppk</code> data frame!</p>
+<section id="question-5" class="level3">
+<h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
+<p>What is the unit of observation in the <code>ppk</code> data frame? Answer in at least one sentence.</p>
+<hr>
+<section id="before-moving-to-question-6-a-note-on-missing-data" class="level5">
+<h5 class="anchored" data-anchor-id="before-moving-to-question-6-a-note-on-missing-data"><strong>BEFORE MOVING TO QUESTION 6:</strong> a note on missing data</h5>
+<p>As you take a look at the <code>ppk</code> data frame, you may notice that some data is missing. Data entries that are missing or not collected are labeled as <code>NA</code> in R.</p>
+<p>There are many ways to handle situations like this, but in this lab, when performing calculations that involve columns containing <code>NA</code> entries, you can remove them before starting your calculation using the <code>drop_na()</code> function, which scans any columns that you provide and drop any rows (observations) with <code>NA</code> in that column. For example, imagine that someone would like to work with scale option one in the seventh question on the Google form, and notices there is missing data. They might precede the calculation as follows:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ppk <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Q7_1) <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  ... <span class="co"># continue with the calculation</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Make sure not to use <code>drop_na()</code> without first specifying the columns, or you may get rid of more data than you need to!</strong></p>
+<hr>
 </section>
-<section id="question-11" class="level4">
-<h4 class="anchored" data-anchor-id="question-11">Question 11</h4>
-<p>Using the normal curve, create a 95% confidence interval for the mean change in support for the Project across the entire population after being exposed to the information on page 14.</p>
 </section>
-<section id="question-12" class="level4">
-<h4 class="anchored" data-anchor-id="question-12">Question 12</h4>
-<p>Does your interval from the previous question contain 0? What are the implications of that for those working in the Chancellor’s Office on the People’s Park Project?</p>
+<section id="question-6" class="level3">
+<h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+<section id="part-a" class="level4">
+<h4 class="anchored" data-anchor-id="part-a">part a</h4>
+<p>Write code to construct a 95% confidence interval for the mean rating of the condition of People’s Park. Your answer should come in the form of a data frame containing the lower and upper bounds of this interval in a single pipeline.</p>
 </section>
-<section id="last-question" class="level4">
-<h4 class="anchored" data-anchor-id="last-question">Last Question</h4>
-<p>Will you ensure that your submission to Gradescope…</p>
-<ol type="1">
-<li>is of a pdf generated from a qmd file,</li>
-<li>has all of your code visible to readers,</li>
-<li>and assigns each of the questions to all pages that show your work for that question?</li>
-</ol>
-<p>(This one is easy! Just answer “yes” or “no”)</p>
+<section id="part-b" class="level4">
+<h4 class="anchored" data-anchor-id="part-b">part b</h4>
+<p>Interpret the confidence interval you constructed in the context of the problem in at least one sentence.</p>
+</section>
+</section>
+<section id="question-7" class="level3">
+<h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
+<section id="part-a-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-1">part a</h4>
+<p>Add a new column to the <code>ppk</code> data frame called <code>support_before</code> that takes the response data (in text form) from Question 18 on the Google Form and returns <code>TRUE</code> for answers of <code>"Very strongly support"</code>, <code>"Strongly support"</code>, and <code>"Somewhat support"</code> and <code>FALSE</code> otherwise. Recall that you can use the <code>%in%</code> operator to check if the response is one of these three values.</p>
+</section>
+<section id="part-b-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-1">part b</h4>
+<p>Repeat the process of <strong>part a</strong> but instead for the response data from Question 21 on the Google Form. Call this column <code>support_after</code>.</p>
+</section>
+<section id="part-c" class="level4">
+<h4 class="anchored" data-anchor-id="part-c">part c</h4>
+<p>Create a data structure which displays, for each class (freshman, sophomore, etc) the proportion that supported the People’s Park project:</p>
+<ul>
+<li><p>before they received additional information about the project</p></li>
+<li><p>after they received this information</p></li>
+</ul>
+</section>
+<section id="part-d" class="level4">
+<h4 class="anchored" data-anchor-id="part-d">part d</h4>
+<p>Add a third column to the data frame called <code>change_in_support</code> that subtracts <code>support_before</code> from <code>support_after</code>.</p>
+</section>
+</section>
+<section id="question-8" class="level3">
+<h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
+<section id="part-a-2" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-2">part a</h4>
+<p>Write code to construct a 95% confidence interval for the <em>mean change in support</em> for the Project across the entire population after being exposed to additional information about the project. Your answer should come in the form of a data frame containing the lower and upper bounds of this interval in a single pipeline.</p>
+</section>
+<section id="part-b-2" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-2">part b</h4>
+<p>Interpret the confidence interval you constructed in the context of the problem in at least one sentence.</p>
+</section>
+<section id="part-c-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-c-1">part c</h4>
+<ul>
+<li><p>Does your interval from the previous question contain 0?</p></li>
+<li><p>What are the implications of that for those working in the Chancellor’s Office on the People’s Park Project?</p></li>
+</ul>
+<p>Answer in at least two sentences.</p>
 
 
+</section>
 </section>
 </section>
 
