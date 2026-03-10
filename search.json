@@ -2893,7 +2893,7 @@
     "href": "3-generalization/07-from-samps-to-pops/slides.html#section-4",
     "title": "From Samples to Populations",
     "section": "",
-    "text": "How would the sampling distribution change if instead of calling on the front row, the Prof. put all 527 names on tickets in a box, mixed them up, then drew 8 names without replacement instead of 18?\n\n\nThe sampling distribution will still be centered about the parameter, but the standard deviation would decrease.\nA follow up question if you’d like:\n\nReturning to the “calling on the front row” sampling method and plot: what would happen if, by the end of the semester, 90% of students sit in the same seat every class period? Answer: in that case there would be very little variability from one day / sample to the next and the SD of the sampling distribution would decrease dramatically."
+    "text": "How would the sampling distribution change if, instead of drawing 18 names without replacement after mixing them up, the Prof. drew only 8 names without replacement after mixing them up?\n\n\nThe sampling distribution will still be centered about the parameter, but the standard deviation would decrease.\nA follow up question if you’d like:\n\nReturning to the “calling on the front row” sampling method and plot: what would happen if, by the end of the semester, 90% of students sit in the same seat every class period? Answer: in that case there would be very little variability from one day / sample to the next and the SD of the sampling distribution would decrease dramatically."
   },
   {
     "objectID": "3-generalization/labs/peoples-park/part-2.html",
