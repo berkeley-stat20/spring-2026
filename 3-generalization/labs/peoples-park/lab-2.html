@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R Tutorials – Stat 20</title>
+<title>Lab 9: People’s Park II &amp; MythBusters – Stat 20</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./1-questions-and-data/02-taxonomy-of-data/tutorial.html" rel="next">
-<link href="./assets/stat20-hex.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-de5ea00590eebce64cc5fb6f76cc4f54.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-de5ea00590eebce64cc5fb6f76cc4f54.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,30 +79,26 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="R Tutorials – Stat 20">
+<meta property="og:title" content="Lab 9: People’s Park II &amp; MythBusters – Stat 20">
 <meta property="og:description" content="Introduction to Probability and Statistics at UC Berkeley">
-<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/assets/stat20-hex.png">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/labs/peoples-park/assets/stat20-hex.png">
 <meta property="og:site_name" content="Stat 20">
-<meta property="og:image:height" content="1000">
-<meta property="og:image:width" content="866">
-<meta name="twitter:title" content="R Tutorials – Stat 20">
+<meta name="twitter:title" content="Lab 9: People’s Park II &amp; MythBusters – Stat 20">
 <meta name="twitter:description" content="Introduction to Probability and Statistics at UC Berkeley">
-<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/assets/stat20-hex.png">
-<meta name="twitter:image-height" content="1000">
-<meta name="twitter:image-width" content="866">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/labs/peoples-park/assets/stat20-hex.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-sm " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
-    <img src="./assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
+    <img src="../../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -113,23 +108,23 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> 
+    <a class="nav-link" href="../../../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./office-hours.html"> 
+    <a class="nav-link" href="../../../office-hours.html"> 
 <span class="menu-text">Office Hours</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./notes.html"> 
+    <a class="nav-link" href="../../../notes.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./assignments.html"> 
+    <a class="nav-link" href="../../../assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./tutorials.html" aria-current="page"> 
+    <a class="nav-link" href="../../../tutorials.html"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
 </ul>
@@ -146,104 +141,10 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorials.html">R Tutorials</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./tutorials.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">R Tutorials</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./1-questions-and-data/02-taxonomy-of-data/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Taxonomy of Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./2-summarizing-data/01-summarizing-categorical-data/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summarizing Categorical Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./2-summarizing-data/02-summarizing-numerical-data/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summarizing Numerical Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./2-summarizing-data/03-a-grammar-of-graphics/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">A Grammar of Graphics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./2-summarizing-data/04-conditioning/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Conditioning</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./2-summarizing-data/05-summarizing-associations/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summarizing Numerical Associations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./3-generalization/01-prob-foundations/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probability Foundations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./3-generalization/03-probability-dsns/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probability Distributions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./3-generalization/04-random-variables/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Random Variables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./3-generalization/06-normal-approx/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Continuous Distributions and Normal Approximations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./3-generalization/09-bootstrapping/tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bootstrapping</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -251,7 +152,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R Tutorials</h1>
+<h1 class="title">Lab 9: People’s Park II &amp; MythBusters</h1>
 </div>
 
 
@@ -268,9 +169,125 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </header>
 
 
-<p>Tutorials serve to introduce you to the fundamentals of the R language.</p>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
+<p><strong>People’s Park</strong></p>
+<p>We will again be studying the People’s Park issue and using the <code>ppk</code> dataset in the <code>stat20data</code> package to do so! For more context, see <a href="../../../3-generalization/labs/peoples-park/lab.html">last week’s lab</a>.</p>
+<p><strong>MythBusters</strong></p>
+<p>Druring the episode “Is Yawning Contagious?” (2005), the MythBusters attempted to see if yawning was contagious by having two groups of people – those who were first yawned at and those who were not – sit inside of a booth and do nothing. The action of yawning at someone before they entered the booth was called the “seeded yawn” (or providing a “stimulus”). The MythBusters then compared the proportions of people who yawned while in the booth between the two groups. The experiment was actually performed in the Bay Area! <a href="https://youtu.be/cscvxfTyxNM?si=2FJwL-fOndqIxa7a&amp;t=237"><strong>Make sure you watch the video from the episode here</strong></a> before starting your work, as you’ll need it to help answer a question at the end of the lab. Most likely, you watched it during class!</p>
+<p>In this lab, you will formalize the activity that you completed in-class by performing a hypothesis test. The data from the experiment is available in the <code>yawn</code> dataset within the <code>stat20data</code> package.</p>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<section id="question-1-peoples-park" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-peoples-park">Question 1 (People’s Park)</h3>
+<section id="part-a" class="level4">
+<h4 class="anchored" data-anchor-id="part-a">part a</h4>
+<p>Create a boxplot of the variable corresponding to Question 15 on the Google form survey.</p>
+</section>
+<section id="part-b" class="level4">
+<h4 class="anchored" data-anchor-id="part-b">part b</h4>
+<p>Based on the visualization, state an appropriate measure of center for this variable.</p>
+</section>
+<section id="part-c" class="level4">
+<h4 class="anchored" data-anchor-id="part-c">part c</h4>
+<p>Using the <code>infer</code> library, calculate a 95% bootstrapped confidence interval for the population version of the appropriate measure of center for Question 15. Use 5000 bootstrapped statistics to create the interval.</p>
+</section>
+<section id="part-d" class="level4">
+<h4 class="anchored" data-anchor-id="part-d">part d</h4>
+<p>Interpret this interval in the context of the problem.</p>
+</section>
+</section>
+<section id="question-2-peoples-park" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-peoples-park">Question 2 (People’s Park)</h3>
+<p>As in <strong>Question 7, part b</strong> of last week’s lab, add a new column to the <code>ppk</code> data frame called <code>support_after</code> that takes the response data (in text form) from Question 21 on the Google Form and returns <code>TRUE</code> for answers of <code>"Very strongly support"</code>, <code>"Strongly support"</code>, and <code>"Somewhat support"</code> and <code>FALSE</code> otherwise. Recall that you can use the <code>%in%</code> operator to check if the response is one of these three values. You may re-use the code that you submitted for last week.</p>
+<p>Suppose we are interested in estimating the proportion of all Berkeley students who would have supported the People’s Park housing project after being exposed to more information about it.</p>
+<section id="part-a-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-1">part a</h4>
+<p>Calculate a point estimate of the proportion described above and save it into <code>q2a</code>.</p>
+</section>
+<section id="part-b-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-1">part b</h4>
+<p>Using the <code>infer</code> library, generate 5000 bootstrap samples of the survey respondents (specifically, their responses in the <code>support_after</code> column) and save this into <code>q2b</code>.</p>
+</section>
+<section id="part-c-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-c-1">part c</h4>
+<p>Using the <code>infer</code> library and <code>q2b</code>, create a bootstrap sampling distribution of the sample proportion. Save this into <code>q2c</code>.</p>
+</section>
+<section id="part-d-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-d-1">part d</h4>
+<p>Using the <code>infer</code> library, visualize the bootstrap sampling distribution in <code>q2c</code>.</p>
+</section>
+<section id="part-e" class="level4">
+<h4 class="anchored" data-anchor-id="part-e">part e</h4>
+<p>Using the <code>infer</code> library, calculate a 95 percent bootstrapped percentile confidence interval for the population proportion of students who would have supported the housing project after hearing more information.</p>
+</section>
+<section id="part-f" class="level4">
+<h4 class="anchored" data-anchor-id="part-f">part f</h4>
+<p>Interpret the interval you calculated in <strong>part e</strong> in the context of the problem.</p>
+</section>
+<section id="part-g" class="level4">
+<h4 class="anchored" data-anchor-id="part-g">part g</h4>
+<p>Does the interval contain 0.5? What is the significance of this number, and what implications does containing or not containing 0.5 have for those working in the Chancellor’s office? Answer in at least two sentences.</p>
+</section>
+</section>
+<section id="question-3-mythbusters" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-mythbusters">Question 3 (MythBusters)</h3>
+<section id="part-a-2" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-2">part a</h4>
+<p>What is the unit of observation in the <code>yawn</code> data frame?</p>
+</section>
+<section id="part-b-2" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-2">part b</h4>
+<ul>
+<li><p>Visualize the association between a participant receiving the stimulus and whether or not that participant ended up yawning using an appropriate plot type. <em>Hint: what type of variables are involved in this visualization? What plot type(s) are therefore appropriate? Go back to our notes from the beginning of the course to refresh your memory.</em></p></li>
+<li><p>Describe what you see in at least one sentence.</p></li>
+</ul>
+<hr>
+<p>The MythBusters concluded that yawning was contagious based off of their results. In this lab, we would like to apply some statistical rigor to the situation. Using their data, we will test the hypothesis that yawning is not contagious against the hypothesis that it is contagious.</p>
+</section>
+<section id="part-c-2" class="level4">
+<h4 class="anchored" data-anchor-id="part-c-2">part c</h4>
+<p>Write down mathematical equations for the null and alternative hypotheses.</p>
+</section>
+<section id="part-d-2" class="level4">
+<h4 class="anchored" data-anchor-id="part-d-2">part d</h4>
+<p>Using the <code>infer</code> library, calculate the observed test statistic for the hypothesis test (the sample version of the parameter you identified in your mathematical equations for the hypotheses).</p>
+</section>
+<section id="part-e-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-e-1">part e</h4>
+<p>Using the <code>infer</code> library, generate 9 simulations of the MythBusters experiment under the null hypothesis and save it into <code>q3e</code>.</p>
+</section>
+<section id="part-f-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-f-1">part f</h4>
+<ul>
+<li>Use <code>q3e</code> to visualize the results of the simulated experiments using <code>ggplot2</code> and the <code>facet_wrap()</code> layer.</li>
+</ul>
+</section>
+<section id="part-g-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-g-1">part g</h4>
+<ul>
+<li>Do the plots you made in <strong>part f</strong> look like the one you made in <strong>part b</strong> ? What does this say about the consistency of the null hypothesis with the data the MythBusters found? Answer in at least two sentences.</li>
+</ul>
+</section>
+<section id="part-h" class="level4">
+<h4 class="anchored" data-anchor-id="part-h">part h</h4>
+<p>Using the <code>infer</code> library:</p>
+<ul>
+<li><p>Generate 5000 simulations of the MythBusters experiment under the null hypothesis. Save this into <code>q3h</code>.</p></li>
+<li><p>With <code>q3h</code>, calculate and visualize the null distribution of 5000 simulated test statistics.</p></li>
+</ul>
+</section>
+<section id="part-i" class="level4">
+<h4 class="anchored" data-anchor-id="part-i">part i</h4>
+<ul>
+<li>Based on the plot of <strong>part h</strong>, does the test support the null or alternative hypothesis? Answer and explain in at least one sentence.</li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -673,15 +690,6 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./1-questions-and-data/02-taxonomy-of-data/tutorial.html" class="pagination-link" aria-label="The Taxonomy of Data">
-        <span class="nav-page-text">The Taxonomy of Data</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -694,7 +702,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./license.html">
+    <a class="nav-link" href="../../../license.html">
 <p>License</p>
 </a>
   </li>  
