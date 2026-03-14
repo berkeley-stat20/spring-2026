@@ -80,11 +80,9 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 
 
 <meta property="og:title" content="Lab 9: People’s Park II &amp; MythBusters – Stat 20">
-<meta property="og:description" content="Introduction to Probability and Statistics at UC Berkeley">
 <meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/labs/peoples-park/assets/stat20-hex.png">
 <meta property="og:site_name" content="Stat 20">
 <meta name="twitter:title" content="Lab 9: People’s Park II &amp; MythBusters – Stat 20">
-<meta name="twitter:description" content="Introduction to Probability and Statistics at UC Berkeley">
 <meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/labs/peoples-park/assets/stat20-hex.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -169,125 +167,8 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </header>
 
 
-<section id="the-data" class="level2">
-<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
-<p><strong>People’s Park</strong></p>
-<p>We will again be studying the People’s Park issue and using the <code>ppk</code> dataset in the <code>stat20data</code> package to do so! For more context, see <a href="../../../3-generalization/labs/peoples-park/lab.html">last week’s lab</a>.</p>
-<p><strong>MythBusters</strong></p>
-<p>Druring the episode “Is Yawning Contagious?” (2005), the MythBusters attempted to see if yawning was contagious by having two groups of people – those who were first yawned at and those who were not – sit inside of a booth and do nothing. The action of yawning at someone before they entered the booth was called the “seeded yawn” (or providing a “stimulus”). The MythBusters then compared the proportions of people who yawned while in the booth between the two groups. The experiment was actually performed in the Bay Area! <a href="https://youtu.be/cscvxfTyxNM?si=2FJwL-fOndqIxa7a&amp;t=237"><strong>Make sure you watch the video from the episode here</strong></a> before starting your work, as you’ll need it to help answer a question at the end of the lab. Most likely, you watched it during class!</p>
-<p>In this lab, you will formalize the activity that you completed in-class by performing a hypothesis test. The data from the experiment is available in the <code>yawn</code> dataset within the <code>stat20data</code> package.</p>
-</section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions</h2>
-<section id="question-1-peoples-park" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-peoples-park">Question 1 (People’s Park)</h3>
-<section id="part-a" class="level4">
-<h4 class="anchored" data-anchor-id="part-a">part a</h4>
-<p>Create a boxplot of the variable corresponding to Question 15 on the Google form survey.</p>
-</section>
-<section id="part-b" class="level4">
-<h4 class="anchored" data-anchor-id="part-b">part b</h4>
-<p>Based on the visualization, state an appropriate measure of center for this variable.</p>
-</section>
-<section id="part-c" class="level4">
-<h4 class="anchored" data-anchor-id="part-c">part c</h4>
-<p>Using the <code>infer</code> library, calculate a 95% bootstrapped confidence interval for the population version of the appropriate measure of center for Question 15. Use 5000 bootstrapped statistics to create the interval.</p>
-</section>
-<section id="part-d" class="level4">
-<h4 class="anchored" data-anchor-id="part-d">part d</h4>
-<p>Interpret this interval in the context of the problem.</p>
-</section>
-</section>
-<section id="question-2-peoples-park" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-peoples-park">Question 2 (People’s Park)</h3>
-<p>As in <strong>Question 7, part b</strong> of last week’s lab, add a new column to the <code>ppk</code> data frame called <code>support_after</code> that takes the response data (in text form) from Question 21 on the Google Form and returns <code>TRUE</code> for answers of <code>"Very strongly support"</code>, <code>"Strongly support"</code>, and <code>"Somewhat support"</code> and <code>FALSE</code> otherwise. Recall that you can use the <code>%in%</code> operator to check if the response is one of these three values. You may re-use the code that you submitted for last week.</p>
-<p>Suppose we are interested in estimating the proportion of all Berkeley students who would have supported the People’s Park housing project after being exposed to more information about it.</p>
-<section id="part-a-1" class="level4">
-<h4 class="anchored" data-anchor-id="part-a-1">part a</h4>
-<p>Calculate a point estimate of the proportion described above and save it into <code>q2a</code>.</p>
-</section>
-<section id="part-b-1" class="level4">
-<h4 class="anchored" data-anchor-id="part-b-1">part b</h4>
-<p>Using the <code>infer</code> library, generate 5000 bootstrap samples of the survey respondents (specifically, their responses in the <code>support_after</code> column) and save this into <code>q2b</code>.</p>
-</section>
-<section id="part-c-1" class="level4">
-<h4 class="anchored" data-anchor-id="part-c-1">part c</h4>
-<p>Using the <code>infer</code> library and <code>q2b</code>, create a bootstrap sampling distribution of the sample proportion. Save this into <code>q2c</code>.</p>
-</section>
-<section id="part-d-1" class="level4">
-<h4 class="anchored" data-anchor-id="part-d-1">part d</h4>
-<p>Using the <code>infer</code> library, visualize the bootstrap sampling distribution in <code>q2c</code>.</p>
-</section>
-<section id="part-e" class="level4">
-<h4 class="anchored" data-anchor-id="part-e">part e</h4>
-<p>Using the <code>infer</code> library, calculate a 95 percent bootstrapped percentile confidence interval for the population proportion of students who would have supported the housing project after hearing more information.</p>
-</section>
-<section id="part-f" class="level4">
-<h4 class="anchored" data-anchor-id="part-f">part f</h4>
-<p>Interpret the interval you calculated in <strong>part e</strong> in the context of the problem.</p>
-</section>
-<section id="part-g" class="level4">
-<h4 class="anchored" data-anchor-id="part-g">part g</h4>
-<p>Does the interval contain 0.5? What is the significance of this number, and what implications does containing or not containing 0.5 have for those working in the Chancellor’s office? Answer in at least two sentences.</p>
-</section>
-</section>
-<section id="question-3-mythbusters" class="level3">
-<h3 class="anchored" data-anchor-id="question-3-mythbusters">Question 3 (MythBusters)</h3>
-<section id="part-a-2" class="level4">
-<h4 class="anchored" data-anchor-id="part-a-2">part a</h4>
-<p>What is the unit of observation in the <code>yawn</code> data frame?</p>
-</section>
-<section id="part-b-2" class="level4">
-<h4 class="anchored" data-anchor-id="part-b-2">part b</h4>
-<ul>
-<li><p>Visualize the association between a participant receiving the stimulus and whether or not that participant ended up yawning using an appropriate plot type. <em>Hint: what type of variables are involved in this visualization? What plot type(s) are therefore appropriate? Go back to our notes from the beginning of the course to refresh your memory.</em></p></li>
-<li><p>Describe what you see in at least one sentence.</p></li>
-</ul>
-<hr>
-<p>The MythBusters concluded that yawning was contagious based off of their results. In this lab, we would like to apply some statistical rigor to the situation. Using their data, we will test the hypothesis that yawning is not contagious against the hypothesis that it is contagious.</p>
-</section>
-<section id="part-c-2" class="level4">
-<h4 class="anchored" data-anchor-id="part-c-2">part c</h4>
-<p>Write down mathematical equations for the null and alternative hypotheses.</p>
-</section>
-<section id="part-d-2" class="level4">
-<h4 class="anchored" data-anchor-id="part-d-2">part d</h4>
-<p>Using the <code>infer</code> library, calculate the observed test statistic for the hypothesis test (the sample version of the parameter you identified in your mathematical equations for the hypotheses).</p>
-</section>
-<section id="part-e-1" class="level4">
-<h4 class="anchored" data-anchor-id="part-e-1">part e</h4>
-<p>Using the <code>infer</code> library, generate 9 simulations of the MythBusters experiment under the null hypothesis and save it into <code>q3e</code>.</p>
-</section>
-<section id="part-f-1" class="level4">
-<h4 class="anchored" data-anchor-id="part-f-1">part f</h4>
-<ul>
-<li>Use <code>q3e</code> to visualize the results of the simulated experiments using <code>ggplot2</code> and the <code>facet_wrap()</code> layer.</li>
-</ul>
-</section>
-<section id="part-g-1" class="level4">
-<h4 class="anchored" data-anchor-id="part-g-1">part g</h4>
-<ul>
-<li>Do the plots you made in <strong>part f</strong> look like the one you made in <strong>part b</strong> ? What does this say about the consistency of the null hypothesis with the data the MythBusters found? Answer in at least two sentences.</li>
-</ul>
-</section>
-<section id="part-h" class="level4">
-<h4 class="anchored" data-anchor-id="part-h">part h</h4>
-<p>Using the <code>infer</code> library:</p>
-<ul>
-<li><p>Generate 5000 simulations of the MythBusters experiment under the null hypothesis. Save this into <code>q3h</code>.</p></li>
-<li><p>With <code>q3h</code>, calculate and visualize the null distribution of 5000 simulated test statistics.</p></li>
-</ul>
-</section>
-<section id="part-i" class="level4">
-<h4 class="anchored" data-anchor-id="part-i">part i</h4>
-<ul>
-<li>Based on the plot of <strong>part h</strong>, does the test support the null or alternative hypothesis? Answer and explain in at least one sentence.</li>
-</ul>
 
 
-</section>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
