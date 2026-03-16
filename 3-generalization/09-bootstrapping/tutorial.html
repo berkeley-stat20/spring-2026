@@ -155,13 +155,13 @@ window.Quarto = {
 <meta property="og:site_name" content="Stat 20">
 <meta name="twitter:title" content="Bootstrapping – Stat 20">
 <meta name="twitter:description" content="Another Approach to Confidence Intervals">
-<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/images/infer-pipeline.png">
-<meta name="twitter:image-height" content="662">
-<meta name="twitter:image-width" content="998">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/3-generalization/09-bootstrapping/tutorial_files/figure-html/unnamed-chunk-7-1.png">
+<meta name="twitter:image-height" content="960">
+<meta name="twitter:image-width" content="1344">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
+<body class="nav-sidebar floating nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -312,11 +312,9 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials.html">R Tutorials</a></li><li class="breadcrumb-item"><a href="../../3-generalization/09-bootstrapping/tutorial.html">Bootstrapping</a></li></ol></nav>
 <div class="quarto-title">
@@ -338,15 +336,7 @@ window.Quarto = {
 </header>
 
 
-<section id="ideas-in-code" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="ideas-in-code">Ideas in code</h2>
-<p>These notes utilize several functions from the <code>infer</code> library, which can be used to calculate confidence intervals and conduct hypothesis tests. It can be loaded with <code>library(infer)</code>.</p>
-<p>With <code>infer</code>, each step in the bootstrap procedure is controlled by one of four functions.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/infer-pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="440"></p>
-</figure>
-</div>
+<p>This tutorial utilizes several functions from the <code>infer</code> library, which can be used to calculate confidence intervals via the bootstrap and conduct hypothesis tests via a few different methods. It can be loaded with <code>library(infer)</code>.</p>
 <p>For a comprehensive list of templates that you can use to form intervals, see the online documentation: <a href="https://infer.netlify.app/articles/observed_stat_examples.html" class="uri">https://infer.netlify.app/articles/observed_stat_examples.html</a>.</p>
 <section id="specify" class="level4">
 <h4 class="anchored" data-anchor-id="specify"><a href="https://infer.netlify.app/reference/specify.html"><code>specify()</code></a></h4>
@@ -373,6 +363,31 @@ window.Quarto = {
 </div>
 </div>
 <p>Observe that the output of specify is essentially the same data frame that went in. the only difference is that <code>bill_length_mm</code> is tagged as the response variable. That will be useful for downstream functions.</p>
+<section id="working-with-categorical-response-variables" class="level5">
+<h5 class="anchored" data-anchor-id="working-with-categorical-response-variables">Working with categorical response variables</h5>
+<p><code>bill_length_mm</code> is numerical. Say you’re working with a categorical variable and want to estimate a proportion. Since there are usually at least two levels (options) in a categorical variable, the <code>specify()</code> function will ask you: <em>“the proportion of what level?”</em> You need to tell <code>specify()</code> which level explicitly. This can be done with the additional <code>success</code> argument! Below, we are telling <code>infer</code> that we are interested in estimating the proportion of all Antarctic penguins that are female.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> sex, <span class="at">success =</span> <span class="st">"female"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Response: sex (factor)
+# A tibble: 333 × 1
+   sex   
+   &lt;fct&gt; 
+ 1 male  
+ 2 female
+ 3 female
+ 4 female
+ 5 male  
+ 6 female
+ 7 male  
+ 8 female
+ 9 male  
+10 male  
+# ℹ 323 more rows</code></pre>
+</div>
+</div>
+</section>
 </section>
 <section id="generate" class="level4">
 <h4 class="anchored" data-anchor-id="generate"><a href="https://infer.netlify.app/reference/generate.html"><code>generate()</code></a></h4>
@@ -380,28 +395,28 @@ window.Quarto = {
 <p>Useful functions include:</p>
 <ul>
 <li><code>reps</code>: the number of data set replicates to generate. Generally set this to 500 when making confidence intervals.</li>
-<li><code>type</code>: the mechanism used to generate new data. Either <code>"bootstrap"</code>, <code>"draw"</code>, or <code>"permute"</code>.</li>
+<li><code>type</code>: the mechanism used to generate new data. Either <code>"bootstrap"</code>, <code>"draw"</code>, or <code>"permute"</code>. Today, we’ll be using the bootstrap; the other two argument choices will be explained in subsequent lectures!</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> bill_length_mm) <span class="sc">|&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">2</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> bill_length_mm) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">2</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Response: bill_length_mm (numeric)
 # A tibble: 684 × 2
 # Groups:   replicate [2]
    replicate bill_length_mm
        &lt;int&gt;          &lt;dbl&gt;
- 1         1           40.3
- 2         1           40.5
- 3         1           40.2
- 4         1           40.2
- 5         1           48.2
- 6         1           37.9
- 7         1           35.2
- 8         1           37.8
- 9         1           46.2
-10         1           42.6
+ 1         1           54.3
+ 2         1           37.3
+ 3         1           34.4
+ 4         1           37.6
+ 5         1           50  
+ 6         1           39.2
+ 7         1           36.5
+ 8         1           34.6
+ 9         1           50.7
+10         1           48.4
 # ℹ 674 more rows</code></pre>
 </div>
 </div>
@@ -413,19 +428,19 @@ window.Quarto = {
 </section>
 <section id="calculate" class="level4">
 <h4 class="anchored" data-anchor-id="calculate"><a href="https://infer.netlify.app/reference/calculate.html"><code>calculate()</code></a></h4>
-<p>The third link in an <code>infer</code> pipeline is the calculate function, which calculates a single summary statistic for each replicate data frame. The main argument is <code>stat</code>, which can take values <code>"mean"</code>, <code>"median"</code>, <code>"proportion"</code>, <code>"diff in means"</code>, <code>"diff in props"</code> and a few more.</p>
+<p>The third link in an <code>infer</code> pipeline is the calculate function, which calculates a single summary statistic for each replicate data frame. The main argument is <code>stat</code>, which can take values <code>"mean"</code>, <code>"median"</code>, <code>"prop"</code> (for proportion), <code>"diff in means"</code>, <code>"diff in props"</code> and a few more.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> bill_length_mm) <span class="sc">|&gt;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">2</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"mean"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> bill_length_mm) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">2</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"mean"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Response: bill_length_mm (numeric)
 # A tibble: 2 × 2
   replicate  stat
       &lt;int&gt; &lt;dbl&gt;
-1         1  43.9
-2         2  43.4</code></pre>
+1         1  43.8
+2         2  44.0</code></pre>
 </div>
 </div>
 <p>Observe:</p>
@@ -433,33 +448,75 @@ window.Quarto = {
 <li><p>The name of the summary statistic should be put in quotation marks.</p></li>
 <li><p>The resulting data frame had <code>reps</code> rows, one statistic from every replicate.</p></li>
 <li><p>The calculate function is a shortcut for an operation you’re familiar with:</p>
-<pre><code>df %&gt;%
-  group_by(replicate) %&gt;%
+<pre><code>df |&gt;
+  group_by(replicate) |&gt;
   summarize(mean(bill_length_mm))</code></pre></li>
 </ul>
+</section>
+<section id="visualize" class="level4">
+<h4 class="anchored" data-anchor-id="visualize"><a href="https://infer.netlify.app/reference/visualize.html"><code>visualize()</code></a></h4>
+<p>Now imagine that we have a distribution of many bootstrapped statistics (a <em>bootstrap sampling distribution</em>). Let’s put that distribution on a histogram! Normally, we’d have to use <code>ggplot()</code> to do this, but the <code>infer</code> library offers a nifty function called <code>visualize()</code> which does this for us in one easy step (and even titles the plot appropriately!) Here, we’ll plot a sampling distribution of 500 bootstrapped means.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> bill_length_mm) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">500</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">visualize</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tutorial_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Here is a nice visual which sums up what we’ve done so far!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/infer-pipeline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="440"></p>
+</figure>
+</div>
+</section>
+<section id="get_ci" class="level4">
+<h4 class="anchored" data-anchor-id="get_ci"><a href="https://infer.tidymodels.org/reference/get_confidence_interval.html"><code>get_ci()</code></a></h4>
+<p>The moment we’ve been waiting for is here– it’s time to calculate the confidence interval! For a 95 percent confidence interval, we’ll leave out 5 percent of the sampling distribution: 2.5 percent on the low side, counting up from 0 percent, and 2.5 percent on the high side, counting down from 100 percent. Therefore, we’ll take the 2.5th percentile and the 97.5th percentile of our distribution as the lower and upper bound, respectively.</p>
+<p>Luckily, the <code>get_ci()</code> function does this work for us! Its level argument allows us to specify the confidence level we’d like.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> bill_length_mm) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">500</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"mean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_ci</span>(<span class="at">level =</span> <span class="fl">0.95</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  lower_ci upper_ci
+     &lt;dbl&gt;    &lt;dbl&gt;
+1     43.3     44.5</code></pre>
+</div>
+</div>
 </section>
 <section id="fit" class="level4">
 <h4 class="anchored" data-anchor-id="fit"><code>fit()</code></h4>
 <p>If you would like to create bootstrapped coefficients for a linear model, you’ll have to do something a bit different since there is a more than 1 summary statistic involved for each replicate data set. This is the role of <code>fit()</code>. There are no arguments to fill-in; it inherits the formula for the linear model from <code>specify()</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>penguins_adelie <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">"Adelie"</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>penguins_adelie <span class="sc">|&gt;</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(body_mass_g <span class="sc">~</span> sex <span class="sc">+</span> flipper_length_mm) <span class="sc">|&gt;</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">2</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>penguins_adelie <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">"Adelie"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>penguins_adelie <span class="sc">|&gt;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(body_mass_g <span class="sc">~</span> sex <span class="sc">+</span> flipper_length_mm) <span class="sc">|&gt;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">2</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 3
 # Groups:   replicate [2]
   replicate term              estimate
       &lt;int&gt; &lt;chr&gt;                &lt;dbl&gt;
-1         1 intercept            101. 
-2         1 sexmale              641. 
-3         1 flipper_length_mm     17.3
-4         2 intercept           -247. 
-5         2 sexmale              556. 
-6         2 flipper_length_mm     19.5</code></pre>
+1         1 intercept            777. 
+2         1 sexmale              581. 
+3         1 flipper_length_mm     14.0
+4         2 intercept            639. 
+5         2 sexmale              578. 
+6         2 flipper_length_mm     14.7</code></pre>
 </div>
 </div>
 <p>Observe:</p>
@@ -467,31 +524,54 @@ window.Quarto = {
 <li>The data frame has a number of rows equal to <code>reps</code> times the number of coefficients in the linear model (in this case <span class="math inline">\(2 \times 3\)</span>).</li>
 <li>To get the collection of all coefficients for <code>flipper_length_mm</code>, for example, follow your <code>infer</code> pipeline with <code>filter(term == "flipper_length_mm")</code>.</li>
 </ul>
-</section>
-<section id="drop_na" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="drop_na"><code>drop_na()</code></h4>
-<p>This function drops rows that have missing values (<code>NA</code>s). Add as arguments any variables you would like it to look to for missing values. If no arguments are given it will drop a row if there is a missing value in <em>any</em> column (Be ware of this behavior. It might lead you to drop more rows that you mean to).</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">rank =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="cn">NA</span>),</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">letter =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="st">"d"</span>, <span class="st">"e"</span>))</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(rank)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  rank letter
-1    2   &lt;NA&gt;
-2    3   &lt;NA&gt;
-3    1   &lt;NA&gt;
-4    4      d</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  rank letter
-1    4      d</code></pre>
-</div>
-</div>
-<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class=""></span></div></div>
+<!--
+#### `drop_na()`
+
+This function drops rows that have missing values (`NA`s). Add as arguments any variables you would like it to look to for missing values. If no arguments are given it will drop a row if there is a missing value in *any* column (Be ware of this behavior. It might lead you to drop more rows that you mean to).
+
+
+::: {.cell}
+
+```{.r .cell-code  code-fold="false"}
+df <- data.frame(rank = c(2, 3, 1, 4, NA),
+                 letter = c(NA, NA, NA, "d", "e"))
+
+df |>
+  drop_na(rank)
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+  rank letter
+1    2   <NA>
+2    3   <NA>
+3    1   <NA>
+4    4      d
+```
+
+
+:::
+
+```{.r .cell-code  code-fold="false"}
+df %>%
+  drop_na()
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+  rank letter
+1    4      d
+```
+
+
+:::
+:::
+
+
+[ ]{.column-margin}
+-->
 
 
 <script type="ojs-module-contents">
@@ -508,7 +588,6 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
 </section>
 
 </main> <!-- /main -->
