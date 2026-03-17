@@ -342,13 +342,25 @@ window.Quarto = {
 </header>
 
 
-<section id="the-ideas-in-code" class="level2">
-<h2 class="anchored" data-anchor-id="the-ideas-in-code">The Ideas in Code</h2>
-<p>A hypothesis test using permutation can be implemented by introducing one new step into the process used for calculating a bootstrap interval. The key distinction is that in a hypothesis test the researchers puts forth a model for how the data could be generated. That is the role of <code>hypothesize()</code>.</p>
+<p>A hypothesis test using permutation can also be implemented with the <code>infer</code> library! This tutorial will explore how it’s done. As opposed to a confidence interval, the key distinction about a hypothesis test is that the researchers put forth a model for how the data could be generated. In the context of <code>infer</code>, this means that we’ll introduce one new step into the process that we previously used for calculating bootstrap interval. The whole process can be seen below!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/infer-hypothesize.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="440"></p>
 </figure>
+</div>
+<p>The following walkthrough implements a permutation test under the null hypothesis that there is no relationship between the body mass of penguins and their sex. Here is a visualization of the data. Do you think there is a relationship, based on the plot? Or, did we just happen to get a sample where male penguins tended to outweigh female penguins? We will conduct a hypothesis test to form a stronger answer to that question.</p>
+<p>Here’s a plot of the data:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> sex)) <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tutorial_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 <section id="hypothesize" class="level4">
 <h4 class="anchored" data-anchor-id="hypothesize">hypothesize()</h4>
@@ -356,12 +368,12 @@ window.Quarto = {
 <ul>
 <li><code>null</code>: the null hypothesis. Options include <code>"independence"</code> and <code>"point"</code>.</li>
 </ul>
-<p>The following example implements a permutation test under the null hypothesis that there is no relationship between the body mass of penguins and their</p>
+<p>Let’s take a look at the data itself to begin!</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> body_mass_g,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> sex) <span class="sc">|&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> body_mass_g,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> sex) <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Response: body_mass_g (numeric)
 Explanatory: sex (factor)
@@ -386,18 +398,19 @@ Null Hypothesis: in...
 <ul>
 <li>The output is the original data frame with new information appended to describe what the null hypothesis is for this data set.</li>
 <li>There are other forms of hypothesis tests that you will see involving a <code>"point"</code> null hypothesis. Those require adding additional arguments to <code>hypothesize()</code>.</li>
+<li>If your test statstic is a proportion, you’ll be handling a categorical variable. In this case, just like before, you’ll need to add the <code>success</code> argument to <code>specify()</code> and set it to the name of the level you are interested in, in quotes.</li>
 </ul>
 </section>
 <section id="calculating-an-observed-statistic" class="level4">
 <h4 class="anchored" data-anchor-id="calculating-an-observed-statistic">Calculating an observed statistic</h4>
 <p>Let’s say for this example you select as your test statistic a difference in means, <span class="math inline">\(\bar{x}_{female} - \bar{x}_{male}\)</span>. While you can use tools you know - <code>group_by()</code> and <code>summarize()</code> to calculate this statistic, you can also recycle much of the code that you’ll use to build the null distribution with <code>infer</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>obs_stat <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> body_mass_g,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> sex) <span class="sc">|&gt;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>obs_stat</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>obs_stat <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> body_mass_g,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> sex) <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>obs_stat</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Response: body_mass_g (numeric)
 Explanatory: sex (factor)
@@ -408,77 +421,117 @@ Explanatory: sex (factor)
 </div>
 </div>
 </section>
-<section id="calculating-the-null-distribution" class="level4">
-<h4 class="anchored" data-anchor-id="calculating-the-null-distribution">Calculating the null distribution</h4>
-<p>To generate a null distribution of the kind of differences in means that you’d observe in a world where body mass had nothing to do with sex, just add the hypothesis with <code>hypothesize()</code> and the generation mechanism with <code>generate()</code>.</p>
+<section id="calculating-the-null-distribution---generate-and-calculate" class="level4">
+<h4 class="anchored" data-anchor-id="calculating-the-null-distribution---generate-and-calculate">Calculating the null distribution - <code>generate()</code> and <code>calculate()</code></h4>
+<p>To generate a null distribution of the kind of differences in means that you’d observe in a world where body mass had nothing to do with sex, just add the hypothesis with <code>hypothesize()</code> and the generation mechanism with <code>generate()</code>. Here, we’re simulating 500 experiments and so calculating 500 simulated differences in means! Finally, we use the <code>calculate()</code> step with the correct argument to <code>stat</code>: <code>"diff in means."</code></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>null <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> body_mass_g,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> sex) <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">500</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>null</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>null <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> body_mass_g,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> sex) <span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">500</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>null</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Response: body_mass_g (numeric)
 Explanatory: sex (factor)
 Null Hypothesis: in...
 # A tibble: 500 × 2
-   replicate   stat
-       &lt;int&gt;  &lt;dbl&gt;
- 1         1 -47.9 
- 2         2 157.  
- 3         3  76.7 
- 4         4   1.93
- 5         5  61.1 
- 6         6  51.5 
- 7         7  54.8 
- 8         8  48.8 
- 9         9  36.5 
-10        10  21.5 
+   replicate    stat
+       &lt;int&gt;   &lt;dbl&gt;
+ 1         1 -100.  
+ 2         2 -170.  
+ 3         3   62.3 
+ 4         4  -57.8 
+ 5         5  227.  
+ 6         6  -92.7 
+ 7         7  -29.3 
+ 8         8   57.5 
+ 9         9   29.0 
+10        10    1.33
 # ℹ 490 more rows</code></pre>
 </div>
 </div>
 <p>Observe:</p>
 <ul>
-<li>The output data frame has <code>reps</code> rows and 2 columns: one indicating the replicate and the other with the statistic (a difference in means).</li>
+<li>The <code>null</code> data frame has the number of rows specified in <code>reps</code>; here 500. When it comes to columns, there are has 2: one indicating the <code>replicate</code> number and the other with the statistic (a difference in means).</li>
 </ul>
+<section id="detour-getting-a-look-at-our-permutations" class="level5">
+<h5 class="anchored" data-anchor-id="detour-getting-a-look-at-our-permutations">Detour: Getting a look at our permutations</h5>
+<p>Let’s generate one permuted data frame and then plot our simulated data as if it were our original data.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> body_mass_g,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> sex) <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">1</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> sex)) <span class="sc">+</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tutorial_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Let’s now visualize four permuted distributions at a time! This seems like it would be much too complex, but a cool layer in <code>ggplot2</code> called <strong><code>facet_wrap()</code></strong> makes the job very easy. It works like an analog to <code>group_by()</code> in <code>dplyr</code>; rather than calculating a summary statistsic for each group, a plot is made for the data in each group! The <code>replicate</code> variable in the data frame we get after the <code>generate()</code> step proves very useful. It works as our “grouping” variable here and is plugged into <code>vars()</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>four_plots <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> body_mass_g,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> sex) <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">4</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> sex)) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="at">facet =</span> <span class="fu">vars</span>(replicate))</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>four_plots</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tutorial_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Notice that with our permuted distributions, we don’t see a big difference in the two sex distributions when it comes to mass! This should be expected as it’s the assumption we simulated under.</p>
+</section>
 </section>
 <section id="visualize" class="level4">
 <h4 class="anchored" data-anchor-id="visualize"><code>visualize()</code></h4>
-<p>Once you have a collection of test statistics under the null hypothesis saved as <code>null</code>, it can be useful to visualize that approximation of the null distribution. For that, use the function <code>visualize()</code>.</p>
+<p>Let’s go back to the 500 simulated statistics we had earlier. Once you have a collection of test statistics under the null hypothesis (say you saved it as <code>null</code> like we did), it can be useful to visualize that approximation of the null distribution. For that, use the function <code>visualize()</code>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> body_mass_g,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> sex) <span class="sc">|&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">9</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> body_mass_g,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">explanatory =</span> sex) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"independence"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">9</span>, <span class="at">type =</span> <span class="st">"permute"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Response: body_mass_g (numeric)
 Explanatory: sex (factor)
 Null Hypothesis: in...
 # A tibble: 9 × 2
-  replicate   stat
-      &lt;int&gt;  &lt;dbl&gt;
-1         1 -108. 
-2         2  -77.7
-3         3  150. 
-4         4   11.8
-5         5  -16.1
-6         6   13.6
-7         7   98.3
-8         8  -33.8
-9         9   61.4</code></pre>
+  replicate    stat
+      &lt;int&gt;   &lt;dbl&gt;
+1         1  64.7  
+2         2 -32.9  
+3         3  35.9  
+4         4  -6.78 
+5         5 -31.4  
+6         6 -47.6  
+7         7  39.8  
+8         8  27.5  
+9         9   0.427</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>null <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">visualize</span>() <span class="sc">+</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">shade_p_value</span>(<span class="dv">100</span>, <span class="at">direction =</span> <span class="st">"both"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>null <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">visualize</span>() <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">shade_p_value</span>(<span class="dv">100</span>, <span class="at">direction =</span> <span class="st">"both"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="tutorial_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="tutorial_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -488,6 +541,8 @@ Null Hypothesis: in...
 <li><code>visualize()</code> expects a data frame of statistics.</li>
 <li>It is a short cut to creating a particular type of ggplot, so like any ggplot, you can add layers to it with <code>+</code>+.</li>
 <li><code>shade_p_value()</code> is a function you can add to shade the part of the null distribution that corresponds to the p-value. The first argument is the observed statistic, which we’ve recorded as 100 here to see the behavior of the function. <code>direction</code> is an argument where you specify if you would like to shade values <code>"less than"</code> or <code>"more than"</code> the observed value, or <code>"both"</code> for a two-tailed p-value.</li>
+<li>If the difference in means was actually 100 grams, it would appear that the null hypothesis is consistent with the belief that body mass and sex are unrelated. In words, if we believe that there is no relationship between body mass and sex, it would be fairly likely to get a difference in means of 100 or something further out on the tails of the null distribution. So therefore, that belief isn’t unreasonable!</li>
+<li>What value for the difference in means did we actually observe (scroll back up in these notes to find it)! See if you can decide what the outcome of the hypothesis test would be based on this value.</li>
 </ul>
 
 
@@ -505,7 +560,6 @@ eyJjb250ZW50cyI6W119
 <script type="vfs-file">
 W10=
 </script>
-</section>
 </section>
 
 </main> <!-- /main -->
