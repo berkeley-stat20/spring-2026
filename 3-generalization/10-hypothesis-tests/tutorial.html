@@ -440,16 +440,16 @@ Null Hypothesis: in...
 # A tibble: 500 × 2
    replicate   stat
        &lt;int&gt;  &lt;dbl&gt;
- 1         1 -35.6 
- 2         2  22.7 
- 3         3 -96.3 
- 4         4  38.0 
- 5         5   9.44
- 6         6 -25.7 
- 7         7 -54.8 
- 8         8 -43.4 
- 9         9 205.  
-10        10   8.24
+ 1         1   33.5
+ 2         2  -54.5
+ 3         3  -67.4
+ 4         4   35.3
+ 5         5   91.4
+ 6         6   22.4
+ 7         7  -50.0
+ 8         8 -119. 
+ 9         9  -38.3
+10        10  -19.1
 # ℹ 490 more rows</code></pre>
 </div>
 </div>
@@ -513,17 +513,17 @@ Null Hypothesis: in...
 Explanatory: sex (factor)
 Null Hypothesis: in...
 # A tibble: 9 × 2
-  replicate    stat
-      &lt;int&gt;   &lt;dbl&gt;
-1         1  -44.3 
-2         2  -85.5 
-3         3 -136.  
-4         4  243.  
-5         5  -79.2 
-6         6   -6.48
-7         7   21.8 
-8         8  -35.9 
-9         9   25.4 </code></pre>
+  replicate     stat
+      &lt;int&gt;    &lt;dbl&gt;
+1         1   12.1  
+2         2   46.4  
+3         3   47.0  
+4         4 -235.   
+5         5   -9.78 
+6         6 -130.   
+7         7   -0.473
+8         8 -100.   
+9         9  103.   </code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>null <span class="sc">|&gt;</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">visualize</span>() <span class="sc">+</span></span>
@@ -541,6 +541,7 @@ Null Hypothesis: in...
 <li><code>visualize()</code> expects a data frame of statistics.</li>
 <li>It is a short cut to creating a particular type of ggplot, so like any ggplot, you can add layers to it with <code>+</code>+.</li>
 <li><code>shade_p_value()</code> is a function you can add to shade the part of the null distribution that corresponds to the p-value. The first argument is the observed statistic, which we’ve recorded as 100 here to see the behavior of the function. <code>direction</code> is an argument where you specify if you would like to shade values <code>"less than"</code> or <code>"more than"</code> the observed value, or <code>"both"</code> for a two-tailed p-value.</li>
+<li>If you’re interested in calculating the p-value directly, use the <code>get_p_value()</code> function directly after the <code>calculate()</code> step. It has the same two arguments as <code>shade_p_value()</code>!</li>
 <li>If the difference in means was actually 100 grams, it would appear that the null hypothesis is consistent with the belief that body mass and sex are unrelated. In words, if we believe that there is no relationship between body mass and sex, it would be fairly likely to get a difference in means of 100 or something further out on the tails of the null distribution. So therefore, that belief isn’t unreasonable!</li>
 <li>What value for the difference in means did we actually observe (scroll back up in these notes to find it)! See if you can decide what the outcome of the hypothesis test would be based on this value.</li>
 </ul>
