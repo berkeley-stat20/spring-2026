@@ -311,6 +311,12 @@ window.Quarto = {
  <span class="menu-text">Hypothesis Testing</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/02-experiments/tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Randomized Experiments</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -438,18 +444,18 @@ Explanatory: sex (factor)
 Explanatory: sex (factor)
 Null Hypothesis: in...
 # A tibble: 500 × 2
-   replicate    stat
-       &lt;int&gt;   &lt;dbl&gt;
- 1         1   27.2 
- 2         2    1.63
- 3         3  -50.0 
- 4         4   65.6 
- 5         5  146.  
- 6         6  -66.2 
- 7         7   76.7 
- 8         8  127.  
- 9         9  -44.0 
-10        10 -111.  
+   replicate   stat
+       &lt;int&gt;  &lt;dbl&gt;
+ 1         1  -40.7
+ 2         2  -53.6
+ 3         3   20.8
+ 4         4   95.3
+ 5         5  177. 
+ 6         6  -40.1
+ 7         7 -105. 
+ 8         8   71.0
+ 9         9   29.0
+10        10  -50.3
 # ℹ 490 more rows</code></pre>
 </div>
 </div>
@@ -513,17 +519,17 @@ Null Hypothesis: in...
 Explanatory: sex (factor)
 Null Hypothesis: in...
 # A tibble: 9 × 2
-  replicate   stat
-      &lt;int&gt;  &lt;dbl&gt;
-1         1 -149. 
-2         2 -144. 
-3         3  134. 
-4         4  107. 
-5         5   37.4
-6         6   83.9
-7         7   46.7
-8         8   26.6
-9         9  115. </code></pre>
+  replicate  stat
+      &lt;int&gt; &lt;dbl&gt;
+1         1 -49.7
+2         2 180. 
+3         3  69.2
+4         4 -39.8
+5         5 -37.1
+6         6 114. 
+7         7  45.2
+8         8 -21.8
+9         9  87.8</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>null <span class="sc">|&gt;</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">visualize</span>() <span class="sc">+</span></span>
