@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
     "listing": "/assignments.html",
     "items": [
       "/4-causation/labs/taste-test/part-1.pdf",
@@ -35,9 +39,5 @@
       "/1-questions-and-data/01-understanding-the-world/ws.pdf",
       "/3-generalization/12-wrong-by-design/ws.pdf"
     ]
-  },
-  {
-    "listing": "/index.html",
-    "items": []
   }
 ]
