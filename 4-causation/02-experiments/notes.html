@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-212601b1b15ad633dc7a1166230cd427.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e83a663d7a10b9f6f8c41e93e8c33c6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
@@ -408,6 +408,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/03-matching/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Causal Effects in Observational Studies</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -501,23 +507,23 @@ in cases where researchers were not able to perform an experiment.--></p>
 <p>We can visualize the distinction between the two groups in a small example with three people in the control group (website) and three people in the treatment group (pdf).</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="wneeznqyhg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wneeznqyhg table {
+<div id="yanlofntvc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#yanlofntvc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wneeznqyhg thead, #wneeznqyhg tbody, #wneeznqyhg tfoot, #wneeznqyhg tr, #wneeznqyhg td, #wneeznqyhg th {
+#yanlofntvc thead, #yanlofntvc tbody, #yanlofntvc tfoot, #yanlofntvc tr, #yanlofntvc td, #yanlofntvc th {
   border-style: none;
 }
 
-#wneeznqyhg p {
+#yanlofntvc p {
   margin: 0;
   padding: 0;
 }
 
-#wneeznqyhg .gt_table {
+#yanlofntvc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -543,12 +549,12 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-left-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_caption {
+#yanlofntvc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wneeznqyhg .gt_title {
+#yanlofntvc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -560,7 +566,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-bottom-width: 0;
 }
 
-#wneeznqyhg .gt_subtitle {
+#yanlofntvc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -572,7 +578,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-top-width: 0;
 }
 
-#wneeznqyhg .gt_heading {
+#yanlofntvc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -584,13 +590,13 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-right-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_bottom_border {
+#yanlofntvc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_col_headings {
+#yanlofntvc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -605,7 +611,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-right-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_col_heading {
+#yanlofntvc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -625,7 +631,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   overflow-x: hidden;
 }
 
-#wneeznqyhg .gt_column_spanner_outer {
+#yanlofntvc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -637,15 +643,15 @@ in cases where researchers were not able to perform an experiment.--></p>
   padding-right: 4px;
 }
 
-#wneeznqyhg .gt_column_spanner_outer:first-child {
+#yanlofntvc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wneeznqyhg .gt_column_spanner_outer:last-child {
+#yanlofntvc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wneeznqyhg .gt_column_spanner {
+#yanlofntvc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -657,11 +663,11 @@ in cases where researchers were not able to perform an experiment.--></p>
   width: 100%;
 }
 
-#wneeznqyhg .gt_spanner_row {
+#yanlofntvc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wneeznqyhg .gt_group_heading {
+#yanlofntvc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -687,7 +693,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   text-align: left;
 }
 
-#wneeznqyhg .gt_empty_group_heading {
+#yanlofntvc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -702,15 +708,15 @@ in cases where researchers were not able to perform an experiment.--></p>
   vertical-align: middle;
 }
 
-#wneeznqyhg .gt_from_md > :first-child {
+#yanlofntvc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wneeznqyhg .gt_from_md > :last-child {
+#yanlofntvc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wneeznqyhg .gt_row {
+#yanlofntvc .gt_row {
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
@@ -729,7 +735,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   overflow-x: hidden;
 }
 
-#wneeznqyhg .gt_stub {
+#yanlofntvc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -742,7 +748,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   padding-right: 5px;
 }
 
-#wneeznqyhg .gt_stub_row_group {
+#yanlofntvc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -756,15 +762,15 @@ in cases where researchers were not able to perform an experiment.--></p>
   vertical-align: top;
 }
 
-#wneeznqyhg .gt_row_group_first td {
+#yanlofntvc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wneeznqyhg .gt_row_group_first th {
+#yanlofntvc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wneeznqyhg .gt_summary_row {
+#yanlofntvc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -774,16 +780,16 @@ in cases where researchers were not able to perform an experiment.--></p>
   padding-right: 5px;
 }
 
-#wneeznqyhg .gt_first_summary_row {
+#yanlofntvc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_first_summary_row.thick {
+#yanlofntvc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wneeznqyhg .gt_last_summary_row {
+#yanlofntvc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -793,7 +799,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-bottom-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_grand_summary_row {
+#yanlofntvc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -803,7 +809,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   padding-right: 5px;
 }
 
-#wneeznqyhg .gt_first_grand_summary_row {
+#yanlofntvc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -813,7 +819,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-top-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_last_grand_summary_row_top {
+#yanlofntvc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -823,11 +829,11 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-bottom-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_striped {
+#yanlofntvc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wneeznqyhg .gt_table_body {
+#yanlofntvc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -836,7 +842,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-bottom-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_footnotes {
+#yanlofntvc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -850,7 +856,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-right-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_footnote {
+#yanlofntvc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -859,7 +865,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   padding-right: 5px;
 }
 
-#wneeznqyhg .gt_sourcenotes {
+#yanlofntvc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -873,7 +879,7 @@ in cases where researchers were not able to perform an experiment.--></p>
   border-right-color: #D3D3D3;
 }
 
-#wneeznqyhg .gt_sourcenote {
+#yanlofntvc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -881,72 +887,72 @@ in cases where researchers were not able to perform an experiment.--></p>
   padding-right: 5px;
 }
 
-#wneeznqyhg .gt_left {
+#yanlofntvc .gt_left {
   text-align: left;
 }
 
-#wneeznqyhg .gt_center {
+#yanlofntvc .gt_center {
   text-align: center;
 }
 
-#wneeznqyhg .gt_right {
+#yanlofntvc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wneeznqyhg .gt_font_normal {
+#yanlofntvc .gt_font_normal {
   font-weight: normal;
 }
 
-#wneeznqyhg .gt_font_bold {
+#yanlofntvc .gt_font_bold {
   font-weight: bold;
 }
 
-#wneeznqyhg .gt_font_italic {
+#yanlofntvc .gt_font_italic {
   font-style: italic;
 }
 
-#wneeznqyhg .gt_super {
+#yanlofntvc .gt_super {
   font-size: 65%;
 }
 
-#wneeznqyhg .gt_footnote_marks {
+#yanlofntvc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wneeznqyhg .gt_asterisk {
+#yanlofntvc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wneeznqyhg .gt_indent_1 {
+#yanlofntvc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wneeznqyhg .gt_indent_2 {
+#yanlofntvc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wneeznqyhg .gt_indent_3 {
+#yanlofntvc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wneeznqyhg .gt_indent_4 {
+#yanlofntvc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wneeznqyhg .gt_indent_5 {
+#yanlofntvc .gt_indent_5 {
   text-indent: 25px;
 }
 
-#wneeznqyhg .katex-display {
+#yanlofntvc .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#wneeznqyhg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#yanlofntvc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1099,23 +1105,23 @@ were randomized to receive a job training opportunity, while the others did not.
 <p>Let’s return to our hypothetical pdf vs.&nbsp;website experiment and imagine that in addition to our subject’s names and understanding level we were able to collect some additional information about each of them.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="aulyuhgfox" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#aulyuhgfox table {
+<div id="oaipjkmvec" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oaipjkmvec table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#aulyuhgfox thead, #aulyuhgfox tbody, #aulyuhgfox tfoot, #aulyuhgfox tr, #aulyuhgfox td, #aulyuhgfox th {
+#oaipjkmvec thead, #oaipjkmvec tbody, #oaipjkmvec tfoot, #oaipjkmvec tr, #oaipjkmvec td, #oaipjkmvec th {
   border-style: none;
 }
 
-#aulyuhgfox p {
+#oaipjkmvec p {
   margin: 0;
   padding: 0;
 }
 
-#aulyuhgfox .gt_table {
+#oaipjkmvec .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1141,12 +1147,12 @@ were randomized to receive a job training opportunity, while the others did not.
   border-left-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_caption {
+#oaipjkmvec .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#aulyuhgfox .gt_title {
+#oaipjkmvec .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1158,7 +1164,7 @@ were randomized to receive a job training opportunity, while the others did not.
   border-bottom-width: 0;
 }
 
-#aulyuhgfox .gt_subtitle {
+#oaipjkmvec .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1170,7 +1176,7 @@ were randomized to receive a job training opportunity, while the others did not.
   border-top-width: 0;
 }
 
-#aulyuhgfox .gt_heading {
+#oaipjkmvec .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1182,13 +1188,13 @@ were randomized to receive a job training opportunity, while the others did not.
   border-right-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_bottom_border {
+#oaipjkmvec .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_col_headings {
+#oaipjkmvec .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1203,7 +1209,7 @@ were randomized to receive a job training opportunity, while the others did not.
   border-right-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_col_heading {
+#oaipjkmvec .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1223,7 +1229,7 @@ were randomized to receive a job training opportunity, while the others did not.
   overflow-x: hidden;
 }
 
-#aulyuhgfox .gt_column_spanner_outer {
+#oaipjkmvec .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1235,15 +1241,15 @@ were randomized to receive a job training opportunity, while the others did not.
   padding-right: 4px;
 }
 
-#aulyuhgfox .gt_column_spanner_outer:first-child {
+#oaipjkmvec .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aulyuhgfox .gt_column_spanner_outer:last-child {
+#oaipjkmvec .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aulyuhgfox .gt_column_spanner {
+#oaipjkmvec .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1255,11 +1261,11 @@ were randomized to receive a job training opportunity, while the others did not.
   width: 100%;
 }
 
-#aulyuhgfox .gt_spanner_row {
+#oaipjkmvec .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#aulyuhgfox .gt_group_heading {
+#oaipjkmvec .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1285,7 +1291,7 @@ were randomized to receive a job training opportunity, while the others did not.
   text-align: left;
 }
 
-#aulyuhgfox .gt_empty_group_heading {
+#oaipjkmvec .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1300,15 +1306,15 @@ were randomized to receive a job training opportunity, while the others did not.
   vertical-align: middle;
 }
 
-#aulyuhgfox .gt_from_md > :first-child {
+#oaipjkmvec .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aulyuhgfox .gt_from_md > :last-child {
+#oaipjkmvec .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aulyuhgfox .gt_row {
+#oaipjkmvec .gt_row {
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
@@ -1327,7 +1333,7 @@ were randomized to receive a job training opportunity, while the others did not.
   overflow-x: hidden;
 }
 
-#aulyuhgfox .gt_stub {
+#oaipjkmvec .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1340,7 +1346,7 @@ were randomized to receive a job training opportunity, while the others did not.
   padding-right: 5px;
 }
 
-#aulyuhgfox .gt_stub_row_group {
+#oaipjkmvec .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1354,15 +1360,15 @@ were randomized to receive a job training opportunity, while the others did not.
   vertical-align: top;
 }
 
-#aulyuhgfox .gt_row_group_first td {
+#oaipjkmvec .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#aulyuhgfox .gt_row_group_first th {
+#oaipjkmvec .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#aulyuhgfox .gt_summary_row {
+#oaipjkmvec .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1372,16 +1378,16 @@ were randomized to receive a job training opportunity, while the others did not.
   padding-right: 5px;
 }
 
-#aulyuhgfox .gt_first_summary_row {
+#oaipjkmvec .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_first_summary_row.thick {
+#oaipjkmvec .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#aulyuhgfox .gt_last_summary_row {
+#oaipjkmvec .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1391,7 +1397,7 @@ were randomized to receive a job training opportunity, while the others did not.
   border-bottom-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_grand_summary_row {
+#oaipjkmvec .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1401,7 +1407,7 @@ were randomized to receive a job training opportunity, while the others did not.
   padding-right: 5px;
 }
 
-#aulyuhgfox .gt_first_grand_summary_row {
+#oaipjkmvec .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1411,7 +1417,7 @@ were randomized to receive a job training opportunity, while the others did not.
   border-top-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_last_grand_summary_row_top {
+#oaipjkmvec .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1421,11 +1427,11 @@ were randomized to receive a job training opportunity, while the others did not.
   border-bottom-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_striped {
+#oaipjkmvec .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aulyuhgfox .gt_table_body {
+#oaipjkmvec .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1434,7 +1440,7 @@ were randomized to receive a job training opportunity, while the others did not.
   border-bottom-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_footnotes {
+#oaipjkmvec .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1448,7 +1454,7 @@ were randomized to receive a job training opportunity, while the others did not.
   border-right-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_footnote {
+#oaipjkmvec .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1457,7 +1463,7 @@ were randomized to receive a job training opportunity, while the others did not.
   padding-right: 5px;
 }
 
-#aulyuhgfox .gt_sourcenotes {
+#oaipjkmvec .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1471,7 +1477,7 @@ were randomized to receive a job training opportunity, while the others did not.
   border-right-color: #D3D3D3;
 }
 
-#aulyuhgfox .gt_sourcenote {
+#oaipjkmvec .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1479,72 +1485,72 @@ were randomized to receive a job training opportunity, while the others did not.
   padding-right: 5px;
 }
 
-#aulyuhgfox .gt_left {
+#oaipjkmvec .gt_left {
   text-align: left;
 }
 
-#aulyuhgfox .gt_center {
+#oaipjkmvec .gt_center {
   text-align: center;
 }
 
-#aulyuhgfox .gt_right {
+#oaipjkmvec .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aulyuhgfox .gt_font_normal {
+#oaipjkmvec .gt_font_normal {
   font-weight: normal;
 }
 
-#aulyuhgfox .gt_font_bold {
+#oaipjkmvec .gt_font_bold {
   font-weight: bold;
 }
 
-#aulyuhgfox .gt_font_italic {
+#oaipjkmvec .gt_font_italic {
   font-style: italic;
 }
 
-#aulyuhgfox .gt_super {
+#oaipjkmvec .gt_super {
   font-size: 65%;
 }
 
-#aulyuhgfox .gt_footnote_marks {
+#oaipjkmvec .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#aulyuhgfox .gt_asterisk {
+#oaipjkmvec .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#aulyuhgfox .gt_indent_1 {
+#oaipjkmvec .gt_indent_1 {
   text-indent: 5px;
 }
 
-#aulyuhgfox .gt_indent_2 {
+#oaipjkmvec .gt_indent_2 {
   text-indent: 10px;
 }
 
-#aulyuhgfox .gt_indent_3 {
+#oaipjkmvec .gt_indent_3 {
   text-indent: 15px;
 }
 
-#aulyuhgfox .gt_indent_4 {
+#oaipjkmvec .gt_indent_4 {
   text-indent: 20px;
 }
 
-#aulyuhgfox .gt_indent_5 {
+#oaipjkmvec .gt_indent_5 {
   text-indent: 25px;
 }
 
-#aulyuhgfox .katex-display {
+#oaipjkmvec .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#aulyuhgfox div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#oaipjkmvec div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

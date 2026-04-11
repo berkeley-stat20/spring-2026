@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-212601b1b15ad633dc7a1166230cd427.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e83a663d7a10b9f6f8c41e93e8c33c6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
@@ -414,6 +414,12 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../4-causation/03-matching/notes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Causal Effects in Observational Studies</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -596,23 +602,23 @@ A population parameter that captures the effect of being administered a particul
 </div>
 <div class="cell quarto-layout-cell" style="flex-basis: 45.5%;justify-content: center;">
 <div class="cell-output-display">
-<div id="fbxyvtjhay" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fbxyvtjhay table {
+<div id="aupjoapmlh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#aupjoapmlh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fbxyvtjhay thead, #fbxyvtjhay tbody, #fbxyvtjhay tfoot, #fbxyvtjhay tr, #fbxyvtjhay td, #fbxyvtjhay th {
+#aupjoapmlh thead, #aupjoapmlh tbody, #aupjoapmlh tfoot, #aupjoapmlh tr, #aupjoapmlh td, #aupjoapmlh th {
   border-style: none;
 }
 
-#fbxyvtjhay p {
+#aupjoapmlh p {
   margin: 0;
   padding: 0;
 }
 
-#fbxyvtjhay .gt_table {
+#aupjoapmlh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -638,12 +644,12 @@ A population parameter that captures the effect of being administered a particul
   border-left-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_caption {
+#aupjoapmlh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fbxyvtjhay .gt_title {
+#aupjoapmlh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -655,7 +661,7 @@ A population parameter that captures the effect of being administered a particul
   border-bottom-width: 0;
 }
 
-#fbxyvtjhay .gt_subtitle {
+#aupjoapmlh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -667,7 +673,7 @@ A population parameter that captures the effect of being administered a particul
   border-top-width: 0;
 }
 
-#fbxyvtjhay .gt_heading {
+#aupjoapmlh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -679,13 +685,13 @@ A population parameter that captures the effect of being administered a particul
   border-right-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_bottom_border {
+#aupjoapmlh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_col_headings {
+#aupjoapmlh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -700,7 +706,7 @@ A population parameter that captures the effect of being administered a particul
   border-right-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_col_heading {
+#aupjoapmlh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -720,7 +726,7 @@ A population parameter that captures the effect of being administered a particul
   overflow-x: hidden;
 }
 
-#fbxyvtjhay .gt_column_spanner_outer {
+#aupjoapmlh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -732,15 +738,15 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 4px;
 }
 
-#fbxyvtjhay .gt_column_spanner_outer:first-child {
+#aupjoapmlh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fbxyvtjhay .gt_column_spanner_outer:last-child {
+#aupjoapmlh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fbxyvtjhay .gt_column_spanner {
+#aupjoapmlh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -752,11 +758,11 @@ A population parameter that captures the effect of being administered a particul
   width: 100%;
 }
 
-#fbxyvtjhay .gt_spanner_row {
+#aupjoapmlh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fbxyvtjhay .gt_group_heading {
+#aupjoapmlh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -782,7 +788,7 @@ A population parameter that captures the effect of being administered a particul
   text-align: left;
 }
 
-#fbxyvtjhay .gt_empty_group_heading {
+#aupjoapmlh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -797,15 +803,15 @@ A population parameter that captures the effect of being administered a particul
   vertical-align: middle;
 }
 
-#fbxyvtjhay .gt_from_md > :first-child {
+#aupjoapmlh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fbxyvtjhay .gt_from_md > :last-child {
+#aupjoapmlh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fbxyvtjhay .gt_row {
+#aupjoapmlh .gt_row {
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
@@ -824,7 +830,7 @@ A population parameter that captures the effect of being administered a particul
   overflow-x: hidden;
 }
 
-#fbxyvtjhay .gt_stub {
+#aupjoapmlh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -837,7 +843,7 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 5px;
 }
 
-#fbxyvtjhay .gt_stub_row_group {
+#aupjoapmlh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -851,15 +857,15 @@ A population parameter that captures the effect of being administered a particul
   vertical-align: top;
 }
 
-#fbxyvtjhay .gt_row_group_first td {
+#aupjoapmlh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fbxyvtjhay .gt_row_group_first th {
+#aupjoapmlh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fbxyvtjhay .gt_summary_row {
+#aupjoapmlh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -869,16 +875,16 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 5px;
 }
 
-#fbxyvtjhay .gt_first_summary_row {
+#aupjoapmlh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_first_summary_row.thick {
+#aupjoapmlh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fbxyvtjhay .gt_last_summary_row {
+#aupjoapmlh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -888,7 +894,7 @@ A population parameter that captures the effect of being administered a particul
   border-bottom-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_grand_summary_row {
+#aupjoapmlh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -898,7 +904,7 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 5px;
 }
 
-#fbxyvtjhay .gt_first_grand_summary_row {
+#aupjoapmlh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -908,7 +914,7 @@ A population parameter that captures the effect of being administered a particul
   border-top-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_last_grand_summary_row_top {
+#aupjoapmlh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -918,11 +924,11 @@ A population parameter that captures the effect of being administered a particul
   border-bottom-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_striped {
+#aupjoapmlh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fbxyvtjhay .gt_table_body {
+#aupjoapmlh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -931,7 +937,7 @@ A population parameter that captures the effect of being administered a particul
   border-bottom-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_footnotes {
+#aupjoapmlh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -945,7 +951,7 @@ A population parameter that captures the effect of being administered a particul
   border-right-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_footnote {
+#aupjoapmlh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -954,7 +960,7 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 5px;
 }
 
-#fbxyvtjhay .gt_sourcenotes {
+#aupjoapmlh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -968,7 +974,7 @@ A population parameter that captures the effect of being administered a particul
   border-right-color: #D3D3D3;
 }
 
-#fbxyvtjhay .gt_sourcenote {
+#aupjoapmlh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -976,72 +982,72 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 5px;
 }
 
-#fbxyvtjhay .gt_left {
+#aupjoapmlh .gt_left {
   text-align: left;
 }
 
-#fbxyvtjhay .gt_center {
+#aupjoapmlh .gt_center {
   text-align: center;
 }
 
-#fbxyvtjhay .gt_right {
+#aupjoapmlh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fbxyvtjhay .gt_font_normal {
+#aupjoapmlh .gt_font_normal {
   font-weight: normal;
 }
 
-#fbxyvtjhay .gt_font_bold {
+#aupjoapmlh .gt_font_bold {
   font-weight: bold;
 }
 
-#fbxyvtjhay .gt_font_italic {
+#aupjoapmlh .gt_font_italic {
   font-style: italic;
 }
 
-#fbxyvtjhay .gt_super {
+#aupjoapmlh .gt_super {
   font-size: 65%;
 }
 
-#fbxyvtjhay .gt_footnote_marks {
+#aupjoapmlh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fbxyvtjhay .gt_asterisk {
+#aupjoapmlh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fbxyvtjhay .gt_indent_1 {
+#aupjoapmlh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fbxyvtjhay .gt_indent_2 {
+#aupjoapmlh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fbxyvtjhay .gt_indent_3 {
+#aupjoapmlh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fbxyvtjhay .gt_indent_4 {
+#aupjoapmlh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fbxyvtjhay .gt_indent_5 {
+#aupjoapmlh .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fbxyvtjhay .katex-display {
+#aupjoapmlh .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fbxyvtjhay div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#aupjoapmlh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1096,23 +1102,23 @@ A population parameter that captures the effect of being administered a particul
 </div>
 <div class="cell quarto-layout-cell" style="flex-basis: 27.3%;justify-content: center;">
 <div class="cell-output-display">
-<div id="kaedsbsmzb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kaedsbsmzb table {
+<div id="wtopehcunv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wtopehcunv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kaedsbsmzb thead, #kaedsbsmzb tbody, #kaedsbsmzb tfoot, #kaedsbsmzb tr, #kaedsbsmzb td, #kaedsbsmzb th {
+#wtopehcunv thead, #wtopehcunv tbody, #wtopehcunv tfoot, #wtopehcunv tr, #wtopehcunv td, #wtopehcunv th {
   border-style: none;
 }
 
-#kaedsbsmzb p {
+#wtopehcunv p {
   margin: 0;
   padding: 0;
 }
 
-#kaedsbsmzb .gt_table {
+#wtopehcunv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1138,12 +1144,12 @@ A population parameter that captures the effect of being administered a particul
   border-left-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_caption {
+#wtopehcunv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kaedsbsmzb .gt_title {
+#wtopehcunv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1155,7 +1161,7 @@ A population parameter that captures the effect of being administered a particul
   border-bottom-width: 0;
 }
 
-#kaedsbsmzb .gt_subtitle {
+#wtopehcunv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1167,7 +1173,7 @@ A population parameter that captures the effect of being administered a particul
   border-top-width: 0;
 }
 
-#kaedsbsmzb .gt_heading {
+#wtopehcunv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1179,13 +1185,13 @@ A population parameter that captures the effect of being administered a particul
   border-right-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_bottom_border {
+#wtopehcunv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_col_headings {
+#wtopehcunv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1200,7 +1206,7 @@ A population parameter that captures the effect of being administered a particul
   border-right-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_col_heading {
+#wtopehcunv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1220,7 +1226,7 @@ A population parameter that captures the effect of being administered a particul
   overflow-x: hidden;
 }
 
-#kaedsbsmzb .gt_column_spanner_outer {
+#wtopehcunv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1232,15 +1238,15 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 4px;
 }
 
-#kaedsbsmzb .gt_column_spanner_outer:first-child {
+#wtopehcunv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kaedsbsmzb .gt_column_spanner_outer:last-child {
+#wtopehcunv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kaedsbsmzb .gt_column_spanner {
+#wtopehcunv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1252,11 +1258,11 @@ A population parameter that captures the effect of being administered a particul
   width: 100%;
 }
 
-#kaedsbsmzb .gt_spanner_row {
+#wtopehcunv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kaedsbsmzb .gt_group_heading {
+#wtopehcunv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1282,7 +1288,7 @@ A population parameter that captures the effect of being administered a particul
   text-align: left;
 }
 
-#kaedsbsmzb .gt_empty_group_heading {
+#wtopehcunv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1297,15 +1303,15 @@ A population parameter that captures the effect of being administered a particul
   vertical-align: middle;
 }
 
-#kaedsbsmzb .gt_from_md > :first-child {
+#wtopehcunv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kaedsbsmzb .gt_from_md > :last-child {
+#wtopehcunv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kaedsbsmzb .gt_row {
+#wtopehcunv .gt_row {
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
@@ -1324,7 +1330,7 @@ A population parameter that captures the effect of being administered a particul
   overflow-x: hidden;
 }
 
-#kaedsbsmzb .gt_stub {
+#wtopehcunv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1337,7 +1343,7 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 5px;
 }
 
-#kaedsbsmzb .gt_stub_row_group {
+#wtopehcunv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1351,15 +1357,15 @@ A population parameter that captures the effect of being administered a particul
   vertical-align: top;
 }
 
-#kaedsbsmzb .gt_row_group_first td {
+#wtopehcunv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kaedsbsmzb .gt_row_group_first th {
+#wtopehcunv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kaedsbsmzb .gt_summary_row {
+#wtopehcunv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1369,16 +1375,16 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 5px;
 }
 
-#kaedsbsmzb .gt_first_summary_row {
+#wtopehcunv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_first_summary_row.thick {
+#wtopehcunv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kaedsbsmzb .gt_last_summary_row {
+#wtopehcunv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1388,7 +1394,7 @@ A population parameter that captures the effect of being administered a particul
   border-bottom-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_grand_summary_row {
+#wtopehcunv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1398,7 +1404,7 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 5px;
 }
 
-#kaedsbsmzb .gt_first_grand_summary_row {
+#wtopehcunv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1408,7 +1414,7 @@ A population parameter that captures the effect of being administered a particul
   border-top-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_last_grand_summary_row_top {
+#wtopehcunv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1418,11 +1424,11 @@ A population parameter that captures the effect of being administered a particul
   border-bottom-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_striped {
+#wtopehcunv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kaedsbsmzb .gt_table_body {
+#wtopehcunv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1431,7 +1437,7 @@ A population parameter that captures the effect of being administered a particul
   border-bottom-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_footnotes {
+#wtopehcunv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1445,7 +1451,7 @@ A population parameter that captures the effect of being administered a particul
   border-right-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_footnote {
+#wtopehcunv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1454,7 +1460,7 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 5px;
 }
 
-#kaedsbsmzb .gt_sourcenotes {
+#wtopehcunv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1468,7 +1474,7 @@ A population parameter that captures the effect of being administered a particul
   border-right-color: #D3D3D3;
 }
 
-#kaedsbsmzb .gt_sourcenote {
+#wtopehcunv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1476,72 +1482,72 @@ A population parameter that captures the effect of being administered a particul
   padding-right: 5px;
 }
 
-#kaedsbsmzb .gt_left {
+#wtopehcunv .gt_left {
   text-align: left;
 }
 
-#kaedsbsmzb .gt_center {
+#wtopehcunv .gt_center {
   text-align: center;
 }
 
-#kaedsbsmzb .gt_right {
+#wtopehcunv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kaedsbsmzb .gt_font_normal {
+#wtopehcunv .gt_font_normal {
   font-weight: normal;
 }
 
-#kaedsbsmzb .gt_font_bold {
+#wtopehcunv .gt_font_bold {
   font-weight: bold;
 }
 
-#kaedsbsmzb .gt_font_italic {
+#wtopehcunv .gt_font_italic {
   font-style: italic;
 }
 
-#kaedsbsmzb .gt_super {
+#wtopehcunv .gt_super {
   font-size: 65%;
 }
 
-#kaedsbsmzb .gt_footnote_marks {
+#wtopehcunv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kaedsbsmzb .gt_asterisk {
+#wtopehcunv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kaedsbsmzb .gt_indent_1 {
+#wtopehcunv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kaedsbsmzb .gt_indent_2 {
+#wtopehcunv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kaedsbsmzb .gt_indent_3 {
+#wtopehcunv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kaedsbsmzb .gt_indent_4 {
+#wtopehcunv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kaedsbsmzb .gt_indent_5 {
+#wtopehcunv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kaedsbsmzb .katex-display {
+#wtopehcunv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kaedsbsmzb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wtopehcunv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
