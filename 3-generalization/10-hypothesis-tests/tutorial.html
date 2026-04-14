@@ -323,6 +323,12 @@ window.Quarto = {
  <span class="menu-text">Causal Effects in Observational Studies</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../5-prediction/01-method-of-least-squares/tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Method of Least Squares</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -452,16 +458,16 @@ Null Hypothesis: in...
 # A tibble: 500 × 2
    replicate   stat
        &lt;int&gt;  &lt;dbl&gt;
- 1         1   30.8
- 2         2  -23.6
- 3         3   47.3
- 4         4   74.6
- 5         5 -105. 
- 6         6  -37.1
- 7         7  -46.1
- 8         8   29.3
- 9         9  -53.0
-10        10  117. 
+ 1         1  -63.8
+ 2         2   26.9
+ 3         3   70.4
+ 4         4  -88.2
+ 5         5 -107. 
+ 6         6 -100. 
+ 7         7   83.0
+ 8         8  -43.7
+ 9         9 -129. 
+10        10   30.5
 # ℹ 490 more rows</code></pre>
 </div>
 </div>
@@ -525,17 +531,17 @@ Null Hypothesis: in...
 Explanatory: sex (factor)
 Null Hypothesis: in...
 # A tibble: 9 × 2
-  replicate   stat
-      &lt;int&gt;  &lt;dbl&gt;
-1         1  -72.6
-2         2   50.0
-3         3   71.3
-4         4   34.7
-5         5   32.9
-6         6  -79.8
-7         7 -165. 
-8         8   69.8
-9         9   14.5</code></pre>
+  replicate  stat
+      &lt;int&gt; &lt;dbl&gt;
+1         1 -36.2
+2         2 231. 
+3         3 -75.6
+4         4 -19.4
+5         5 -70.7
+6         6 -86.7
+7         7 -15.5
+8         8 158. 
+9         9 -93.6</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>null <span class="sc">|&gt;</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">visualize</span>() <span class="sc">+</span></span>
