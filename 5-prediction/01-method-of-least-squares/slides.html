@@ -234,62 +234,81 @@ STAT 20: Introduction to Probability and Statistics
 <h1>Concept Activity - Linear Models Review</h1>
 <p>Head to <a href="https://pollev.com">pollev.com</a>!</p>
 </section>
-<section id="concept-question-1" class="slide level2">
-<h2>Concept Question 1</h2>
-<p>An engineer working for Waymo self-driving cars is working to solve a problem. When it rains, reflections of other cars in puddles can disorient the self-driving car. Their team is working on a model to determine when the self-driving car is seeing a reflection of a car vs a real car.</p>
-<div class="poll">
-<p>Think of a potential response and predictor, and about whether this is a regression or classification problem.</p>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_b7c0c41b" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<section id="which-of-the-following-tasks-are-regression-tasks" class="slide level2">
+<h2>Which of the following tasks are <em>regression</em> tasks?</h2>
+<ul>
+<li><p>A. Amazon sets a price for its books which is dependent on the books’ weight and whether the books are hardback or paperback.</p></li>
+<li><p>B. A Waymo engineer is working on a model to determine whether a self-driving car is seeing a real car or a reflection of a car.</p></li>
+<li><p>C. The Weather Channel predicts tomorrow’s temperature based on historical data, tomorrow’s expected weather conditions and yesterday’s temperature.</p></li>
+<li><p>D. The UCB Admissions office has to predict whether a student will accept its admission offer or not based on the student’s high school and her intended major.</p></li>
+</ul>
+<div id="timer_1e86918c76e10acfa12fe49720c5032c841dba5d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
+<!--
+
+## Concept Question 1
+
+An engineer working for Waymo self-driving cars is working to solve a problem. When it rains, reflections of other cars in puddles can disorient the self-driving car. Their team is working on a model to determine when the self-driving car is seeing a reflection of a car vs a real car.
+
+:::{.poll}
+Think of a potential response and predictor, and about whether this is a  regression or classification problem.
+:::
+
+
+::: {.cell}
+::: {.cell-output-display}
+
+```{=html}
+<div class="countdown" id="timer_8a6af3ef" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
-</div>
-</div>
-<aside class="notes">
-<p>This is a serious challenge encountered by self-driving cars at the moment. This is probably best thought of as a classification problem, with the response being either reflection / not or puddle / not. The predictors could be sensor input (cameras, lidar) as well as weather info (to know if it’s been raining).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="concept-question-2" class="slide level2">
-<h2>Concept Question 2</h2>
-<p>An analyst working for the UC Berkeley Admissions Office is working to help the university decide how many students to send offer letters to. They have a target class size (that fits within the budget and residence halls), but they’re not sure how many students will accept the offer. How many should they admit?</p>
-<div class="poll">
-<p>Think of a potential response and predictor, and about whether this is a regression or classification problem.</p>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_f5537442" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+```
+
+:::
+:::
+
+
+:::{.notes}
+This is a serious challenge encountered by self-driving cars at the moment. This is probably best thought of as a classification problem, with the response being either reflection / not or puddle / not. The predictors could be sensor input (cameras, lidar) as well as weather info (to know if it's been raining).
+:::
+
+## Concept Question 2
+
+An analyst working for the UC Berkeley Admissions Office is working to help the university decide how many students to send offer letters to. They have a target class size (that fits within the budget and residence halls), but they're not sure how many students will accept the offer. How many should they admit?
+
+:::{.poll}
+Think of a potential response and predictor, and about whether this is a  regression or classification problem.
+:::
+
+
+
+::: {.cell}
+::: {.cell-output-display}
+
+```{=html}
+<div class="countdown" id="timer_55930539" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
-</div>
-</div>
-<aside class="notes">
-<p>This is another very real task. Universities use what’s called a “yield model” to predict whether or not a student will accept the offer. That’s a classification method. Those classifiers aggregated up across all offers lead to a numerical prediction for the total yield, which looks more like a regression problem, so either answer could work. It could also be a direct regression model where they use aggregate stats of the class to predict the total yield.</p>
-<p>Response is either the decision of a single student or the total number of students that accept. Predictors could be either student level covariates (for classification) or class-level averages (for regression). Those might also include broader economic indicators like unemployment rate.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+```
+
+:::
+:::
+
+
+:::{.notes}
+This is another very real task. Universities use what's called a "yield model" to predict whether or not a student will accept the offer. That's a classification method. Those classifiers aggregated up across all offers lead to a numerical prediction for the total yield, which looks more like a regression problem, so either answer could work. It could also be a direct regression model where they use aggregate stats of the class to predict the total yield.
+
+Response is either the decision of a single student or the total number of students that accept. Predictors could be either student level covariates (for classification) or class-level averages (for regression). Those might also include broader economic indicators like unemployment rate.
+:::
+
+-->
 </section>
 <section id="concept-question-3" class="slide level2">
 <h2>Concept Question 3</h2>
@@ -327,7 +346,7 @@ STAT 20: Introduction to Probability and Statistics
 </section></section>
 <section id="break" class="title-slide slide level1 center">
 <h1>Break</h1>
-<div id="timer_864127d75d0ba915a4fb41b25678cfeba685d299" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_1e86918c76e10acfa12fe49720c5032c841dba5d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -338,7 +357,7 @@ STAT 20: Introduction to Probability and Statistics
 
 <section id="ps-method-of-least-squares" class="title-slide slide level1 center">
 <h1>PS: Method of Least Squares</h1>
-<div id="timer_864127d75d0ba915a4fb41b25678cfeba685d299" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_1e86918c76e10acfa12fe49720c5032c841dba5d" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
