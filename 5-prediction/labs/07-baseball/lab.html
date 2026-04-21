@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Questions and Data – Stat 20</title>
+<title>Baseball – Stat 20</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../1-questions-and-data/01-understanding-the-world/notes.html" rel="next">
-<link href="../notes.html" rel="prev">
-<link href="../assets/stat20-hex.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3e83a663d7a10b9f6f8c41e93e8c33c6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/stat20notes-1.0.0/stat20notes.js"></script>
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/stat20-hex.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-81b06f8f26bb788f126c138105b4e370.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,26 +78,56 @@ gtag('js', new Date());
 gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/stat20/stat20notes/sidebar.css">
-<meta property="og:title" content="Questions and Data – Stat 20">
-<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/1-questions-and-data/assets/stat20-hex.png">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Baseball – Stat 20">
+<meta property="og:description" content="Introduction to Probability and Statistics at UC Berkeley">
+<meta property="og:image" content="https://stat20.berkeley.edu/spring-2026/5-prediction/labs/07-baseball/assets/stat20-hex.png">
 <meta property="og:site_name" content="Stat 20">
-<meta name="twitter:title" content="Questions and Data – Stat 20">
-<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/1-questions-and-data/assets/stat20-hex.png">
+<meta name="twitter:title" content="Baseball – Stat 20">
+<meta name="twitter:description" content="Introduction to Probability and Statistics at UC Berkeley">
+<meta name="twitter:image" content="https://stat20.berkeley.edu/spring-2026/5-prediction/labs/07-baseball/assets/stat20-hex.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-sm " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
-    <img src="../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo light-content">
+    <img src="../../../assets/stat20-hex-small.png" alt="Stat 20 logo" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -110,23 +137,23 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../syllabus.html"> 
+    <a class="nav-link" href="../../../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../office-hours.html"> 
+    <a class="nav-link" href="../../../office-hours.html"> 
 <span class="menu-text">Office Hours</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../notes.html" aria-current="page"> 
+    <a class="nav-link" href="../../../notes.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../assignments.html"> 
+    <a class="nav-link" href="../../../assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../tutorials.html"> 
+    <a class="nav-link" href="../../../tutorials.html"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
 </ul>
@@ -143,289 +170,18 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs">Questions and Data</h1>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Notes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Questions and Data</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../1-questions-and-data/notes.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Questions and Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../1-questions-and-data/01-understanding-the-world/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Understanding the World with Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../1-questions-and-data/02-taxonomy-of-data/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Taxonomy of Data</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Summarization</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2-summarizing-data/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summarization</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2-summarizing-data/01-summarizing-categorical-data/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summarizing Categorical Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2-summarizing-data/02-summarizing-numerical-data/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summarizing Numerical Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2-summarizing-data/03-a-grammar-of-graphics/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">A Grammar of Graphics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2-summarizing-data/04-conditioning/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Conditioning</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2-summarizing-data/05-summarizing-associations/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Summarizing Numerical Associations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2-summarizing-data/06-multiple-linear-regression/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Multiple Linear Regression</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Generalization</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Generalization</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/01-prob-foundations/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probability Foundations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/02-computing-probs/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Computing Probabilities</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/03-probability-dsns/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Probability Distributions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/04-random-variables/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Random Variables</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Generalization</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/05-ev-se/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Expected Value and Variance</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/06-normal-approx/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Continuous Distributions and Normal Approximations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/07-from-samps-to-pops/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">From Samples to Populations</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/08-confidence-intervals/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Confidence Intervals</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/09-bootstrapping/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bootstrapping</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/10-hypothesis-tests/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hypothesis Testing</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/11-hypothesis-tests-2/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hypothesis Tests II</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../3-generalization/12-wrong-by-design/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wrong by Design</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
- <span class="menu-text">Causation</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../4-causation/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Causation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../4-causation/01-defining-causality/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Defining Causality</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../4-causation/02-experiments/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Randomized Experiments</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
- <span class="menu-text">Prediction</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../4-causation/03-matching/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Causal Effects in Observational Studies</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../5-prediction/01-method-of-least-squares/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The Method of Least Squares</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../5-prediction/02-improving-predictions/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Evaluating and Improving Predictions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../5-prediction/03-overfitting/notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overfitting</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides-fill"></i>Slides</a></li></ul></div></div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Questions and Data</h1>
+<h1 class="title">Baseball</h1>
 </div>
 
 
@@ -442,8 +198,302 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
 </header>
 
 
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The Data</h2>
+<p>The source of data for this lab is the public Lahman database. This database contains a number of data sets with different units of observation! Below are the first few rows and some of the columns for two of these data sets: <code>Teams</code> and <code>Batting</code>. They contain data going back to 1871! Use these excerpts to help you answer the following questions.</p>
+<section id="teams-data-frame" class="level4">
+<h4 class="anchored" data-anchor-id="teams-data-frame"><strong><code>Teams</code></strong> <strong>data frame:</strong></h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">yearID</th>
+<th style="text-align: left;">teamID</th>
+<th style="text-align: left;">franchID</th>
+<th style="text-align: right;">G</th>
+<th style="text-align: right;">W</th>
+<th style="text-align: right;">L</th>
+<th style="text-align: right;">R</th>
+<th style="text-align: right;">RA</th>
+<th style="text-align: left;">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2000</td>
+<td style="text-align: left;">MON</td>
+<td style="text-align: left;">WSN</td>
+<td style="text-align: right;">162</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">738</td>
+<td style="text-align: right;">902</td>
+<td style="text-align: left;">Montreal Expos</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1981</td>
+<td style="text-align: left;">PIT</td>
+<td style="text-align: left;">PIT</td>
+<td style="text-align: right;">103</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">407</td>
+<td style="text-align: right;">425</td>
+<td style="text-align: left;">Pittsburgh Pirates</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1945</td>
+<td style="text-align: left;">WS1</td>
+<td style="text-align: left;">MIN</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">87</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">622</td>
+<td style="text-align: right;">562</td>
+<td style="text-align: left;">Washington Senators</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1922</td>
+<td style="text-align: left;">SLN</td>
+<td style="text-align: left;">STL</td>
+<td style="text-align: right;">154</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">863</td>
+<td style="text-align: right;">819</td>
+<td style="text-align: left;">St.&nbsp;Louis Cardinals</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1904</td>
+<td style="text-align: left;">CHA</td>
+<td style="text-align: left;">CHW</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">482</td>
+<td style="text-align: left;">Chicago White Sox</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1896</td>
+<td style="text-align: left;">BLN</td>
+<td style="text-align: left;">BLO</td>
+<td style="text-align: right;">132</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">995</td>
+<td style="text-align: right;">662</td>
+<td style="text-align: left;">Baltimore Orioles</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="batting-data-frame" class="level4">
+<h4 class="anchored" data-anchor-id="batting-data-frame"><strong><code>Batting</code></strong> <strong>data frame:</strong></h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">playerID</th>
+<th style="text-align: right;">yearID</th>
+<th style="text-align: left;">teamID</th>
+<th style="text-align: right;">G</th>
+<th style="text-align: right;">AB</th>
+<th style="text-align: right;">R</th>
+<th style="text-align: right;">H</th>
+<th style="text-align: right;">BB</th>
+<th style="text-align: right;">SO</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">tekotbl01</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: left;">SDN</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">liriafr01</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: left;">MIN</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">streehu01</td>
+<td style="text-align: right;">2007</td>
+<td style="text-align: left;">OAK</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">eldreca01</td>
+<td style="text-align: right;">2003</td>
+<td style="text-align: left;">SLN</td>
+<td style="text-align: right;">63</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">konerpa01</td>
+<td style="text-align: right;">1998</td>
+<td style="text-align: left;">CIN</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">hollica01</td>
+<td style="text-align: right;">1921</td>
+<td style="text-align: left;">DET</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<section id="part-a" class="level4">
+<h4 class="anchored" data-anchor-id="part-a">part a</h4>
+<p>What is the unit of observation for the <code>Teams</code> data set?</p>
+</section>
+<section id="part-b" class="level4">
+<h4 class="anchored" data-anchor-id="part-b">part b</h4>
+<p>What about for the <code>Batting</code> data set?</p>
+</section>
+</section>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<section id="part-a-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-1">part a</h4>
+<p>Write out a question about baseball that could answered purely through the information in the <code>Teams</code> data set (numerical summaries or plots, etc.)</p>
+</section>
+<section id="part-b-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-1">part b</h4>
+<p>Do the same thing, but for the <code>Batting</code> data set.</p>
+</section>
+</section>
+<section id="question-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>For each subpart below, you will form a <em>predictive</em> questions that you could answer using the data frames above. Identify a response variable for each.</p>
+<section id="part-a---classification-question-batting-data-frame" class="level4">
+<h4 class="anchored" data-anchor-id="part-a---classification-question-batting-data-frame">part a - classification question, <code>Batting</code> data frame</h4>
+</section>
+<section id="part-b---regression-question-batting-data-frame" class="level4">
+<h4 class="anchored" data-anchor-id="part-b---regression-question-batting-data-frame">part b - regression question, <code>Batting</code> data frame</h4>
+</section>
+<section id="part-c---classification-question-teams-data-frame" class="level4">
+<h4 class="anchored" data-anchor-id="part-c---classification-question-teams-data-frame">part c - classification question, <code>Teams</code> data frame</h4>
+</section>
+<section id="part-d---regression-question-teams-data-frame" class="level4">
+<h4 class="anchored" data-anchor-id="part-d---regression-question-teams-data-frame">part d - regression question, <code>Teams</code> data frame</h4>
+<hr>
+<p>For the remainder of the lab, we’ll be working with the <code>Teams</code> data frame. It can be accessed through the <code>Lahman</code> library.</p>
+</section>
+</section>
+<section id="question-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>Subset the <code>Teams</code> data further set to only include years from 2000 to present day (this is the data set that you’ll use for the remainder of this lab. However, there might be another year post-2000 that you might want to filter out: which one and why?).</p>
+</section>
+<section id="question-5" class="level3">
+<h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
+<section id="part-a-2" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-2">part a</h4>
+<p>Plot the relationship between runs and wins using <code>ggplot2</code> code. Place runs on the x-axis and wins on the y-axis.</p>
+</section>
+<section id="part-b-2" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-2">part b</h4>
+<p>Describe the relationship between the two variables, specifically commenting on the form, direction, and the strength of association.</p>
+</section>
+</section>
+<section id="question-6" class="level3">
+<h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+<section id="part-a-3" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-3">part a</h4>
+<p>Fit a simple linear model to predict wins by runs and save it into <code>m1</code>.</p>
+</section>
+<section id="part-b-3" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-3">part b</h4>
+<p>Write out the equation for the linear model (using the estimated coefficients) in mathematical form.</p>
+</section>
+<section id="part-c" class="level4">
+<h4 class="anchored" data-anchor-id="part-c">part c</h4>
+<p>Calculate the <span class="math inline">\(R^2\)</span> value of the linear model and interpret it in the context of the problem in a sentence.</p>
+</section>
+</section>
+<section id="question-7" class="level3">
+<h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
+<section id="part-a-4" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-4">part a</h4>
+<p>Fit a multiple linear regression model to predict wins using runs *and* runs allowed (<code>RA</code>) and save it as <code>m2</code>.</p>
+</section>
+<section id="part-b-4" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-4">part b</h4>
+<p>Write out the equation for the linear model in mathematical form and calculate its <span class="math inline">\(R^2\)</span> value.</p>
+</section>
+<section id="part-c-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-c-1">part c</h4>
+<p>How does this model compare to the simple linear regression from the previous question in terms of predictive power?</p>
+</section>
+</section>
+<section id="question-8" class="level3">
+<h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
+<section id="part-a-5" class="level4">
+<h4 class="anchored" data-anchor-id="part-a-5">part a</h4>
+<p>Fit a third, more complex model to predict wins and call it <code>m3</code>. This model should use:</p>
+<ul>
+<li>at least three predictor variables</li>
+</ul>
+<!-- -->
+<ul>
+<li>at least one non-linear transformation or polynomial term.</li>
+</ul>
+</section>
+<section id="part-b-5" class="level4">
+<h4 class="anchored" data-anchor-id="part-b-5">part b</h4>
+<p>Write out the equation for the linear model in mathematical form and calculate its <span class="math inline">\(R^2\)</span> value.</p>
+</section>
+</section>
+<section id="question-9" class="level3">
+<h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
+<p>Revisit the definition of causation. If your predictive model has a positive coefficient between one of the predictors and the response, is that evidence that if you increase that predictor variable for a given observation, the response variable will increase? That is, can you (or a sports management team) use this model to draw causal conclusions? Why or why not? Answer in at least three sentences. There’s more than one possible answer, so make sure to justify your reasoning.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -846,18 +896,6 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../notes.html" class="pagination-link" aria-label="Notes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Notes</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../1-questions-and-data/01-understanding-the-world/notes.html" class="pagination-link" aria-label="Understanding the World with Data">
-        <span class="nav-page-text">Understanding the World with Data</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -870,7 +908,7 @@ gtag('config', 'G-WP7F4QKDC8', { 'anonymize_ip': true});
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../license.html">
+    <a class="nav-link" href="../../../license.html">
 <p>License</p>
 </a>
   </li>  
