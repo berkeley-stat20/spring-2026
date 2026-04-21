@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -201,6 +236,30 @@ window.Quarto = {
 <section id="the-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-data">The Data</h2>
 <p>The source of data for this lab is the public Lahman database. This database contains a number of data sets with different units of observation! Below are the first few rows and some of the columns for two of these data sets: <code>Teams</code> and <code>Batting</code>. They contain data going back to 1871! Use these excerpts to help you answer the following questions.</p>
+<section id="get-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="get-the-data">Get the data</h4>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Lahman)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>You can now get information on the datasets with the help functions - <code>?Teams</code> and <code>?Batting</code>:</p>
+<p>For <code>Teams</code>, some key variables are:</p>
+<ul>
+<li><code>G</code>: number of Games played that season</li>
+<li><code>W</code>: number of Wins that season</li>
+<li><code>L</code>: number of Losses that season</li>
+<li><code>R</code>: number of Runs (points, basically) the team scored that season, across all games.</li>
+<li><code>RA</code>: number of Runs Allowed (points scored by the opponents) across all games that season.</li>
+</ul>
+<p>For <code>Batting</code>, some key variables are:</p>
+<ul>
+<li><code>G</code>: number of Games played that season by the player. Not every player plays in every game in a season, so this is the number of games that this person actually played in.</li>
+<li><code>AB</code>: number of At Bats (number of times the player went up to the plate and tried to hit the ball)</li>
+<li><code>H</code>: number of Hits (number of times the player successfully got on base by hitting the ball)</li>
+<li><code>SO</code>: number of Strike Outs (number of times the player went up to the plate and missed the ball too many times)</li>
+<li><code>BB</code>: number of Base on Balls (number of times the player went up to the plate and got a free pass to first base because the pitcher threw too many bad pitches)</li>
+<li><code>R</code>: number of Runs (points) directly scored by the player that season. This means getting all the way around the bases.</li>
+</ul>
+</section>
 <section id="teams-data-frame" class="level4">
 <h4 class="anchored" data-anchor-id="teams-data-frame"><strong><code>Teams</code></strong> <strong>data frame:</strong></h4>
 <div class="cell">
