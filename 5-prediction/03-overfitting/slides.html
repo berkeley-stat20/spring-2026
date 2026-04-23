@@ -161,21 +161,21 @@ STAT 20: Introduction to Probability and Statistics
 <h1>Concept Questions</h1>
 
 </section>
-<section id="overfitting-or-not-taken-from-the-reading-questions" class="slide level2">
-<h2>Overfitting or not? (Taken from the reading questions)</h2>
+<section id="overfitting-or-not" class="slide level2">
+<h2>Overfitting or not?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_33557153" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_8f716708" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 <div class="poll">
-<p>Which one of these (open <code>pollev.com</code>) is not an example of overfitting (either in real life or in statistics)?</p>
+<p>Which scenarios (open <code>pollev.com</code>) are examples of overfitting (either in real life or in statistics)?</p>
 </div>
 <aside class="notes">
-<p>Note that the question is opposite of the reading questions. Options (b) and (d) are NOT examples of overfitting. Sometimes, it’s helpful to draw out data frames for some of the scenarios. What are the response variable, important predictors, and erroneous predictors which might lead to overfitting?</p>
+<p>Sometimes, it’s helpful to draw out data frames for each scenario. What are the response variable, important predictors, and erroneous predictors which might lead to overfitting? The options which involve overfitting are the “high degree polynomial”, sneaker and study method scenarios.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -188,21 +188,21 @@ STAT 20: Introduction to Probability and Statistics
           display:block!important;
       }</style></aside>
 </section>
-<section id="are-rss-and-r-square-related" class="slide level2">
-<h2>Are RSS and R square related?</h2>
+<section id="how-are-rss-and-r2-related" class="slide level2">
+<h2>How are <span class="math inline">\(RSS\)</span> and <span class="math inline">\(R^2\)</span> related?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_384e7c76" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_8607b562" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 <div class="poll">
-<p>If I decrease the RSS (e.g.&nbsp;by fitting a more accurate model) does the <span class="math inline">\(R^2\)</span> value necessarily increase?</p>
+<p>Choose the correct option from the items at <a href="https://pollev.com">pollev.com</a>.</p>
 </div>
 <aside class="notes">
-<p>Yes, because <span class="math inline">\(R^2 = 1 - \dfrac{RSS}{TSS}\)</span></p>
+<p>As we increase RSS, <span class="math inline">\(R^2\)</span> should decrease. As we decrease RSS, <span class="math inline">\(R^2\)</span> should increase.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -214,41 +214,42 @@ STAT 20: Introduction to Probability and Statistics
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="overfit-models" class="slide level2">
-<h2>Overfit models</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_3a0dfcf6" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<!--
+
+## Overfit models
+
+::: {.cell}
+::: {.cell-output-display}
+
+```{=html}
+<div class="countdown" id="timer_2ee80ff4" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">00</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">30</span></code>
 </div>
-</div>
-</div>
-<p>Fill in the blanks: overfit models tend to</p>
-<ul>
-<li><p>fit the training data (well/poorly)</p></li>
-<li><p>fit the testing data (well/poorly)</p></li>
-</ul>
-<aside class="notes">
-<p>Fit the training data well, but testing data not as well. (Can choose option “poorly”)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+```
+
+:::
+:::
+
+
+Fill in the blanks: overfit models tend to
+
+-   fit the training data (well/poorly)
+
+-   fit the testing data  (well/poorly)
+
+:::{.notes}
+Fit the training data well, but testing data not as well. (Can choose option "poorly")
+:::
+
+
+-->
 </section>
 <section id="where-is-overfitting-worse" class="slide level2">
 <h2>Where is overfitting worse?</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_6cce38b4" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_8d5f2243" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -277,7 +278,7 @@ STAT 20: Introduction to Probability and Statistics
 <h1>Break</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f5f05645" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_8683466c" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -289,7 +290,7 @@ STAT 20: Introduction to Probability and Statistics
 <h1>Problem Set: <em>Overfitting</em></h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f4ebec42" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_a57078e8" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">40</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
