@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/index.html",
+    "items": []
+  },
+  {
     "listing": "/assignments.html",
     "items": [
       "/4-causation/labs/taste-test/part-1.pdf",
@@ -7,6 +11,7 @@
       "/3-generalization/labs/review-lab/lab.html",
       "/5-prediction/labs/07-baseball/lab.html",
       "/2-summarizing-data/labs/class-survey/part-2.html",
+      "/5-prediction/labs/08-cancer/lab.pdf",
       "/3-generalization/labs/elections/lab.html",
       "/2-summarizing-data/labs/flights/part-1.html",
       "/2-summarizing-data/labs/flights/part-2.html",
@@ -40,9 +45,5 @@
       "/1-questions-and-data/01-understanding-the-world/ws.pdf",
       "/3-generalization/12-wrong-by-design/ws.pdf"
     ]
-  },
-  {
-    "listing": "/index.html",
-    "items": []
   }
 ]
